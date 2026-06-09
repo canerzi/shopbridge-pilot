@@ -1,0 +1,5 @@
+node_modules/
+.env
+logs.jsonl
+stress_test_results.json
+.DS_Store

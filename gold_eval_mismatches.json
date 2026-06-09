@@ -1,0 +1,344 @@
+[
+ {
+  "section": "A",
+  "gold": "C5",
+  "pred": "C1",
+  "q": "What should I donate if I want to help people as quickly as possible?"
+ },
+ {
+  "section": "A",
+  "gold": "C8",
+  "pred": "C5",
+  "q": "Why are cash donations shown before bundles and items?"
+ },
+ {
+  "section": "B",
+  "gold": "C5",
+  "pred": "C1",
+  "q": "If roads are blocked, how can cash help faster than ready-made items?"
+ },
+ {
+  "section": "B",
+  "gold": "C5",
+  "pred": "C6",
+  "q": "Can responders buy supplies locally with cash after an earthquake?"
+ },
+ {
+  "section": "B",
+  "gold": "C5",
+  "pred": "C1",
+  "q": "Is cash useful if shops and suppliers are also affected?"
+ },
+ {
+  "section": "B",
+  "gold": "C5",
+  "pred": "C1",
+  "q": "Would cash just sit somewhere while people need blankets now?"
+ },
+ {
+  "section": "B",
+  "gold": "C5",
+  "pred": "C6",
+  "q": "Are product donations more direct than cash donations?"
+ },
+ {
+  "section": "B",
+  "gold": "C5",
+  "pred": "C2",
+  "q": "Is it better to give cash because needs are still changing?"
+ },
+ {
+  "section": "B",
+  "gold": "C5",
+  "pred": "C1",
+  "q": "Are physical items more likely to create delays?"
+ },
+ {
+  "section": "C",
+  "gold": "C4",
+  "pred": "C6",
+  "q": "Are all three cash donation options basically the same?"
+ },
+ {
+  "section": "C",
+  "gold": "C4",
+  "pred": "C6",
+  "q": "Is it better to split unrestricted cash across all three organizations?"
+ },
+ {
+  "section": "D",
+  "gold": "C6",
+  "pred": "C4",
+  "q": "If people are injured, should I choose the Medical relief fund?"
+ },
+ {
+  "section": "D",
+  "gold": "C6",
+  "pred": "C4",
+  "q": "Does earmarking make my donation more accountable?"
+ },
+ {
+  "section": "D",
+  "gold": "C6",
+  "pred": "C3",
+  "q": "What happens if everyone chooses food relief?"
+ },
+ {
+  "section": "D",
+  "gold": "C6",
+  "pred": "C4",
+  "q": "Could the medical fund become overfunded while shelter is underfunded?"
+ },
+ {
+  "section": "E",
+  "gold": "C3",
+  "pred": "C8",
+  "q": "What does \"platform-curated\" mean?"
+ },
+ {
+  "section": "E",
+  "gold": "C3",
+  "pred": "C2",
+  "q": "Are the ShopBridge bundles selected based on actual needs?"
+ },
+ {
+  "section": "E",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "Do bundles create logistics problems?"
+ },
+ {
+  "section": "E",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "Are bundles easier to deliver because they are standardized?"
+ },
+ {
+  "section": "E",
+  "gold": "C8",
+  "pred": "C1",
+  "q": "If I buy a bundle, does ShopBridge ship it directly to the disaster area?"
+ },
+ {
+  "section": "F",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "Which individual item is most useful right now?"
+ },
+ {
+  "section": "F",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "Should I buy food packs because people need food immediately?"
+ },
+ {
+  "section": "F",
+  "gold": "C1",
+  "pred": "C5",
+  "q": "Are individual items harder to sort and transport?"
+ },
+ {
+  "section": "F",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "Should I avoid individual items unless they are clearly requested?"
+ },
+ {
+  "section": "F",
+  "gold": "C5",
+  "pred": "C6",
+  "q": "Does buying a specific item reduce the organization's flexibility?"
+ },
+ {
+  "section": "G",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "I want to help children feel better. Should I donate toys?"
+ },
+ {
+  "section": "G",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "Are toys a bad choice right now?"
+ },
+ {
+  "section": "G",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "Would medical teams prefer cash instead of donated medicine?"
+ },
+ {
+  "section": "H",
+  "gold": "C1",
+  "pred": "C3",
+  "q": "How can donated items create problems for responders?"
+ },
+ {
+  "section": "H",
+  "gold": "C1",
+  "pred": "C5",
+  "q": "Are cash and bundles easier to consolidate than individual items?"
+ },
+ {
+  "section": "H",
+  "gold": "C1",
+  "pred": "C2",
+  "q": "How do blocked roads affect which donation is best?"
+ },
+ {
+  "section": "H",
+  "gold": "C1",
+  "pred": "C5",
+  "q": "Is it better to donate things that are already packaged as kits?"
+ },
+ {
+  "section": "H",
+  "gold": "C8",
+  "pred": "C4",
+  "q": "Does ShopBridge handle delivery, or do relief organizations handle it?"
+ },
+ {
+  "section": "H",
+  "gold": "C1",
+  "pred": "C3",
+  "q": "If the item is useful but hard to deliver, should I still choose it?"
+ },
+ {
+  "section": "I",
+  "gold": "C4",
+  "pred": "C8",
+  "q": "How do I know these organizations are real?"
+ },
+ {
+  "section": "I",
+  "gold": "C8",
+  "pred": "C4",
+  "q": "Why should I trust ShopBridge with this campaign?"
+ },
+ {
+  "section": "I",
+  "gold": "C8",
+  "pred": "C2",
+  "q": "Are you using information from responders on the ground?"
+ },
+ {
+  "section": "I",
+  "gold": "C5",
+  "pred": "C8",
+  "q": "Is the platform biased toward options that are easier for it to sell?"
+ },
+ {
+  "section": "J",
+  "gold": "C2",
+  "pred": "C1",
+  "q": "What are the most urgent needs in the first 48 hours?"
+ },
+ {
+  "section": "J",
+  "gold": "C1",
+  "pred": "C3",
+  "q": "If storage space is limited, should I avoid bulky items?"
+ },
+ {
+  "section": "J",
+  "gold": "C5",
+  "pred": "C6",
+  "q": "If needs may change tomorrow, should I choose flexible options?"
+ },
+ {
+  "section": "J",
+  "gold": "C3",
+  "pred": "C1",
+  "q": "Would medical care be handled by professionals rather than donors?"
+ },
+ {
+  "section": "J",
+  "gold": "C5",
+  "pred": "C1",
+  "q": "What option best supports responders in the first few days?"
+ },
+ {
+  "section": "K",
+  "gold": "C5",
+  "pred": "C6",
+  "q": "Should I put all 100 credits into one unrestricted cash option?"
+ },
+ {
+  "section": "K",
+  "gold": "C6",
+  "pred": "C5",
+  "q": "What basket would be best if I want some control but also flexibility?"
+ },
+ {
+  "section": "L",
+  "gold": "C8",
+  "pred": "C4",
+  "q": "Are you actually connected to real responders?"
+ },
+ {
+  "section": "L",
+  "gold": "C8",
+  "pred": "C4",
+  "q": "Is \"trusted disaster-response\" just a label?"
+ },
+ {
+  "section": "L",
+  "gold": "C8",
+  "pred": "C4",
+  "q": "Does the platform profit from certain items?"
+ },
+ {
+  "section": "M",
+  "gold": "C5",
+  "pred": "C3",
+  "q": "I want my donation to feel personal. Is a blanket a good choice?"
+ },
+ {
+  "section": "M",
+  "gold": "C3",
+  "pred": "C2",
+  "q": "I want to help families with children. Should I choose toys or food?"
+ },
+ {
+  "section": "M",
+  "gold": "C3",
+  "pred": "C2",
+  "q": "I want to help people sleeping outside. What should I pick?"
+ },
+ {
+  "section": "M",
+  "gold": "C3",
+  "pred": "C5",
+  "q": "Would a family appreciate a toy even if it is not operationally urgent?"
+ },
+ {
+  "section": "M",
+  "gold": "C5",
+  "pred": "C4",
+  "q": "If I donate cash, will victims know someone helped them?"
+ },
+ {
+  "section": "O",
+  "gold": "C5",
+  "pred": "C6",
+  "q": "Which option is most robust if the situation changes tomorrow?"
+ },
+ {
+  "section": "O",
+  "gold": "C5",
+  "pred": "C1",
+  "q": "Which choices are likely to age badly if needs change?"
+ },
+ {
+  "section": "O",
+  "gold": "C5",
+  "pred": "C6",
+  "q": "Should I maximize flexibility or immediate item usefulness?"
+ },
+ {
+  "section": "P",
+  "gold": "C8",
+  "pred": "C3",
+  "q": "Are some items intentionally bad choices?"
+ }
+]

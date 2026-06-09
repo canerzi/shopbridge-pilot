@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SUBPROJECT_BASKET - ShopBridge Mockup v7</title>
+<style>
+:root{
+  --navy-950:#071326;--navy-900:#0b1d3a;--navy-850:#10294d;--blue-700:#0f58c9;--blue-600:#1767e8;
+  --slate-950:#020617;--slate-900:#111827;--slate-700:#334155;--slate-600:#475569;--slate-400:#94a3b8;--slate-300:#cbd5e1;--slate-100:#f1f5f9;
+  --green:#16713c;--green-soft:#dcfce7;--purple:#5b3bbd;--purple-soft:#ede9f7;--gold:#f5c451;--gpt-teal:#10a37f;
+  --card:0 8px 24px rgba(15,23,42,.08);--font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 18% 0%,rgba(59,130,246,.19),transparent 34%),linear-gradient(135deg,#dce7f7,#edf3fb 46%,#f7f9fc);font-family:var(--font);color:var(--slate-900);padding:18px}
+.priorstrip{max-width:1480px;margin:0 auto 12px;background:linear-gradient(135deg,#ede9f7,#f4f0ff);border:1px solid #c4b5fd;border-radius:14px;padding:11px 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;color:#1e1b4b}
+.priorstrip .icon{color:var(--purple);display:flex;align-items:center}.priorstrip strong{color:var(--purple);font-weight:700}.priorstrip .chips{display:flex;gap:6px;flex-wrap:wrap}.priorstrip .chip{background:#fff;color:var(--purple);border:1px solid #c4b5fd;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600}.priorstrip .note{color:#6b7280;font-style:italic;font-size:12px;margin-left:auto}
+.armtoggle{max-width:1480px;margin:0 auto 12px;background:#0b1220;color:#e5e7eb;padding:10px 16px;border-radius:12px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:12px}.production .armtoggle{display:none}.armtoggle .lbl{color:#93c5fd;letter-spacing:1.5px;font-weight:700;font-size:11px}.armtoggle .group{display:flex;gap:4px;background:rgba(255,255,255,.08);padding:3px;border-radius:7px}.armtoggle button{padding:6px 12px;background:transparent;color:#e5e7eb;border:0;border-radius:5px;cursor:pointer;font:inherit;font-size:12px}.armtoggle button.active{background:var(--blue-600);font-weight:600}.armtoggle button:hover:not(.active){background:rgba(255,255,255,.12)}
+.browser{max-width:1480px;margin:0 auto;border-radius:28px;background:rgba(255,255,255,.86);box-shadow:0 28px 80px rgba(7,19,38,.22);border:1px solid rgba(255,255,255,.75);backdrop-filter:blur(18px)}
+.browserbar{height:44px;background:linear-gradient(180deg,#111827,#0b1220);display:grid;grid-template-columns:94px 1fr 92px;align-items:center;padding:0 14px;color:#e5e7eb;border-radius:28px 28px 0 0}.dots{display:flex;gap:8px}.dots span{width:12px;height:12px;border-radius:50%;display:block}.dots span:nth-child(1){background:#ff5f57}.dots span:nth-child(2){background:#ffbd2e}.dots span:nth-child(3){background:#28c840}.address{justify-self:center;width:min(620px,100%);height:28px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:#dbeafe}
+.header{min-height:78px;background:linear-gradient(135deg,var(--navy-950),var(--navy-850) 58%,#0d3f7c);color:white;display:flex;align-items:center;gap:18px;padding:18px 26px;border-bottom:1px solid rgba(255,255,255,.12)}
+.logo{width:48px;height:48px;border:2px solid rgba(255,255,255,.82);border-radius:16px;display:grid;place-items:center;font-weight:850;background:rgba(255,255,255,.09)}.logo svg{width:32px;height:32px}.brand{font-size:26px;font-weight:850;letter-spacing:-.035em;line-height:1}.subtitle{color:#bfdbfe;font-size:14px;margin-top:7px}.budget{margin-left:auto;display:flex;align-items:center;gap:16px;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,rgba(16,163,127,.30),rgba(23,103,232,.32));border:1.5px solid rgba(125,211,252,.7);box-shadow:0 4px 20px rgba(23,103,232,.28),inset 0 1px 0 rgba(255,255,255,.18);white-space:nowrap;font-size:15px}.budget b{color:#fff}.budget #allocatedTop{color:#5eead4}.budget b{color:white}.divider{width:1px;height:22px;background:rgba(255,255,255,.28)}
+.workspace{display:grid;grid-template-columns:minmax(740px,1.65fr) minmax(420px,.95fr);min-height:870px;align-items:start;border-radius:0 0 28px 28px;overflow:visible}.donation{padding:16px;background:linear-gradient(180deg,rgba(248,250,252,.74),rgba(255,255,255,.96));border-right:1px solid rgba(203,213,225,.8);position:relative;border-radius:0 0 0 28px}.charityhero{background:linear-gradient(135deg,#eef4ff,#ffffff 60%);border:1px solid #dbeafe;border-radius:18px;box-shadow:var(--card);padding:14px 18px 16px;margin-bottom:14px}.charityhero .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:5px 10px;border-radius:999px;background:#eff6ff;border:1px solid #bfdbfe;color:#0f58c9;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.charityhero .charityname{font-size:28px;font-weight:900;letter-spacing:-.04em;color:#0b1d3a;margin-top:8px}.charityhero .charitycopy{color:#475569;font-size:13px;margin-top:5px}
+.cartcard{background:white;border:1px solid #cbd5e1;border-radius:16px;box-shadow:var(--card);margin-bottom:14px;overflow:hidden}.cartcard .head{padding:11px 16px;background:linear-gradient(135deg,#0b1d3a,#0f58c9);color:white;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:700;flex-wrap:wrap}.cartcard .head .cartlbl{flex:1;display:flex;align-items:center;gap:8px;min-width:250px}.cartcard .head .checkout{background:#10a37f;color:white;border:1px solid rgba(255,255,255,.18);padding:5px 12px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.04em;text-transform:uppercase}.cartcard .head .checkout:hover{background:#0d8c6c}.cartcard .head .checkout:disabled{opacity:.45;cursor:not-allowed}.cartcard .head .clear{background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.3);padding:5px 12px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;letter-spacing:.04em;text-transform:uppercase}.cartcard .head .clear:disabled{opacity:.4;cursor:not-allowed}.cartcard .head .toggle{background:rgba(255,255,255,.15);color:white;border:0;width:28px;height:28px;border-radius:8px;cursor:pointer;font-size:14px;font-family:inherit}.cartcard .body{padding:10px 16px;font-size:12.5px;color:var(--slate-700);display:none}.cartcard.expanded .body{display:block}.cartcard .row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dotted rgba(100,116,139,.3)}.cartcard .row b{color:var(--slate-900);font-weight:700}.cartcard .totalrow{display:flex;justify-content:space-between;padding:6px 0 0;margin-top:4px;border-top:1px solid #cbd5e1;font-size:13px}.cartcard .totalrow b{color:var(--blue-700);font-weight:800}.cartcard .lineitem{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:4px 0;font-size:12px;border-bottom:1px dotted rgba(100,116,139,.2)}.cartcard .lineitem .ctrls-mini{display:flex;gap:4px;align-items:center}.cartcard .lineitem .ctrls-mini button{width:22px;height:22px;border:1px solid #cbd5e1;background:white;border-radius:5px;cursor:pointer;font:inherit;font-weight:700;display:grid;place-items:center;padding:0;color:var(--slate-700)}.cartcard .lineitem .ctrls-mini .n{min-width:18px;text-align:center;font-weight:700;color:var(--slate-900)}
+.panel{background:rgba(255,255,255,.9);border:1px solid rgba(203,213,225,.86);border-radius:18px;box-shadow:var(--card);margin-bottom:14px;overflow:hidden}.title{display:flex;align-items:center;gap:10px;padding:13px 16px 9px;font-size:13px;font-weight:850;letter-spacing:.055em;text-transform:uppercase}.title:before{content:"";width:5px;height:20px;border-radius:99px;background:var(--accent)}.catalog{--accent:var(--blue-600)}.hint{margin-left:auto;color:#64748b;font-size:12px;letter-spacing:0;text-transform:none;font-weight:550}.cataloggrid{display:grid;grid-template-columns:1fr;gap:12px;padding:2px 16px 16px;transition:opacity .18s,filter .18s}.catalogrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.sectionheader{margin:8px 2px 2px;padding:8px 4px 6px;font-size:11.5px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-700);border-bottom:1px solid rgba(203,213,225,.85);display:flex;align-items:center;gap:8px}.sectionheader:before{content:"";width:4px;height:14px;border-radius:99px;background:var(--slate-400)}.sectionheader.cash:before{background:var(--green)}.sectionheader.bundles:before{background:var(--purple)}.sectionheader.items:before{background:var(--blue-600)}.sectionheader .scount{margin-left:auto;font-size:10.5px;color:var(--slate-400);font-weight:600;letter-spacing:.02em;text-transform:none}
+.catalogcard{height:242px;border:1px solid rgba(148,163,184,.45);background:linear-gradient(180deg,#fff,#fbfdff);border-radius:14px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;display:flex;flex-direction:column}.catalogcard:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(15,23,42,.13)}.catalogcard .cardvisual{height:121px;background:white;overflow:hidden;border-bottom:1px solid rgba(226,232,240,.9);display:flex;align-items:center;justify-content:center}.catalogcard .cardvisual img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}.catalogcard .info{padding:8px 11px 6px;flex:1;display:flex;flex-direction:column;min-height:0}
+/* v4: Brand tag is now an ABSOLUTELY-POSITIONED badge in the top-left corner of the card, sitting above the image. Solid dark backgrounds + white text — foolproof readability regardless of image content. */
+.brandtag{position:absolute!important;top:8px!important;left:8px!important;z-index:5!important;display:inline-block!important;margin:0!important;padding:5px 11px!important;border-radius:6px!important;background:#0f172a!important;color:#ffffff!important;border:none!important;font-size:11px;font-weight:900!important;letter-spacing:.05em;text-transform:uppercase;max-width:calc(100% - 16px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 4px 12px rgba(0,0,0,.28)!important;text-shadow:none!important}
+.catalogcard.voucher .brandtag{background:#15803d!important;color:#ffffff!important;border-color:transparent!important}
+.catalogcard.bundle .brandtag{background:#6d28d9!important;color:#ffffff!important;border-color:transparent!important}
+.catalogcard.item .brandtag{background:#1e40af!important;color:#ffffff!important;border-color:transparent!important}.catalogcard .name{font-size:13px;font-weight:850;line-height:1.16;letter-spacing:-.015em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:31px}.catalogcard .desc{margin-top:4px;color:var(--slate-600);font-size:11.3px;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:14px}.catalogcard .price{margin-top:auto;color:var(--blue-700);font-size:16px;font-weight:950;text-align:right}.catalogcard.voucher .price{color:var(--green)}.catalogcard.bundle .price{color:var(--purple)}.ctrls{display:flex;align-items:center;justify-content:center;gap:0;margin:7px 8px 8px;border:1px solid #cbd5e1;border-radius:9px;overflow:hidden;background:white}.ctrls button{flex:1;border:0;background:white;color:var(--slate-700);font:inherit;font-weight:700;font-size:14px;cursor:pointer;padding:5px 0;transition:background .12s}.ctrls button:hover:not(:disabled){background:#f1f5f9;color:var(--blue-700)}.ctrls button:disabled{color:#cbd5e1;cursor:not-allowed}.ctrls .qty{flex:1;text-align:center;font-weight:800;color:var(--slate-900);font-size:13px;padding:5px 0;border-left:1px solid #e2e8f0;border-right:1px solid #e2e8f0}.catalogcard.voucher .ctrls{border-color:#16713c}.catalogcard.bundle .ctrls{border-color:#5b3bbd}.catalogcard.item .ctrls{border-color:#0f58c9}.catalogcard.voucher .ctrls button:hover:not(:disabled){background:var(--green-soft);color:var(--green)}.catalogcard.bundle .ctrls button:hover:not(:disabled){background:var(--purple-soft);color:var(--purple)}.catalogcard.item .ctrls button:hover:not(:disabled){background:#eff6ff;color:var(--blue-700)}.incart{border-color:rgba(23,103,232,.78);box-shadow:0 0 0 3px rgba(23,103,232,.11),0 16px 34px rgba(15,23,42,.1)}.voucher.incart{border-color:rgba(22,113,60,.78);box-shadow:0 0 0 3px rgba(22,113,60,.13),0 16px 34px rgba(15,23,42,.1)}.bundle.incart{border-color:rgba(91,59,189,.78);box-shadow:0 0 0 3px rgba(91,59,189,.13),0 16px 34px rgba(15,23,42,.1)}.catalog-locked .cataloggrid{opacity:.42;filter:grayscale(.55);pointer-events:none}.cataloglocknote{display:none;margin:0 16px 12px;padding:10px 12px;border-radius:12px;background:#fff7ed;border:1px solid #fdba74;color:#9a3412;font-size:12px;font-weight:700}.catalog-locked .cataloglocknote{display:block}
+.bottom{display:grid;grid-template-columns:minmax(170px,.55fr) minmax(220px,1fr);gap:12px}.keep,.final{border-radius:18px;background:rgba(255,255,255,.92);border:1px solid rgba(203,213,225,.86);box-shadow:var(--card);min-height:130px}.keep{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px}.keep .klabel{color:var(--blue-700);font-weight:900;font-size:12px;letter-spacing:.06em}.keep .kvalue{margin-top:8px;color:var(--blue-700);font-size:38px;font-weight:950;letter-spacing:-.08em}.keep .khelp{color:#94a3b8;font-size:11px;margin-top:6px;font-style:italic}.final{overflow:hidden}.final button{width:100%;height:100%;min-height:130px;border:0;color:white;background:linear-gradient(135deg,#0f58c9,#004ce4 55%,#00359d);cursor:pointer;font:inherit;font-size:19px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:14px}.final button:disabled{background:#cbd5e1;color:#94a3b8;cursor:not-allowed}.final button span:last-child{font-size:28px}
+.chatpane{background:radial-gradient(circle at 12% 4%,rgba(59,130,246,.28),transparent 30%),linear-gradient(180deg,var(--navy-950),#071936 42%,#09234a);color:#eaf2ff;padding:14px;display:flex;flex-direction:column;min-width:0;position:sticky;top:18px;max-height:calc(100vh - 36px);min-height:560px;align-self:start;border-radius:0 0 28px 0;overflow:hidden}.tca .chatpane{background:radial-gradient(circle at 12% 4%,rgba(245,196,81,.20),transparent 28%),linear-gradient(180deg,var(--navy-950),#071936 42%,#09234a)}.chatshell{height:100%;border-radius:22px;border:1px solid rgba(191,219,254,.28);background:rgba(5,18,40,.58);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 24px 58px rgba(0,0,0,.22);overflow:hidden;display:flex;flex-direction:column}.chattop{padding:14px 16px 12px;border-bottom:1px solid rgba(191,219,254,.18);display:flex;align-items:center;gap:11px}.gpticon{width:42px;height:42px;border-radius:50%;background:white;display:grid;place-items:center;color:var(--gpt-teal);flex:0 0 auto;box-shadow:0 0 0 3px rgba(147,197,253,.5),0 2px 8px rgba(0,0,0,.25);position:relative}.tca .gpticon{box-shadow:0 0 0 3px rgba(245,196,81,.9),0 0 18px rgba(245,196,81,.5),0 2px 8px rgba(0,0,0,.25)}.gpticon svg{width:26px;height:26px}.verifiedbadge{display:none;position:absolute;right:-7px;bottom:-6px;width:22px;height:22px;border-radius:50%;background:var(--gold);color:#0b1d3a;border:2px solid #071936;place-items:center;font-size:13px;font-weight:900;box-shadow:0 1px 5px rgba(0,0,0,.35)}.tca .verifiedbadge{display:grid}.ctitle{font-weight:800;font-size:16px;display:flex;align-items:center;gap:6px}.ctitle .qualifier{color:#93c5fd;font-weight:500;font-size:11.5px}.tca .ctitle .qualifier{color:#f5d879;font-weight:700}.cstatus{color:#93c5fd;margin-top:2px;font-size:11px;display:flex;align-items:center;gap:5px}.tca .cstatus{color:#fde68a}.cstatus .ondot{width:6px;height:6px;border-radius:50%;background:#10a37f;box-shadow:0 0 6px #10a37f}.tca .cstatus .ondot{background:#f5c451;box-shadow:0 0 6px #f5c451}.spacer{flex:1}.skipbtn{background:transparent;color:#93c5fd;border:1px solid rgba(147,197,253,.4);padding:5px 10px;border-radius:7px;font:inherit;font-size:11px;cursor:pointer;font-weight:600}.skipbtn:hover:not(:disabled){background:rgba(147,197,253,.12)}.skipbtn:disabled{opacity:.45;cursor:not-allowed}.srccard{margin:12px 14px 0;padding:12px 14px;border-radius:13px;display:flex;gap:11px;align-items:flex-start;line-height:1.45}.generic .srccard{background:rgba(147,197,253,.10);border:1px solid rgba(147,197,253,.30);border-left:4px solid #3b82f6;color:#dbeafe}.tca .srccard{background:linear-gradient(180deg,rgba(245,196,81,.17),rgba(245,196,81,.06));border:1px solid rgba(245,196,81,.45);border-left:4px solid #f5c451;color:#fdecc0;box-shadow:0 4px 20px rgba(245,196,81,.12)}.noai .srccard{display:none}.srcicon{width:26px;height:26px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:14px}.generic .srcicon{border:1.5px solid rgba(147,197,253,.7);color:#bfdbfe}.tca .srcicon{background:var(--gold);color:#0b1d3a;box-shadow:0 0 12px rgba(245,196,81,.55)}.srctitle{font-weight:900;font-size:12.5px;letter-spacing:.045em;text-transform:uppercase;margin-bottom:3px}.generic .srctitle{color:#bfdbfe}.tca .srctitle{color:#f5d879}.srcbody{font-size:11.8px;line-height:1.42;opacity:.96}.messages{flex:1;overflow-y:auto;padding:14px 16px 8px;display:flex;flex-direction:column;gap:13px;scroll-behavior:smooth;min-height:200px}.messages::-webkit-scrollbar{width:7px}.messages::-webkit-scrollbar-thumb{background:rgba(191,219,254,.22);border-radius:99px}.chatrow{display:flex;gap:9px;align-items:flex-end;animation:rise .28s ease both}.chatrow.user{justify-content:flex-end}.avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;font-weight:900;font-size:11px;border:1px solid rgba(255,255,255,.35);background:white;color:var(--gpt-teal)}.avatar.user{background:rgba(59,130,246,.3);color:white;border-color:rgba(255,255,255,.45)}.avatar svg{width:18px;height:18px}.bubble{max-width:min(380px,86%);padding:11px 13px;border-radius:14px;font-size:13.5px;line-height:1.5;white-space:pre-wrap;position:relative}.assistant .bubble{background:rgba(219,234,254,.14);border:1px solid rgba(191,219,254,.16);color:#eff6ff;border-bottom-left-radius:6px}.user .bubble{background:linear-gradient(135deg,var(--blue-700),#0b4eb4);color:white;border-bottom-right-radius:6px;box-shadow:0 12px 26px rgba(15,88,201,.2)}.time{display:block;text-align:right;color:rgba(219,234,254,.74);font-size:9.5px;margin-top:6px}.typing{display:inline-flex;align-items:center;gap:5px;min-height:20px}.typing span{width:7px;height:7px;border-radius:99px;background:#bfdbfe;opacity:.35;animation:dot 1.4s infinite ease-in-out}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}.understandbox{margin-top:10px;padding-top:10px;border-top:1px solid rgba(191,219,254,.18)}.understandbtn{width:100%;min-height:42px;border:0;border-radius:12px;background:linear-gradient(135deg,#10a37f,#0d8c6c);color:white;font:inherit;font-weight:850;cursor:pointer;box-shadow:0 12px 28px rgba(16,163,127,.2)}.tca .understandbtn{background:linear-gradient(135deg,#f5c451,#c58d16);color:#0b1d3a}.actions{padding:10px 16px 12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.chip{border:1px solid rgba(191,219,254,.38);background:rgba(255,255,255,.04);color:#eaf2ff;min-height:38px;border-radius:99px;font:inherit;font-size:12px;font-weight:600;cursor:pointer;transition:.18s;padding:0 10px}.chip:hover{background:rgba(59,130,246,.22);border-color:rgba(219,234,254,.7);transform:translateY(-1px)}.chip:disabled{opacity:.4;cursor:not-allowed;transform:none}.aboutbtn{display:flex;align-items:center;justify-content:center;gap:7px;margin:9px 16px 2px;background:rgba(255,255,255,.05);border:1px solid rgba(191,219,254,.45);border-radius:10px;color:#cfe3ff;font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;padding:10px 0}.aboutbtn:hover{background:rgba(59,130,246,.16);border-color:rgba(219,234,254,.7)}.tca .aboutbtn{border-color:rgba(245,196,81,.5);color:#f5d879}.tca .aboutbtn:hover{background:rgba(245,196,81,.14)}.noai .aboutbtn{display:none}.aboutbtn:disabled{opacity:.4;cursor:not-allowed}.demoonly{display:none}.demo .demoonly{display:inline-flex}.demoreset{align-self:center;margin:2px auto 8px;background:rgba(255,255,255,.08);color:#cbd5e1;border:1px dashed rgba(191,219,254,.45);border-radius:8px;font:inherit;font-size:11px;font-weight:600;cursor:pointer;padding:5px 12px}.demoreset:hover{background:rgba(255,255,255,.14)}.inputarea{padding:12px 16px 14px;border-top:1px solid rgba(191,219,254,.18);display:grid;grid-template-columns:1fr 46px;gap:8px}.chatinput{min-height:46px;border-radius:14px;border:1px solid rgba(191,219,254,.3);background:rgba(255,255,255,.96);color:#0f172a;padding:0 14px;font:inherit;font-size:13px;outline:0}.chatinput:focus{border-color:#93c5fd;box-shadow:0 0 0 4px rgba(59,130,246,.18)}.send{width:46px;height:46px;border:0;border-radius:14px;color:white;background:linear-gradient(135deg,#10a37f,#0d8c6c);font-size:20px;cursor:pointer;font-family:inherit}.send:disabled{background:#475569;cursor:not-allowed;opacity:.5}.turncounter{text-align:center;color:#93c5fd;font-size:10.5px;padding:4px 0 6px;letter-spacing:.04em}.turncounter.warning{color:#fbbf24}.turncounter.exhausted{color:#f87171;font-weight:700}.chatpane.collapsed{display:none}.reopenbtn{display:none;align-items:center;gap:9px;position:fixed;top:18px;right:22px;background:linear-gradient(135deg,#10a37f,#0d8c6c);color:white;border:0;padding:12px 19px;border-radius:999px;cursor:pointer;font:inherit;font-size:13px;font-weight:800;letter-spacing:.01em;z-index:200;box-shadow:0 12px 30px rgba(16,163,127,.45);animation:reopenpulse 2.6s ease-in-out infinite}.reopenbtn::before{content:"💬";font-size:15px;line-height:1}.reopenbtn:hover{filter:brightness(1.06);box-shadow:0 16px 40px rgba(16,163,127,.65)}@keyframes reopenpulse{0%,100%{transform:translateY(0);box-shadow:0 12px 30px rgba(16,163,127,.45)}50%{transform:translateY(-2px);box-shadow:0 16px 42px rgba(16,163,127,.72)}}.chat-collapsed .reopenbtn{display:inline-flex}.chat-collapsed .workspace{grid-template-columns:1fr}.chat-collapsed .chatpane{display:none}.noai .workspace{grid-template-columns:1fr}.noai .chatpane{display:none}.noai .reopenbtn{display:none!important}.noai .cataloglocknote{display:none!important}
+.modalbackdrop{position:fixed;inset:0;background:rgba(2,6,23,.55);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:300;padding:18px}.modalbackdrop.show{display:flex}.modal{width:min(520px,100%);background:white;border-radius:22px;box-shadow:0 30px 90px rgba(2,6,23,.35);padding:22px;border:1px solid #e2e8f0}.modal .eyebrow{display:inline-flex;padding:4px 9px;border-radius:99px;background:#eff6ff;border:1px solid #bfdbfe;color:#0f58c9;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}.modal h2{margin:12px 0 8px;font-size:22px;letter-spacing:-.04em;color:#0b1d3a}.modal p{color:#475569;line-height:1.5;margin:0 0 18px;font-size:14px}.modalactions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}.modalactions button{border:0;border-radius:12px;padding:11px 14px;font:inherit;font-weight:800;cursor:pointer}.modalactions .secondary{background:#eef2ff;color:#1e3a8a}.modalactions .primary{background:#0f58c9;color:white}.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(18px);background:#071326;color:white;padding:14px 18px;border-radius:999px;box-shadow:0 20px 48px rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:.24s;font-size:14px;z-index:350}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}#analyticsJson{display:none}.summarymodal{width:min(560px,100%)}.summarysub{color:#475569;font-size:13px;line-height:1.5;margin:0 0 14px}.summarylist{max-height:300px;overflow-y:auto;border:1px solid #e2e8f0;border-radius:14px;padding:4px 6px;margin-bottom:12px}.sumrow{display:flex;align-items:center;gap:12px;padding:9px 8px}.sumrow+.sumrow{border-top:1px solid #eef2f7}.sumthumb{width:46px;height:46px;flex:0 0 auto;border-radius:9px;object-fit:cover;background:#f1f5f9;border:1px solid #e2e8f0}.sumname{flex:1;min-width:0}.sumname b{display:block;font-size:13px;color:#0b1d3a;line-height:1.2}.sumname span{font-size:11px;color:#64748b}.sumqty{font-size:11.5px;color:#475569;font-weight:700;white-space:nowrap}.sumtotal{font-size:14px;font-weight:900;color:#0f58c9;white-space:nowrap;min-width:70px;text-align:right}.summarytotals{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-radius:12px;background:#f0f7ff;border:1px solid #cfe3fb;font-size:13px;color:#334155;margin-bottom:6px}.summarytotals b{font-size:16px;color:#0f58c9}.returnoverlay{position:fixed;inset:0;background:rgba(2,6,23,.72);backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;z-index:400}.returnoverlay.show{display:flex}.ro-card{text-align:center;color:#eaf2ff;font-family:inherit;padding:20px}.ro-title{font-size:18px;font-weight:800;margin-top:16px}.ro-sub{font-size:13px;color:#93c5fd;margin-top:6px}.ro-spin{width:38px;height:38px;border-radius:50%;border:3px solid rgba(147,197,253,.3);border-top-color:#10a37f;animation:rospin .8s linear infinite;margin:0 auto}@keyframes rospin{to{transform:rotate(360deg)}}
+@keyframes dot{0%,80%,100%{opacity:.35;transform:translateY(0)}40%{opacity:1;transform:translateY(-4px)}}@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes flash{0%,100%{box-shadow:none}50%{box-shadow:0 0 0 4px rgba(220,38,38,.18)}}
+@media(max-width:1180px){.workspace{grid-template-columns:1fr}.donation{border-right:0}.chatpane{display:none}.chatpane.mobile-open{display:flex;position:fixed;inset:0;z-index:100;padding:12px}.chatpane.mobile-open .chatshell{height:100%}.mobilechatfab{display:flex;position:fixed;bottom:18px;right:18px;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#10a37f,#0d8c6c);color:white;border:0;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:90;font-family:inherit}.noai .mobilechatfab{display:none}.mobile-close{display:flex;position:absolute;top:18px;right:18px;background:rgba(255,255,255,.2);border:0;color:white;width:32px;height:32px;border-radius:50%;align-items:center;justify-content:center;font-size:18px;cursor:pointer;z-index:101;font-family:inherit}}
+@media(min-width:1181px){.mobilechatfab,.mobile-close{display:none}}
+@media(max-width:780px){body{padding:8px}.browser{border-radius:18px}.browserbar{grid-template-columns:70px 1fr 30px}.header{align-items:flex-start;flex-direction:column;gap:12px}.budget{margin-left:0;width:100%;justify-content:space-between}.catalogrow{grid-template-columns:1fr}.catalogcard{height:250px}.bottom{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.chip:nth-child(5){grid-column:auto}.priorstrip{font-size:12px;padding:8px 12px}.priorstrip .note{display:none}}
+
+/* User-note refinements: larger cards, clearer prices, more spacious chat headers. */
+/* v5: card grew taller (~338px) and the image area got a ~36px top padding so the floating brand badge sits in clean whitespace above the product image instead of overlapping it. */
+.catalogcard{min-height:358px!important;box-shadow:0 10px 26px rgba(15,23,42,.08)}
+.catalogcard:hover{transform:translateY(-3px)!important;box-shadow:0 20px 40px rgba(15,23,42,.14)!important}
+.catalogcard .cardvisual{height:172px!important;background:linear-gradient(180deg,#ffffff,#f8fafc);border-bottom:1px solid rgba(203,213,225,.75);padding:38px 6px 6px}
+.catalogcard .cardvisual img{max-width:100%;max-height:100%;object-fit:contain}
+.catalogcard .info{padding:11px 14px 10px!important;min-height:140px;display:flex;flex-direction:column;gap:4px;flex:1 1 auto}
+.catalogcard .brandtag{position:absolute!important;top:8px!important;left:8px!important;z-index:5!important;margin:0!important;font-size:12px!important;line-height:1.2!important;padding:5px 12px!important;max-width:calc(100% - 16px)!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:900!important;border-radius:6px!important;box-shadow:0 4px 12px rgba(0,0,0,.32)!important;color:#ffffff!important;border:none!important}
+.catalogcard .name{font-size:14px!important;line-height:1.22!important;min-height:36px!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.catalogcard .desc{font-size:12.5px!important;line-height:1.28!important;min-height:50px!important;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.catalogcard .price{font-size:15.5px!important;line-height:1.15!important;text-align:right;align-self:stretch;margin-top:auto!important;padding-top:8px;padding-bottom:4px;border-top:1px solid #e2e8f0;white-space:nowrap}
+.catalogcard .ctrls{margin:8px 12px 12px!important;flex:0 0 auto;min-height:34px}
+.catalogcard .ctrls button,.catalogcard .ctrls .qty{padding:7px 0!important;font-size:14px!important}
+/* Variable-cash input: replaces the static qty span on voucher cards */
+.catalogcard.voucher .ctrls.cash .qty.amount-input{flex:1;border:0;background:white;text-align:center;font-weight:800;font-size:14px;color:var(--green);padding:7px 4px;width:100%;outline:none;-moz-appearance:textfield;border-left:1px solid #e2e8f0;border-right:1px solid #e2e8f0}
+.catalogcard.voucher .ctrls.cash .qty.amount-input::-webkit-outer-spin-button,.catalogcard.voucher .ctrls.cash .qty.amount-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.catalogcard.voucher .ctrls.cash .qty.amount-input:focus{background:#f0fdf4;box-shadow:inset 0 0 0 2px var(--green-soft)}
+.catalogcard.voucher .price .anyamt{font-size:13px;font-weight:700;color:#15803d;font-style:italic;letter-spacing:.02em}
+.keep .kvalue{font-size:34px!important;letter-spacing:-.055em!important}.final button{font-size:20px!important;line-height:1.25;padding:0 18px}.final button span:first-child{max-width:88%}
+.chattop{padding:16px 16px 14px!important;min-height:86px;align-items:flex-start!important}.chattop > div:nth-child(2){flex:1 1 auto;min-width:0;overflow:hidden;padding-top:2px}.gpticon{width:40px!important;height:40px!important;margin-top:2px}.gpticon svg{width:25px!important;height:25px!important}.verifiedbadge{width:20px!important;height:20px!important}.ctitle{font-size:17px!important;line-height:1.18;display:flex;flex-direction:column;align-items:flex-start;gap:1px}.ctitle .qualifier{display:block;width:100%;font-size:11.5px!important;line-height:1.25;margin-top:1px;letter-spacing:.01em;opacity:.92}.cstatus{font-size:11.5px!important;line-height:1.35;margin-top:5px!important;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;align-items:flex-start}.cstatus .ondot{margin-top:5px;flex:0 0 auto}.skipbtn{font-size:12px!important;padding:8px 12px!important;border-radius:10px!important;white-space:nowrap}.attr{margin:14px 16px 0!important;padding:13px 15px!important;font-size:12.8px!important;line-height:1.45!important}.attr .i{width:24px!important;height:24px!important;font-size:12px!important}.bubble{font-size:14px!important}.reopenbtn{font-size:12px!important;padding:16px 9px!important;background:linear-gradient(135deg,#0f58c9,#0d8c6c)!important}
+@media(max-width:780px){.catalogcard{min-height:350px!important}.catalogcard .cardvisual{height:160px!important;padding:36px 4px 4px!important}.catalogcard .name{font-size:13.8px!important}.catalogcard .desc{font-size:12.3px!important;min-height:48px!important}}
+
+</style>
+</head>
+<body>
+<!-- pre-task strip and demo/arm-toggle controls removed for production -->
+<div class="browser">
+  <div class="browserbar"><div class="dots"><span></span><span></span><span></span></div><div class="address">🔒 shopbridge.example/earthquake-relief-checkout</div><div></div></div>
+  <header class="header">
+    <div class="logo" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M10 40c9-15 35-15 44 0" stroke="#fed7aa" stroke-width="6" stroke-linecap="round"/><path d="M16 42h32" stroke="#fed7aa" stroke-width="6" stroke-linecap="round"/><path d="M18 46h28l-4 10H22l-4-10Z" fill="#fed7aa" opacity=".95"/><path d="M25 40v13M39 40v13" stroke="#0b1d3a" stroke-width="3" opacity=".45"/></svg></div>
+    <div><div class="brand">ShopBridge</div><div class="subtitle">Earthquake relief marketplace</div></div>
+    <div class="budget"><span>Budget: <b>100 credits</b></span><span class="divider"></span><span>Allocated: <b id="allocatedTop">0 credits</b></span></div>
+  </header>
+  <main class="workspace">
+    <section class="donation">
+      <div class="cartcard" id="cartCard">
+        <div class="head"><div class="cartlbl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span><b id="cartTotal">0 credits</b> allocated · <b id="cartRemainingHead">100 credits</b> unallocated · <span id="cartCount">0</span> cards</span></div><button class="checkout" id="topCheckoutBtn" disabled>Complete order</button><button class="clear" id="clearBtn" disabled>Clear all</button><button class="toggle" id="cartToggle" title="Show details">▾</button></div>
+        <div class="body" id="cartBody"><div class="row"><span>Cash (any need)</span><b id="unrTot">0 credits</b></div><div class="row"><span>Directed cash</span><b id="earTot">0 credits</b></div><div class="row"><span>Curated bundles</span><b id="bunTot">0 credits</b></div><div class="row"><span>Individual items</span><b id="itmTot">0 credits</b></div><div id="cartLines"></div><div class="totalrow"><span>Total allocated</span><b id="cartTotal2">0 / 100 credits</b></div></div>
+      </div>
+      <div class="panel catalog"><div class="title">Donation options</div><div class="cataloglocknote">Please review the assistant message and click "I understand" before choosing donation options.</div><div class="cataloggrid" id="catalogGrid"></div></div>
+      <div class="bottom"><div class="keep"><div class="klabel">KEEP</div><div class="kvalue" id="keepValue">100 credits</div><div class="khelp">Any unallocated credits stay with you</div></div><div class="final"><button id="finalize" disabled><span id="finalLabel">Select at least one option</span><span>›</span></button></div></div>
+    </section>
+    <aside class="chatpane" id="chatPane">
+      <div class="chatshell">
+        <div class="chattop"><div class="gpticon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v3l-2.597 1.5-2.607-1.5z"/></svg><span class="verifiedbadge" title="Verified source edition">✓</span></div><div><div class="ctitle">ChatGPT <span class="qualifier" id="chatQualifier"></span></div><div class="cstatus"><span class="ondot"></span><span id="chatStatus"></span></div></div><div class="spacer"></div><button class="skipbtn" id="skipBtn">Hide AI assistant</button></div>
+        <div class="srccard" id="srcCard"><div class="srcicon" id="srcIcon">i</div><div><div class="srctitle" id="srcTitle"></div><div class="srcbody" id="srcBody"></div></div></div>
+        <div class="messages" id="messages"></div>
+        <div class="actions" id="chipActions"><button class="chip" data-topic="cash_vs_items" data-q="When is cash a better choice than donating specific items?">Cash vs. items</button><button class="chip" data-topic="earmarking" data-q="How does directing cash to a specific cause compare with giving flexible cash?">Directed vs. flexible cash</button><button class="chip" data-topic="items" data-q="How do the individual items and curated bundles compare?">Items &amp; bundles</button><button class="chip" data-topic="logistics" data-q="How do donation choices affect logistics and delivery?">Delivery &amp; logistics</button><button class="chip" data-topic="local" data-q="How do local conditions affect what is most useful to donate?">Local conditions</button><button class="chip" data-topic="trust" data-q="How do I know my donation will be used responsibly?">Trust &amp; transparency</button></div>
+        <button class="aboutbtn" id="aboutBtn" data-topic="about_assistant" data-q="What are you, and where does your information come from?">ⓘ About this assistant</button>
+        <div class="turncounter" id="turnCounter">Engage with assistant - your choice · 0 of 6 questions used</div>
+        <button class="demoreset demoonly" id="resetQBtn">↻ Reset questions (demo)</button>
+        <div class="inputarea"><input id="chatInput" class="chatinput" maxlength="180" placeholder="Type a question, or pick a topic above..." /><button id="send" class="send" aria-label="Send">↗</button></div>
+      </div>
+    </aside>
+    <button class="mobilechatfab" id="mobileFab" aria-label="Show AI assistant"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073z"/></svg></button><button class="mobile-close" id="mobileClose" aria-label="Hide AI assistant">×</button>
+  </main>
+</div>
+<button class="reopenbtn" id="reopenBtn">Show AI assistant</button>
+<div class="modalbackdrop" id="finalReminder"><div class="modal"><span class="eyebrow">Before you finalize</span><h2>Assistant guidance is still available</h2><p>You can still review the assistant's guidance or ask a question before finalizing your donation basket.</p><div class="modalactions"><button class="secondary" id="askQuestionBtn">Ask a question</button><button class="primary" id="finalizeAnywayBtn">Finalize my basket</button></div></div></div>
+<div class="modalbackdrop" id="orderSummary"><div class="modal summarymodal"><span class="eyebrow">Almost done</span><h2>Review your donation</h2><p class="summarysub">Here&#39;s what you&#39;ve chosen to donate. You can return to the survey now, or ask the assistant once more before you finish.</p><div class="summarylist" id="summaryLines"></div><div class="summarytotals" id="summaryTotals"></div><div class="modalactions"><button class="secondary" id="summaryAskBtn">Ask the assistant again</button><button class="primary" id="returnSurveyBtn">Complete order &#8594;</button></div></div></div>
+<div class="returnoverlay" id="returnOverlay"><div class="ro-card"><div class="ro-spin"></div><div class="ro-title">Returning to the survey…</div><div class="ro-sub">Saving your responses and taking you back to finalize.</div></div></div>
+<div class="toast" id="toast">Decision recorded.</div>
+<textarea id="analyticsJson" aria-hidden="true"></textarea>
+<script>
+window.FORCED_ARM="generic";
+const BUDGET = 100;
+const params = new URLSearchParams(location.search);
+const DEMO = ['1','true','yes'].includes((params.get('demo')||'').toLowerCase());
+const TURN_CAP = DEMO ? 999 : 6;
+const HARD_CAP = DEMO ? 999 : 9;   // total sends (answers + clarifies + refusals) — hard ceiling so vague looping can't run forever (lifted in demo)
+const START_TIME = Date.now();
+const RETURN_URL_BASE = '';  // Qualtrics return-survey link; or pass ?return=<url-encoded> from Qualtrics. Empty = log instead of redirect.
+const RETURN_NONCE = params.get('nonce') || ('n_' + Math.random().toString(36).slice(2,12));
+const state = {
+  arm: ['noai','generic','tca'].includes(window.FORCED_ARM) ? window.FORCED_ARM : (['noai','generic','tca'].includes(params.get('arm')) ? params.get('arm') : 'tca'),
+  production: ['1','true','yes'].includes((params.get('prod')||'').toLowerCase()),
+  participantId: params.get('pid') || sessionStorage.getItem('basket_pid') || ('p_' + Math.random().toString(36).slice(2,10)),
+  layoutSeed: null,
+  layoutBlocks: [],
+  cart: {},
+  basketEvents: [],
+  userTurns: 0,
+  totalSends: 0,
+  thinking: false,
+  understood: false,
+  understandAt: null,
+  firstCatalogInteractionAt: null,
+  topicClicks: [],
+  openQuestions: [],
+  ratings: [],
+  ratingHintShown: false,
+  finalReminderShown: false,
+  finalReminderAction: null,
+  chatCollapsed: false,
+  completedAt: null
+};
+sessionStorage.setItem('basket_pid', state.participantId);
+const $ = id => document.getElementById(id);
+const fmt = n => `${n} ${n===1?'credit':'credits'}`;
+const nowISO = () => new Date().toISOString();
+const timeStr = () => new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+function esc(s){return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+
+// ===== Locked v2.9 catalog (15 cards) =====
+const catalog = [
+  // Row 1 — Unrestricted cash (NGO-typed)
+  {id:'UNR-LOC', row:1, kind:'voucher', group:'unrestricted', brand:'Community Aid Foundation',  label:'Cash donation',          name:'Cash to Community Aid Foundation',            desc:'To be used by the NGO for any kind of beneficiary need (food, shelter, medical, hygiene, or other).',     price:10, img:'UNR-LOC.png'},
+  {id:'UNR-INT', row:1, kind:'voucher', group:'unrestricted', brand:'Global Aid Alliance',         label:'Cash donation',          name:'Cash to Global Aid Alliance',                 desc:'To be used by the NGO for any kind of beneficiary need (food, shelter, medical, hygiene, or other).',     price:10, img:'UNR-INT.png'},
+  {id:'UNR-GOV', row:1, kind:'voucher', group:'unrestricted', brand:'National Emergency Authority',label:'Cash donation',          name:'Cash to National Emergency Authority',        desc:'To be used by the agency for any kind of beneficiary need (food, shelter, medical, hygiene, or other).',  price:10, img:'UNR-GOV.png'},
+  // Row 2 — Directed cash (sectoral, Community Aid Foundation default)
+  {id:'EAR-FOD', row:2, kind:'voucher', group:'earmarked',    brand:'ReliefBridge',                label:'Directed cash donation', name:'ReliefBridge Food relief fund',              desc:'To be used by verified relief organization ReliefBridge for food-related beneficiary needs.',                            price:10, img:'EAR-FOD.png'},
+  {id:'EAR-WSH', row:2, kind:'voucher', group:'earmarked',    brand:'ReliefBridge',                label:'Directed cash donation', name:'ReliefBridge Water & Hygiene relief fund',   desc:'To be used by verified relief organization ReliefBridge for water and hygiene-related beneficiary needs.',               price:10, img:'EAR-WSH.png'},
+  {id:'EAR-MED', row:2, kind:'voucher', group:'earmarked',    brand:'ReliefBridge',                label:'Directed cash donation', name:'ReliefBridge Medical relief fund',           desc:'To be used by verified relief organization ReliefBridge for health-related beneficiary needs.',                          price:10, img:'EAR-MED.png'},
+  // Row 3 — Platform-curated bundles
+  {id:'BDL-CLD', row:3, kind:'bundle',  group:'bundles',      brand:'ShopBridge',                  label:'Platform curated',       name:'ShopBridge Cold-Response Pack',              desc:'Platform-curated cold-weather pack. Contains: insulated sleeping bag, sleeping mat, warm socks, and stay-warm essentials.', price:25, img:'BDL-CLD.png'},
+  {id:'BDL-WTR', row:3, kind:'bundle',  group:'bundles',      brand:'ShopBridge',                  label:'Platform curated',       name:'ShopBridge Clean Water Kit',                 desc:'Platform-curated household water kit. Contains: 20L jerry can, 100 water purification tablets, tap accessory for dispensing.', price:20, img:'BDL-WTR.png'},
+  {id:'BDL-PWR', row:3, kind:'bundle',  group:'bundles',      brand:'ShopBridge',                  label:'Platform curated',       name:'ShopBridge Power & Light Pack',              desc:'Platform-curated power & light kit. Contains: solar-powered LED lantern, emergency hand-crank flashlight, and 10,000 mAh power bank.', price:22, img:'BDL-PWR.png'},
+  // Row 4 — Priority items
+  {id:'ITM-BLK', row:4, kind:'item',    group:'items',        brand:'WarmNest',                    label:'WarmNest',               name:'Thermal fleece blanket, 180×220 cm',         desc:'Reusable thermal fleece blanket, 180×220 cm.',                                                           price:10, img:'ITM-BLK.png'},
+  {id:'ITM-HYG', row:4, kind:'item',    group:'items',        brand:'FreshDay',                    label:'FreshDay',               name:'Essential Hygiene Pack',                     desc:'Personal hygiene essentials: soap, sanitary pads, toilet paper, and a small handwashing kit.',           price:8,  img:'ITM-HYG.png'},
+  {id:'ITM-RTE', row:4, kind:'item',    group:'items',        brand:'MealReady',                   label:'MealReady',              name:'3-day adult food pack',                      desc:'Three-day adult food pack: 6 shelf-stable ready-to-eat meals. No cooking required.',                     price:12, img:'ITM-RTE.png'},
+  // Row 5 — Non-priority items
+  {id:'ITM-TOY', row:5, kind:'item',    group:'items',        brand:'PlayJoy',                     label:'PlayJoy',                name:'5-piece soft toy assortment',                desc:'Five-piece assortment of plush toys and stuffed animals for children.',                                  price:10, img:'ITM-TOY.png'},
+  {id:'ITM-MED', row:5, kind:'item',    group:'items',        brand:'MediQuick',                   label:'MediQuick',              name:'Painkiller + cough syrup + cold/flu bundle', desc:'Over-the-counter medicine bundle: painkiller tablets, cough syrup, and cold/flu relief.',                price:8,  img:'ITM-MED.png'},
+  {id:'ITM-PET', row:5, kind:'item',    group:'items',        brand:'PawCare',                     label:'PawCare',                name:'Dry pet food pack, 5 kg',                    desc:'Five-kilogram bag of dry pet food for cats and dogs.',                                                   price:12, img:'ITM-PET.png'}
+];
+
+// ===== Seeded shuffle + layout =====
+function xmur3(str){for(var i=0,h=1779033703^str.length;i<str.length;i++){h=Math.imul(h^str.charCodeAt(i),3432918353);h=h<<13|h>>>19;}return function(){h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);return (h^h>>>16)>>>0;};}
+function mulberry32(a){return function(){var t=a+=0x6D2B79F5;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
+function seededShuffle(arr, rng){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function ensureSeed(fresh=false){if(fresh) sessionStorage.removeItem('basket_layout_seed');let s=sessionStorage.getItem('basket_layout_seed');if(!s){s='seed_'+Date.now()+'_'+Math.random().toString(36).slice(2);sessionStorage.setItem('basket_layout_seed',s);}state.layoutSeed=s;return s;}
+
+// Three blocks (Path C): Cash donations / Curated bundles / Specific items.
+// Block ORDER reshuffles per load. Within Block 1 (cash), Row 1 always sits above Row 2.
+// Within each row, cards shuffle position. Items (Rows 4 + 5) are mixed into a single pool of six.
+function buildLayoutRows(fresh=false){
+  const seed = ensureSeed(fresh);
+  const rng = mulberry32(xmur3(seed)());
+  const byRow = n => catalog.filter(c => c.row === n);
+  const cashRows = [seededShuffle(byRow(1), rng), seededShuffle(byRow(2), rng)];
+  const bundles  = seededShuffle(byRow(3), rng);
+  const mixed    = seededShuffle(catalog.filter(c => c.row === 4 || c.row === 5), rng);
+  const blocks = [
+    {key:'cash',    header:'Cash donations',  count:6, rows: cashRows},
+    {key:'bundles', header:'Curated bundles', count:3, rows: [bundles]},
+    {key:'items',   header:'Specific items',  count:6, rows: [mixed.slice(0,3), mixed.slice(3,6)]}
+  ];
+  state.layoutBlocks = seededShuffle(blocks, rng);
+}
+
+function cardById(id){return catalog.find(c=>c.id===id);}
+function priceOf(id){return cardById(id).price;}
+function nameOf(id){return cardById(id).name;}
+function isCashCard(card){return card.kind==='voucher';}
+// Cash cards: state.cart[id] is the amount in credits (variable). Items/bundles: state.cart[id] is units × price.
+function contributionOf(id){const card=cardById(id);const v=state.cart[id]||0;return isCashCard(card)?v:v*card.price;}
+function total(){return Object.keys(state.cart).reduce((s,id)=>s+contributionOf(id),0);}
+function remaining(){return BUDGET-total();}
+function applyBodyClasses(){document.body.className=[state.arm,DEMO?'demo':'',state.production?'production':'',state.chatCollapsed?'chat-collapsed':'',(state.arm!=='noai'&&!state.understood)?'catalog-locked':''].filter(Boolean).join(' ');}
+function updatePriorChips(){const raw=params.get('prior')||params.get('pt_items')||'Thermal blanket,Hygiene pack,RTE food,Toys,Pet food';const vals=raw.split(',').map(s=>s.trim()).filter(Boolean).slice(0,8);$('priorChips').innerHTML=vals.map(v=>`<span class="chip">${esc(v)}</span>`).join('');}
+function trackFirstCatalogInteraction(){if(!state.firstCatalogInteractionAt){state.firstCatalogInteractionAt=Date.now();syncAnalytics();}}
+function logBasket(action,id){state.basketEvents.push({t:nowISO(),action,id:id||null,value:id?(state.cart[id]||0):null,total_cr:total()});}
+function add(id){
+  if(state.arm!=='noai'&&!state.understood)return;
+  trackFirstCatalogInteraction();
+  const card=cardById(id);
+  const inc=isCashCard(card)?1:card.price;  // cash: +1 credit per click; items/bundles: +price per click
+  if(total()+inc>BUDGET){document.querySelector('.budget').style.animation='flash .55s ease';setTimeout(()=>document.querySelector('.budget').style.animation='',600);return;}
+  state.cart[id]=(state.cart[id]||0)+1;
+  logBasket('add',id);
+  render();
+}
+function remove(id){if(state.arm!=='noai'&&!state.understood)return;trackFirstCatalogInteraction();if(!state.cart[id])return;state.cart[id]--;if(state.cart[id]===0)delete state.cart[id];logBasket('remove',id);render();}
+function setAmount(id, val){
+  if(state.arm!=='noai'&&!state.understood)return;
+  trackFirstCatalogInteraction();
+  const card=cardById(id);
+  if(!isCashCard(card))return;  // only cash cards accept typed amounts
+  val=Math.max(0, parseInt(val,10)||0);
+  // Cap so this card's contribution + everything else fits in budget
+  const otherTotal=total()-contributionOf(id);
+  const maxAllowed=Math.max(0, BUDGET-otherTotal);
+  if(val>maxAllowed){val=maxAllowed;document.querySelector('.budget').style.animation='flash .55s ease';setTimeout(()=>document.querySelector('.budget').style.animation='',600);}
+  if(val===0){delete state.cart[id];} else {state.cart[id]=val;}
+  logBasket('set',id);
+  render();
+}
+function clearCart(){state.cart={};logBasket('clear',null);render();}
+window.add=add;window.remove=remove;window.setAmount=setAmount;
+
+function ctrlsHTML(id){
+  const card=cardById(id);
+  const qty=state.cart[id]||0;
+  if(isCashCard(card)){
+    // Variable amount: typeable input + 1-credit step buttons
+    return `<div class="ctrls cash" onclick="event.stopPropagation()"><button onclick="remove('${id}')" ${qty===0?'disabled':''} aria-label="Decrease by 1 credit">−</button><input class="qty amount-input" type="number" min="0" max="${BUDGET}" value="${qty}" onchange="setAmount('${id}', this.value)" onclick="event.stopPropagation();this.select()" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}" aria-label="Credits allocated"/><button onclick="add('${id}')" aria-label="Increase by 1 credit">+</button></div>`;
+  }
+  // Discrete quantity for items/bundles
+  return `<div class="ctrls" onclick="event.stopPropagation()"><button onclick="remove('${id}')" ${qty===0?'disabled':''} aria-label="Remove one">−</button><span class="qty">${qty}</span><button onclick="add('${id}')" aria-label="Add one">+</button></div>`;
+}
+function renderCatalogCard(card){
+  const isVouch=isCashCard(card);
+  const qty=state.cart[card.id]||0;
+  const rightLabel=isVouch?'<span class="anyamt">Any amount</span>':fmt(card.price);
+  return `<div class="catalogcard ${card.kind} ${qty?'incart':''}" data-card-id="${card.id}"><div class="brandtag" title="${esc(card.brand)}">${esc(card.label||card.brand)}</div><div class="cardvisual"><img src="${esc(card.img)}" alt="${esc(card.name)}" loading="lazy"/></div><div class="info"><div class="name">${esc(card.name)}</div><div class="desc">${esc(card.desc)}</div><div class="price">${rightLabel}</div></div>${ctrlsHTML(card.id)}</div>`;
+}
+function render(){
+  applyBodyClasses();
+  $('catalogGrid').innerHTML = state.layoutBlocks.map(block => `
+    <div class="sectionheader ${block.key}"><span>${esc(block.header)}</span><span class="scount">${block.count} card${block.count===1?'':'s'}</span></div>
+    ${block.rows.map(row => `<div class="catalogrow">${row.map(renderCatalogCard).join('')}</div>`).join('')}
+  `).join('');
+  updateCart();
+  syncAnalytics();
+}
+function updateCart(){
+  let t={unrestricted:0,earmarked:0,bundles:0,items:0};
+  Object.keys(state.cart).forEach(id=>{
+    const card=cardById(id);
+    const contrib=contributionOf(id);
+    if(card.group==='unrestricted')t.unrestricted+=contrib;
+    else if(card.group==='earmarked')t.earmarked+=contrib;
+    else if(card.group==='bundles')t.bundles+=contrib;
+    else t.items+=contrib;
+  });
+  const ttl=total(), rem=BUDGET-ttl;
+  // count: cash cards count as 1 if any allocation; items/bundles use their unit count
+  const count=Object.keys(state.cart).reduce((a,id)=>{const c=cardById(id);return a+(isCashCard(c)?1:state.cart[id]);},0);
+  $('unrTot').textContent=fmt(t.unrestricted);$('earTot').textContent=fmt(t.earmarked);$('bunTot').textContent=fmt(t.bundles);$('itmTot').textContent=fmt(t.items);
+  $('cartTotal').textContent=fmt(ttl);$('cartRemainingHead').textContent=fmt(rem);$('cartTotal2').textContent=`${ttl} / ${BUDGET} credits`;$('cartCount').textContent=count;
+  $('allocatedTop').textContent=fmt(ttl);$('keepValue').textContent=fmt(rem);$('clearBtn').disabled=count===0;
+  const lines=Object.keys(state.cart).map(id=>{
+    const card=cardById(id);
+    const v=state.cart[id];
+    const display=isCashCard(card)?`${v} cr`:`${v}× @ ${card.price}cr`;
+    return `<div class="lineitem"><span>${esc(nameOf(id))}</span><span class="ctrls-mini"><button onclick="remove('${id}')">−</button><span class="n">${display}</span><button onclick="add('${id}')">+</button></span></div>`;
+  }).join('');
+  $('cartLines').innerHTML=lines||'<div style="padding:8px 0;text-align:center;color:#94a3b8;font-style:italic;font-size:11px">Cart is empty - tap cards to add</div>';
+  const canCheckout=ttl>0;const label=canCheckout?`Complete order · Donate ${fmt(ttl)} · Keep ${fmt(rem)}`:'Select at least one option';
+  $('finalize').disabled=!canCheckout;$('finalLabel').textContent=label;$('topCheckoutBtn').disabled=!canCheckout;
+}
+
+// ===== Chat content =====
+const baseWelcome="Hi, I can help you think through which donation options may be most useful in the first days after this disaster. Needs can change quickly, and responders may have limited capacity to sort, store, and transport donated products. Low-priority or unsolicited items can sometimes create extra burden. You can ask me about cash vs products, directed cash, urgent needs, item usefulness, logistics burden, or transparency before you finalize your basket.";
+const fieldAttribution="\n\nMy recommendations are synthesized from on-site responders, regional NGOs, army and fire & rescue personnel, and real-time updates on weather conditions and media reports in your region.";
+const ANSWERS={
+  urgent_needs:"Current guidance prioritizes the thermal fleece blanket, Essential Hygiene Pack, and 3-day adult food pack. The platform-curated Cold-Response Pack, Clean Water Kit, and Power & Light Pack are also aligned with the reported acute needs. Pet food, soft toys, and OTC medicine may feel meaningful, but they are not in the immediate priority set unless specifically requested by responders.",
+  cash_vs_items:"Cash is usually better when needs are changing, when responders must buy locally, or when logistics capacity is tight. Specific items can help when they are explicitly requested and standardized. In this basket you can allocate any amount of credits to cash cards (no fixed unit), and discrete units to items and bundles at their listed price. Unrestricted cash gives the most flexibility; directed cash narrows use to a cause; curated bundles reduce mismatch because the platform pre-assembles need-aligned packs.",
+  earmarking:"Directed donations restrict cash to a specific purpose such as food, water and hygiene, or medical relief. They can help donors feel control and support a clearly defined need. The tradeoff is lower flexibility: if the situation shifts, cash for any need lets the NGO redirect funds faster.",
+  logistics:"Donation choices affect sorting, storage, transport, and last-mile delivery. Cash-funded procurement and curated bundles are easier to consolidate. Individual products can create extra handling burden when many donors send varied goods, especially items that need verification, sorting, size matching, or special storage.",
+  trust:"For transparency, use verified organizations, check public reporting, and prefer channels that document procurement and distribution. ReliefBridge receives the proceeds here, while ShopBridge is only the marketplace interface. Directing cash to a specific cause can increase perceived control, but it is not the same as operational effectiveness.",
+  fallback:"I can help with cash vs items, urgent needs, directing cash to a specific cause, logistics burden, or trust and transparency. Pick a topic above, or rephrase your question."
+};
+function classify(text){const t=text.toLowerCase();if(/earmark|direct|restrict|specific cause|fund|wash|water|hygiene|food relief|medical relief/.test(t))return 'earmarking';if(/trust|transparen|responsib|audit|report|where.*money|used/.test(t))return 'trust';if(/logistic|delivery|transport|sort|storage|burden|reach|ship/.test(t))return 'logistics';if(/need|priority|most|urgent|shortage|right now|useful/.test(t))return 'urgent_needs';if(/cash|item|product|bundle|better|buy|specific/.test(t))return 'cash_vs_items';return 'fallback';}
+const msgWrap=$('messages');function scroll(){msgWrap.scrollTop=msgWrap.scrollHeight;}
+function assistantMsg(html, includeGate=false){msgWrap.insertAdjacentHTML('beforeend',`<div class="chatrow assistant"><div class="avatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073z"/></svg></div><div class="bubble">${html}${includeGate?'<div class="understandbox"><button class="understandbtn" id="understandBtn">I understand</button></div>':''}<span class="time">${timeStr()}</span></div></div>`);scroll();const btn=$('understandBtn');if(btn)btn.onclick=understandGate;}
+function userMsg(text){msgWrap.insertAdjacentHTML('beforeend',`<div class="chatrow user"><div class="bubble">${esc(text)}<span class="time">${timeStr()}</span></div><div class="avatar user">●</div></div>`);scroll();}
+function showWelcome(){msgWrap.innerHTML='';if(state.arm==='noai')return;assistantMsg(esc(baseWelcome+(state.arm==='tca'?fieldAttribution:'')),!state.understood);}
+function understandGate(){if(state.understood)return;state.understood=true;state.understandAt=Date.now();const b=$('understandBtn');if(b){b.textContent='Understood';b.disabled=true;}state.chatCollapsed=false;render();updateChatHeader();syncAnalytics();}
+function updateChatHeader(){
+  if(state.arm==='generic'){
+    $('chatQualifier').textContent='— for general donation assistance';
+    $('chatStatus').textContent='Online · general-purpose model';
+    if($('srcTitle'))$('srcTitle').textContent='General-purpose AI';
+    if($('srcBody'))$('srcBody').textContent='A general assistant trained on public sources — not specific to this disaster. It can help you think through the donation options on this page.';
+    if($('srcIcon'))$('srcIcon').textContent='i';
+  }else if(state.arm==='tca'){
+    $('chatQualifier').textContent='— Field Response edition';
+    $('chatStatus').textContent='Live · verified field sources';
+    if($('srcTitle'))$('srcTitle').textContent='Verified field sources';
+    if($('srcBody'))$('srcBody').textContent='Synthesized from on-site responders, NGOs, fire & rescue, and regional health authorities — kept current with field, weather, and media reports from the affected area.';
+    if($('srcIcon'))$('srcIcon').textContent='✓';
+  }
+  $('skipBtn').disabled=state.arm!=='noai'&&!state.understood;
+}
+function typing(){msgWrap.insertAdjacentHTML('beforeend',`<div class="chatrow assistant" id="typingRow"><div class="avatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073z"/></svg></div><div class="bubble"><span class="typing"><span></span><span></span><span></span></span></div></div>`);scroll();}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const AVATAR_SVG='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073z"/></svg>';
+function typeAnswer(text, meta){return new Promise(resolve=>{const row=document.createElement('div');row.className='chatrow assistant';row.innerHTML=`<div class="avatar">${AVATAR_SVG}</div><div class="bubble"><span class="ttext"></span><span class="time"></span></div>`;msgWrap.appendChild(row);const span=row.querySelector('.ttext');const timeEl=row.querySelector('.time');const bubble=row.querySelector('.bubble');scroll();const step=Math.max(1,Math.ceil(text.length/180));let i=0;(function tick(){i+=step;span.textContent=text.slice(0,i);scroll();if(i<text.length){setTimeout(tick,14);}else{span.textContent=text;timeEl.textContent=timeStr();addReactions(bubble,meta||{});scroll();resolve();}})();});}
+function addReactions(bubble,meta){
+  const hint=document.createElement('div');
+  hint.textContent='A quick reaction helps us improve — optional.';
+  hint.style.cssText='font-size:11px;color:#64748b;margin-top:8px;font-style:italic;';
+  bubble.appendChild(hint);
+  const bar=document.createElement('div');
+  bar.style.cssText='display:flex;gap:6px;margin-top:6px;';
+  const opts=[['👎👎',-2,'Not at all helpful'],['👎',-1,'Not helpful'],['😐',0,'Neutral'],['👍',1,'Helpful'],['👍👍',2,'Very helpful']];
+  opts.forEach(([label,val,title])=>{
+    const b=document.createElement('button');
+    b.type='button';b.textContent=label;b.title=title;b.setAttribute('aria-label',title);
+    b.style.cssText='cursor:pointer;border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:1px 7px;font-size:13px;line-height:1.5;opacity:.55;transition:.12s;';
+    b.onclick=()=>{[...bar.children].forEach(c=>{c.style.background='#fff';c.style.opacity='.5';c.style.borderColor='#cbd5e1';});b.style.background='#dbeafe';b.style.opacity='1';b.style.borderColor='#1767e8';rate(meta,val);};
+    bar.appendChild(b);
+  });
+  bubble.appendChild(bar);
+}
+function rate(meta,value){
+  const rec={turn:(meta.turn!=null?meta.turn:state.userTurns),matched_id:(meta.matched_id!=null?meta.matched_id:null),band:(meta.band!=null?meta.band:null),rating:value,timestamp:nowISO()};
+  state.ratings=state.ratings.filter(r=>r.turn!==rec.turn);state.ratings.push(rec);
+  syncAnalytics();
+  try{fetch('/api/v4/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({participant_id:state.participantId,arm:state.arm,...rec})});}catch(e){}
+}
+async function sendText(text, topic=null){text=(text||'').trim();if(!text||state.thinking||state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP)return;state.thinking=true;userMsg(text);state.userTurns++;state.totalSends++;if(topic)state.topicClicks.push({topic,question:text,timestamp:nowISO()});else state.openQuestions.push({question:text,timestamp:nowISO(),beforeUnderstand:!state.understood});$('chatInput').value='';updateTurnCounter();syncAnalytics();typing();
+  const t0=Date.now();
+  let answer, meta={turn:state.userTurns};
+  try{
+    const ctrl=new AbortController();const to=setTimeout(()=>ctrl.abort(),30000);
+    const res=await fetch('/api/v4/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:text,arm:state.arm,turnNumber:state.userTurns,participant_id:state.participantId}),signal:ctrl.signal});
+    clearTimeout(to);
+    if(!res.ok)throw new Error('status '+res.status);
+    const data=await res.json();
+    console.log('V4 QA routing:',data);
+    answer=data.answer||ANSWERS.fallback;
+    meta.matched_id=(data.matched_id!=null?data.matched_id:null);meta.band=(data.band!=null?data.band:null);meta.action=data.action;meta.options=Array.isArray(data.options)?data.options:null;
+  }catch(e){
+    console.warn('API unavailable or timed out; using local fallback.',e);
+    answer=ANSWERS[classify(text)]||ANSWERS.fallback;
+    meta.fallback=true;
+  }
+  const minThink=2200+Math.random()*700;const elapsed=Date.now()-t0;if(elapsed<minThink)await sleep(minThink-elapsed);
+  const row=$('typingRow');if(row)row.remove();
+  await typeAnswer(answer, meta);
+  if(meta.action==='clarify'||meta.action==='disambiguate'||topic==='about_assistant'){state.userTurns=Math.max(0,state.userTurns-1);updateTurnCounter();}  // clarify/disambiguation/About don't consume a question
+  if(meta.action==='disambiguate'&&meta.options&&meta.options.length){renderDisambig(meta.options);}
+  state.thinking=false;
+  if(state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP){document.querySelectorAll('#chipActions .chip').forEach(c=>c.disabled=true);$('chatInput').disabled=true;$('chatInput').placeholder='Question limit reached';$('send').disabled=true;}
+  syncAnalytics();
+}
+function renderDisambig(options){
+  const row=document.createElement('div');row.className='chatrow assistant';
+  row.innerHTML=`<div class="avatar">${AVATAR_SVG}</div>`;
+  const wrap=document.createElement('div');wrap.style.cssText='display:flex;flex-direction:column;gap:7px;max-width:min(380px,86%);';
+  options.forEach(o=>{
+    const b=document.createElement('button');b.type='button';b.textContent=o.label;
+    b.style.cssText='cursor:pointer;text-align:left;border:1px solid rgba(191,219,254,.45);background:rgba(255,255,255,.06);color:#eaf2ff;border-radius:12px;padding:10px 13px;font:inherit;font-size:12.5px;font-weight:650;transition:.15s;';
+    b.onmouseover=()=>{if(!b.disabled)b.style.background='rgba(59,130,246,.22)';};
+    b.onmouseout=()=>{if(!b.disabled)b.style.background='rgba(255,255,255,.06)';};
+    b.onclick=()=>{if(state.thinking)return;[...wrap.querySelectorAll('button')].forEach(x=>{x.disabled=true;x.style.opacity='.45';x.style.cursor='default';});sendForced(o.id,o.label);};
+    wrap.appendChild(b);
+  });
+  row.appendChild(wrap);msgWrap.appendChild(row);scroll();
+}
+async function sendForced(id,label){
+  if(state.thinking||state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP)return;
+  state.thinking=true;userMsg(label);state.userTurns++;state.totalSends++;
+  state.topicClicks.push({topic:'disambiguation',question:label,matched_id:id,timestamp:nowISO()});
+  updateTurnCounter();syncAnalytics();typing();
+  const t0=Date.now();let answer,meta={turn:state.userTurns};
+  try{
+    const ctrl=new AbortController();const to=setTimeout(()=>ctrl.abort(),30000);
+    const res=await fetch('/api/v4/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({forced_id:id,question:label,arm:state.arm,turnNumber:state.userTurns,participant_id:state.participantId}),signal:ctrl.signal});
+    clearTimeout(to);if(!res.ok)throw new Error('status '+res.status);
+    const data=await res.json();answer=data.answer||ANSWERS.fallback;meta.matched_id=data.matched_id;meta.band=data.band;meta.action=data.action;
+  }catch(e){console.warn('forced fetch failed',e);answer=ANSWERS.fallback;meta.fallback=true;}
+  const minThink=1500+Math.random()*600;const elapsed=Date.now()-t0;if(elapsed<minThink)await sleep(minThink-elapsed);
+  const row=$('typingRow');if(row)row.remove();
+  await typeAnswer(answer,meta);
+  state.thinking=false;
+  if(state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP){document.querySelectorAll('#chipActions .chip').forEach(c=>c.disabled=true);$('chatInput').disabled=true;$('chatInput').placeholder='Question limit reached';$('send').disabled=true;}
+  syncAnalytics();
+}
+function updateTurnCounter(){const el=$('turnCounter');if(DEMO){el.textContent=`Demo mode · ${state.userTurns} question${state.userTurns===1?'':'s'} asked (no limit)`;el.className='turncounter';return;}el.textContent=`Engage with assistant - your choice · ${state.userTurns} of ${TURN_CAP} questions used`;el.className='turncounter'+(state.userTurns>=TURN_CAP?' exhausted':state.userTurns>=TURN_CAP-1?' warning':'');}
+function currentAnalytics(){
+  const basket=Object.keys(state.cart).map(id=>{
+    const c=cardById(id);
+    const v=state.cart[id];
+    const isCash=isCashCard(c);
+    return {id,group:c.group,kind:c.kind,allocation_type:isCash?'variable_cash':'discrete_unit',units:isCash?null:v,credits_per_unit:isCash?null:c.price,total_cr:isCash?v:v*c.price};
+  });
+  return {participant_id:state.participantId,arm_assignment:state.arm==='noai'?1:state.arm==='generic'?2:3,arm_label:state.arm,layout_seed:state.layoutSeed,session_start_iso:new Date(START_TIME).toISOString(),time_to_understand_ms:state.understandAt?state.understandAt-START_TIME:null,understand_click_timestamp:state.understandAt?new Date(state.understandAt).toISOString():null,engaged_chat_before_understand:state.openQuestions.some(q=>q.beforeUnderstand)||state.topicClicks.some(q=>!state.understandAt||new Date(q.timestamp).getTime()<state.understandAt),time_to_first_catalog_interaction_ms:state.firstCatalogInteractionAt?state.firstCatalogInteractionAt-(state.understandAt||START_TIME):null,chat_turns_used:state.userTurns,topic_chip_clicks:state.topicClicks,open_text_questions:state.openQuestions,answer_ratings:state.ratings,basket_events:state.basketEvents,final_basket:basket,total_allocated_cr:total(),total_kept_cr:remaining(),final_reminder_triggered:state.finalReminderShown,final_reminder_action:state.finalReminderAction,order_completion_timestamp:state.completedAt?new Date(state.completedAt).toISOString():null};
+}
+function syncAnalytics(){$('analyticsJson').value=JSON.stringify(currentAnalytics());window.SUBPROJECT_BASKET_ANALYTICS=currentAnalytics;}
+function maybeFinalReminder(){return state.arm!=='noai'&&state.userTurns===0&&state.topicClicks.length===0&&!state.finalReminderShown;}
+function completeOrder(force=false){
+  if(total()<=0)return;
+  if(!force&&maybeFinalReminder()){state.finalReminderShown=true;state.finalReminderAction='shown';$('finalReminder').classList.add('show');syncAnalytics();return;}
+  openOrderSummary();
+}
+function renderOrderSummary(){
+  const ids=Object.keys(state.cart);
+  const list=$('summaryLines');
+  if(!ids.length){list.innerHTML='<div style="padding:16px;text-align:center;color:#94a3b8;font-style:italic">No options selected.</div>';}
+  else{
+    list.innerHTML=ids.map(id=>{
+      const c=cardById(id);const v=state.cart[id];const cash=isCashCard(c);
+      const lineTotal=cash?v:v*c.price;
+      const qty=cash?'Any amount':('×'+v+' · '+c.price+' cr each');
+      return `<div class="sumrow"><img class="sumthumb" src="${esc(c.img)}" alt="${esc(c.name)}"/><div class="sumname"><b>${esc(c.name)}</b><span>${esc(c.label||c.brand)}</span></div><div class="sumqty">${esc(qty)}</div><div class="sumtotal">${fmt(lineTotal)}</div></div>`;
+    }).join('');
+  }
+  $('summaryTotals').innerHTML=`<span>Donating <b>${fmt(total())}</b></span><span>Keeping <b>${fmt(remaining())}</b></span>`;
+  const canAsk=state.arm!=='noai'&&state.userTurns<TURN_CAP&&state.totalSends<HARD_CAP;
+  $('summaryAskBtn').style.display=canAsk?'':'none';
+}
+function openOrderSummary(){renderOrderSummary();$('orderSummary').classList.add('show');syncAnalytics();}
+async function returnToSurvey(){
+  state.completedAt=Date.now();
+  if(!state.finalReminderAction)state.finalReminderAction='returned_to_survey';
+  syncAnalytics();
+  const a=currentAnalytics();
+  const sumGroup=g=>a.final_basket.filter(x=>x.group===g).reduce((s,x)=>s+x.total_cr,0);
+  const itemsCr=a.final_basket.filter(x=>x.kind!=='voucher'&&x.group!=='bundles').reduce((s,x)=>s+x.total_cr,0);
+  const alloc=`cash:${sumGroup('unrestricted')},directed:${sumGroup('earmarked')},bundle:${sumGroup('bundles')},item:${itemsCr},kept:${a.total_kept_cr}`;
+  const engage=`q:${a.chat_turns_used},topics:${a.topic_chip_clicks.length},ratings:${a.answer_ratings.length}`;
+  $('orderSummary').classList.remove('show');
+  $('returnOverlay').classList.add('show');
+  const t0=Date.now();
+  let return_url=null;
+  try{
+    // Server persists the full payload (keyed by pid), mints the HMAC token, and builds the return URL.
+    const res=await fetch('/api/v4/complete',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pid:state.participantId,arm:state.arm,nonce:RETURN_NONCE,allocation_summary:alloc,engagement_summary:engage,analytics:a})});
+    if(res.ok){const d=await res.json();return_url=d.return_url||null;}
+  }catch(e){console.warn('complete endpoint failed; falling back',e);}
+  if(!return_url){
+    const base=params.get('return')||params.get('returnURL')||RETURN_URL_BASE;
+    const usedAi=state.arm==='noai'?'':((a.chat_turns_used>0||(a.topic_chip_clicks&&a.topic_chip_clicks.length>0)||(a.open_text_questions&&a.open_text_questions.length>0))?'1':'0');
+    if(base){const sep=base.includes('?')?'&':'?';return_url=base+sep+'pid='+encodeURIComponent(state.participantId)+'&arm='+encodeURIComponent(state.arm)+'&used_ai='+encodeURIComponent(usedAi)+'&nonce='+encodeURIComponent(RETURN_NONCE)+'&allocation_summary='+encodeURIComponent(alloc)+'&engagement_summary='+encodeURIComponent(engage);}
+  }
+  const wait=Math.max(0,900-(Date.now()-t0));
+  setTimeout(()=>{
+    if(return_url){location.href=return_url;}
+    else{$('returnOverlay').classList.remove('show');$('toast').textContent='Order recorded · Donate '+fmt(total())+' · Keep '+fmt(remaining());$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2800);console.log('No return URL configured.');}
+  },wait);
+}
+function setArm(arm){state.arm=arm;state.cart={};state.basketEvents=[];state.userTurns=0;state.totalSends=0;state.thinking=false;state.understood=(arm==='noai');state.understandAt=null;state.firstCatalogInteractionAt=null;state.topicClicks=[];state.openQuestions=[];state.ratings=[];state.ratingHintShown=false;state.finalReminderShown=false;state.finalReminderAction=null;state.chatCollapsed=false;state.completedAt=null;document.querySelectorAll('.armtoggle button[data-arm]').forEach(b=>b.classList.toggle('active',b.dataset.arm===arm));$('chatPane').classList.remove('mobile-open');showWelcome();updateTurnCounter();updateChatHeader();render();document.querySelectorAll('#chipActions .chip').forEach(c=>c.disabled=false);$('chatInput').disabled=false;$('chatInput').placeholder='Type a question, or pick a topic above...';$('send').disabled=false;}
+$('cartToggle').addEventListener('click',()=>{$('cartCard').classList.toggle('expanded');$('cartToggle').textContent=$('cartCard').classList.contains('expanded')?'▴':'▾';});
+$('clearBtn').addEventListener('click',()=>{if(Object.keys(state.cart).length===0)return;if(confirm('Clear entire cart and start over?'))clearCart();});
+$('send').onclick=()=>sendText($('chatInput').value);
+$('chatInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();sendText(e.target.value);}});
+document.querySelectorAll('#chipActions .chip').forEach(c=>{c.onclick=()=>sendText(c.dataset.q,c.dataset.topic);});
+$('aboutBtn').onclick=()=>sendText($('aboutBtn').dataset.q,$('aboutBtn').dataset.topic);
+$('skipBtn').addEventListener('click',()=>{if(state.arm!=='noai'&&!state.understood)return;state.chatCollapsed=true;applyBodyClasses();});
+$('reopenBtn').addEventListener('click',()=>{state.chatCollapsed=false;applyBodyClasses();});
+$('mobileFab').addEventListener('click',()=>{$('chatPane').classList.add('mobile-open');});
+$('mobileClose').addEventListener('click',()=>{$('chatPane').classList.remove('mobile-open');});
+$('finalize').addEventListener('click',()=>completeOrder(false));$('topCheckoutBtn').addEventListener('click',()=>completeOrder(false));
+$('askQuestionBtn').addEventListener('click',()=>{state.finalReminderAction='ask_question';$('finalReminder').classList.remove('show');state.chatCollapsed=false;applyBodyClasses();$('chatPane').classList.add('mobile-open');$('chatInput').focus();syncAnalytics();});
+$('finalizeAnywayBtn').addEventListener('click',()=>{state.finalReminderAction='finalize_without_ai';$('finalReminder').classList.remove('show');completeOrder(true);});
+$('returnSurveyBtn').addEventListener('click',returnToSurvey);
+$('summaryAskBtn').addEventListener('click',()=>{state.finalReminderAction='ask_again_from_summary';$('orderSummary').classList.remove('show');state.chatCollapsed=false;applyBodyClasses();$('chatPane').classList.add('mobile-open');$('chatInput').focus();syncAnalytics();});
+$('orderSummary').addEventListener('click',e=>{if(e.target.id==='orderSummary')$('orderSummary').classList.remove('show');});
+document.querySelectorAll('.armtoggle button[data-arm]').forEach(btn=>btn.addEventListener('click',()=>setArm(btn.dataset.arm)));
+function resetQuestions(){state.userTurns=0;state.totalSends=0;state.thinking=false;state.ratings=[];state.openQuestions=[];state.topicClicks=[];showWelcome();updateTurnCounter();document.querySelectorAll('#chipActions .chip').forEach(c=>c.disabled=false);if($('aboutBtn'))$('aboutBtn').disabled=false;$('chatInput').disabled=false;$('chatInput').placeholder='Type a question, or pick a topic above...';$('send').disabled=false;syncAnalytics();}
+if(DEMO&&$('resetQBtn')){$('resetQBtn').addEventListener('click',resetQuestions);}
+buildLayoutRows(false);setArm(state.arm);applyBodyClasses();syncAnalytics();
+</script>
+</body>
+</html>

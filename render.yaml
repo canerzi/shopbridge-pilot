@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: shopbridge-pilot
+    runtime: node
+    plan: starter            # paid plan: no idle sleep, and required for a persistent Disk
+    buildCommand: npm install
+    startCommand: node server.js
+    disk:
+      name: data             # persistent volume — survives restarts & redeploys
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false          # set this in the Render dashboard, do NOT commit it
+      - key: OPENAI_MODEL
+        value: gpt-5.4-mini   # change to your pilot model
+      - key: QUALTRICS_RETURN_URL
+        value: https://sabancimanagement.qualtrics.com/jfe/form/SV_7OjA7M4G45YyGge
+      - key: QUALTRICS_HMAC_SECRET
+        sync: false          # set a long random string in the Render dashboard; keep a copy to verify tokens offline
+      - key: LOG_DIR
+        value: /var/data      # write logs.jsonl to the persistent disk so all data is retained
+      - key: LOG_WEBHOOK_URL
+        sync: false          # OPTIONAL: also mirror each record to a webhook (e.g. Google Apps Script -> Sheet)

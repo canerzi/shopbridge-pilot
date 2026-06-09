@@ -1,0 +1,875 @@
+{
+  "answers": [
+    {
+      "id": "Q1.1",
+      "cluster": "C1",
+      "subtopic": "Cash conversion speed",
+      "question": "How quickly does cash actually convert to help on the ground?",
+      "answer": "Cash generally moves into help faster than physical goods: there is nothing to ship, sort, or store before it can be used. Relief agencies can act on monetary gifts quickly, directing them to whatever responders confirm is most urgent and procuring supplies at scale — including from unaffected regions or pre-positioned stock — rather than waiting on individual shipments. In an acute response, where needs are still being assessed, that adaptability is the main advantage: cash can be redirected as the picture changes, while goods are committed the moment they are sent. Exact speed depends on conditions, so it is best read as faster and more flexible, not instant.",
+      "tags": "T1, T6, T8",
+      "source": "USAID 'Cash is Best' (2022); Harvey 2007 (HPG/ODI)"
+    },
+    {
+      "id": "Q1.2",
+      "cluster": "C1",
+      "subtopic": "Physical item lead time",
+      "question": "How long do physical items take to arrive after I donate them?",
+      "answer": "Physical items typically take longer to reach people than cash, because they must be transported, cleared, sorted, and stored first. In large emergencies, in-kind goods also compete for scarce logistics capacity — transport, warehouse space, staff time — which can slow the whole pipeline. And because needs shift during the delivery window, an item that matched a gap when sent may be less needed by the time it arrives. Items that match a confirmed, current need land better than general donations, but lead times for goods are harder to predict than for cash, which carries no shipping or sorting step and can be redirected as the picture changes.",
+      "tags": "T1, T7, T8",
+      "source": "Logistics Cluster 'In-Kind Donation Guidance' (UBDs); jhv 'Material Convergence'"
+    },
+    {
+      "id": "Q1.3",
+      "cluster": "C1",
+      "subtopic": "First-48-hour timeline",
+      "question": "What happens to my donation in the first 48 hours?",
+      "answer": "In the first 48 hours, needs are still being assessed and can change quickly as information arrives from different areas. Flexible support — cash and curated assistance — can be directed to whatever shortages responders confirm, while individual goods enter a longer pipeline of transport and sorting. Priorities in this window usually centre on immediate survival needs — water, food, shelter, warmth, medical care — set through responder assessments rather than fixed in advance. Because the situation is fluid, contributions that can adapt tend to be used sooner than those committed to a specific item before needs are clear.",
+      "tags": "T5, T6",
+      "source": "Sphere Handbook 2018; Logistics Cluster 'In-Kind Donation Guidance'"
+    },
+    {
+      "id": "Q1.7",
+      "cluster": "C1",
+      "subtopic": "Late or surplus items",
+      "question": "What happens to items that arrive too late or are already in surplus?",
+      "answer": "Items that arrive after the acute phase, or that are already in surplus, can become a burden rather than a help. A large influx of low-priority or unneeded goods can clog supply chains and compete for the transport and storage that urgent items need. Responders then have to sort, store, or dispose of them, diverting staff and space — part of what is called a 'second disaster' of unwanted donations. Cash does not carry this risk: it cannot become surplus, since it is simply directed to whatever is needed at the time. Surplus goods can sometimes be redirected to later recovery needs, but matching donations to current needs avoids the problem in the first place.",
+      "tags": "T7, T5",
+      "source": "jhv 'Material Convergence'; Natural Hazards Center 'Second Disaster'; IFRC 'Unsolicited donations'"
+    },
+    {
+      "id": "Q1.8",
+      "cluster": "C1",
+      "subtopic": "Physical distribution mechanism",
+      "question": "How are items physically distributed to people who need them?",
+      "answer": "Distribution generally moves through a coordinated chain: goods arrive at central receiving points, are sorted and prioritised, then pass to local hubs and finally to shelters and households. Local responders and partner agencies usually handle the last-mile step, since they know the area and the people. The efficiency of this flow depends heavily on goods being sorted and matched to need; large volumes of low-priority items slow the movement of high-priority ones. This is one reason assessed-need matching and flexible support are emphasised — they keep the pipeline clear for what is urgent.",
+      "tags": "T7, T5",
+      "source": "Sanchez-Partida 'Humanitarian Logistics'; Logistics Cluster guidance; jhv 'Material Convergence'"
+    },
+    {
+      "id": "Q1.9",
+      "cluster": "C1",
+      "subtopic": "Who delivers donations",
+      "question": "Who actually delivers the donations — volunteers or paid logistics?",
+      "answer": "Delivery typically combines professional logistics and local actors. Longer-haul transport toward the affected region often uses contracted logistics for speed and reliability, while last-mile distribution to shelters and households relies on local responders, partner agencies, and trained volunteers who know the community. Coordination matters: unmanaged volunteer and material convergence can itself create congestion if not organised. The mix varies by context, but coordinated, assessed delivery reaches people more reliably than ad hoc efforts.",
+      "tags": "T5, T7",
+      "source": "Sanchez-Partida 'Humanitarian Logistics'; Hunkovice 'Unaffiliated Volunteers'; jhv 'Material Convergence'"
+    },
+    {
+      "id": "Q2.1",
+      "cluster": "C2",
+      "subtopic": "Most needed now",
+      "question": "What's most needed in this region right now?",
+      "answer": "In this scenario — a winter earthquake in its first days — the most pressing needs typically centre on shelter and warmth, clean water, food, medical care, and hygiene. This reflects information about the response — from on-the-ground sources such as responders, relief organisations, and health authorities — together with established humanitarian guidance. Exact priorities come from on-the-ground assessments rather than fixed lists, because conditions and numbers are still being confirmed. Needs also shift as the response develops, so today's priority may change within days. Flexible support adapts to those changes, while specific goods help most when they match what assessments currently show is needed.",
+      "tags": "T5, T6",
+      "source": "Sphere Handbook 2018; FEMA 'When Disaster Strikes'; scenario context"
+    },
+    {
+      "id": "Q2.2",
+      "cluster": "C2",
+      "subtopic": "Weather",
+      "question": "How are the weather conditions in the region?",
+      "answer": "Conditions in the affected region are cold and wet, with winter temperatures and rain expected to continue for roughly the next ten to twelve days. This matters for donation choices: cold, exposed conditions raise the importance of shelter, warmth, dry bedding, and protection from the elements for people in temporary or damaged housing. Cold weather can also affect health needs and the suitability of certain items. Because the climate is a fixed feature of this scenario, support that addresses warmth and shelter is especially relevant early on.",
+      "tags": "T4, T5",
+      "source": "Scenario specification; Sphere Handbook 2018 (shelter/NFI)"
+    },
+    {
+      "id": "Q2.4",
+      "cluster": "C2",
+      "subtopic": "How priorities are determined",
+      "question": "How do you know what's actually needed in this region right now?",
+      "answer": "Needs are established through structured assessments rather than assumptions. Those working in the response on the ground — responders, relief organisations, and health authorities — gather and share information about what people require, and priorities are set on the basis of assessed need. Established humanitarian guidance also points to circulating priority-item lists so incoming support matches real gaps rather than guesses. Because assessments update as more areas are reached, the picture evolves over the first days and weeks. This is why flexible support is valued: it follows the assessment as it changes, instead of being locked to an early estimate.",
+      "tags": "T5",
+      "source": "Sphere Handbook 2018; Logistics Cluster 'In-Kind Donation Guidance'"
+    },
+    {
+      "id": "Q2.5",
+      "cluster": "C2",
+      "subtopic": "Long-term needs",
+      "question": "What about long-term needs after the immediate response phase?",
+      "answer": "This campaign is focused on the immediate aftermath — the first days after the disaster — so longer-term recovery needs sit outside its scope. Those later needs, such as rebuilding, livelihoods, and sustained health support, are real, but they are handled through other, longer-term efforts rather than this donation task. For the choices here, the relevant question is what helps most in the first days, where flexible support and items matched to current needs are most useful.",
+      "tags": "T6, T2",
+      "source": "Grand Bargain 2016; Harvey 2007 (HPG/ODI)"
+    },
+    {
+      "id": "Q2.6",
+      "cluster": "C2",
+      "subtopic": "Vulnerable groups",
+      "question": "How does the situation differ for vulnerable groups like elderly, children, or disabled people?",
+      "answer": "Vulnerable groups — older people, young children, people with disabilities, and those with medical needs — often require tailored support, and responders allocate aid on the basis of assessed need. Specific needs might include appropriate food, mobility and medical support, warmth, and accessible shelter. Because these requirements are diverse and not easily met by generic goods, flexible support is especially useful: cash lets on-site personnel direct resources to where particular vulnerabilities are identified, adjusting as the picture shifts. Targeted in-kind items can help when a specific need is confirmed, but matching to assessed vulnerability is what makes support effective.",
+      "tags": "T5, T6",
+      "source": "Sphere Handbook 2018; Harvey 2007"
+    },
+    {
+      "id": "Q3.1",
+      "cluster": "C3",
+      "subtopic": "Item: thermal blanket",
+      "question": "What is the thermal blanket?",
+      "answer": "A thermal blanket provides insulation and warmth for people who have lost shelter or are exposed to cold, making it a high-priority item in this winter-earthquake setting. Warmth and protection from the elements are core early needs when housing is damaged and people are in temporary or open shelter. Blankets are compact, durable, and broadly useful, so they match assessed cold-weather needs well in the first days. [Specific product spec, brand, and price are defined by the platform's item list — pending BASKET.] As with any item, it helps most when it matches what responders currently report needing.",
+      "tags": "T4, T5",
+      "source": "Sphere Handbook 2018 (shelter/NFI); scenario context; spec pending BASKET"
+    },
+    {
+      "id": "Q3.2",
+      "cluster": "C3",
+      "subtopic": "Item: dry pet food pack",
+      "question": "What's Dry pet food pack, 5 kg?",
+      "answer": "A dry pet food pack supports companion animals affected by the disaster. It is not useless — animal welfare matters and some households will not leave pets behind — but it is generally lower priority than items meeting people's immediate survival needs for shelter, water, food, and medical care. Pet supplies tend to become more relevant once urgent human needs are covered. [Specific product spec, brand, and price come from the platform's item list — pending BASKET.] Because early capacity is limited, lower-priority goods can also add to sorting and storage load if they arrive ahead of need.",
+      "tags": "T4, T5",
+      "source": "Sphere Handbook 2018; FEMA; jhv 'Material Convergence'; spec pending BASKET"
+    },
+    {
+      "id": "Q3.3",
+      "cluster": "C3",
+      "subtopic": "Item: ready-to-eat food pack",
+      "question": "What's in the ready-to-eat food pack?",
+      "answer": "A ready-to-eat food pack provides immediate nutrition without needing cooking facilities, water, or power — high priority in the first days, when people are displaced and kitchens are unavailable. Food that needs no preparation avoids the problems of items that require cooking or clean water to use safely. It suits the acute phase of this scenario well. [Exact contents, brand, and price are set by the platform's item list — pending BASKET.] As with all goods, it is most useful when it matches current assessed needs and dietary suitability for the population.",
+      "tags": "T4, T5",
+      "source": "Sphere Handbook 2018 (food security); USAID 'Cash is Best'; spec pending BASKET"
+    },
+    {
+      "id": "Q3.4",
+      "cluster": "C3",
+      "subtopic": "Item: hygiene pack",
+      "question": "What's in the hygiene pack?",
+      "answer": "A hygiene pack supports sanitation and disease prevention — a high-priority need in crowded shelters where water and sanitation are disrupted. Hygiene promotion and basic supplies are a core component of humanitarian response, because poor sanitation quickly creates health risks for displaced populations. This makes hygiene items broadly relevant early on. [Specific contents, brand, and price are defined by the platform's item list — pending BASKET.] Hygiene packs work best when their contents match the population's needs and the local context, which is why responders assess composition rather than assuming one standard kit fits everyone.",
+      "tags": "T4, T5",
+      "source": "Sphere Handbook 2018 (WASH); spec pending BASKET"
+    },
+    {
+      "id": "Q3.6",
+      "cluster": "C3",
+      "subtopic": "Item: toys / stuffed animals",
+      "question": "What about the toys / stuffed animals?",
+      "answer": "Toys and comfort items are not useless, but they are lower priority than survival needs in the first days. Once immediate needs for shelter, water, food, and medical care are met, comfort items can support children's morale and a sense of normalcy in shelters — part of why donors are drawn to them. Earlier in the response, though, they deliver less benefit per unit of logistics effort, and goods sent ahead of need add to sorting and storage burden. [Product spec, brand, and price are from the platform's item list — pending BASKET.]",
+      "tags": "T4, T10",
+      "source": "Zagefka 2015; Natural Hazards Center 'Second Disaster'; spec pending BASKET"
+    },
+    {
+      "id": "Q3.7",
+      "cluster": "C3",
+      "subtopic": "Item: cold/flu medication bundle",
+      "question": "What is Painkiller + cough syrup + cold/flu bundle?",
+      "answer": "This is an over-the-counter medication bundle for common symptoms. It is not without value, but individually donated medicines are generally lower priority and are usually handled through professional medical channels rather than donor menus. International guidance discourages unsolicited medicine donations, which can arrive mislabelled, expired, or unsuited to local needs and then require careful screening and disposal. Medical supply is typically coordinated by health authorities and agencies that can match drugs to need and regulation. [Exact contents, brand, and price are defined by the platform's item list — pending BASKET.]",
+      "tags": "T4, T9",
+      "source": "WHO 'Guidelines for Medicine Donations'; FEMA/HowStuffWorks 'worst things to donate'; spec pending BASKET"
+    },
+    {
+      "id": "Q3.8",
+      "cluster": "C3",
+      "subtopic": "Bundle: Clean Water Kit",
+      "question": "What's the Clean Water Kit?",
+      "answer": "A clean-water kit is a curated bundle grouping items around one purpose — safe drinking water and basic water handling. The advantage of a curated kit is coherence: its contents are assembled to address one assessed need together, rather than leaving the donor to match individual items, which reduces the chance of mismatched goods to sort out later. Clean water is a core early priority in this scenario. [Exact contents and price are defined by the platform's bundle list — pending BASKET.] A bundle is less flexible than cash but more targeted than arbitrary individual selection.",
+      "tags": "T3, T4",
+      "source": "Holguín 2022; Natural Hazards Center; Sphere (WASH); contents pending BASKET"
+    },
+    {
+      "id": "Q3.9",
+      "cluster": "C3",
+      "subtopic": "Bundle: Cold-Response Pack",
+      "question": "What's the Cold-Response Pack?",
+      "answer": "A cold-response pack is a curated bundle built around warmth and protection from the elements — a high-priority need in this winter-earthquake scenario, where people are in damaged or temporary shelter. Grouping related items into one kit keeps the contribution targeted to a coherent, assessed need and reduces the sorting and mismatch problems of arbitrary individual goods. [Exact contents and price are defined by the platform's bundle list — pending BASKET.] Compared with cash it is less flexible, but it is a more organised option than picking single items for donors who prefer to give in kind.",
+      "tags": "T3, T4",
+      "source": "Sphere 2018; Holguín 2022; Natural Hazards Center; contents pending BASKET"
+    },
+    {
+      "id": "Q3.10",
+      "cluster": "C3",
+      "subtopic": "Bundle: Power & Light Pack",
+      "question": "What's the Power & Light Pack?",
+      "answer": "A power-and-light pack is a curated bundle providing basic lighting and small-scale power, which can matter where electricity is disrupted — for safety, communication, and managing cold nights. Its relevance depends on the assessed situation; lighting and power needs are real but usually rank behind shelter, water, food, and medical care in the first hours. As a curated kit, it groups related items around one purpose, keeping the donation coherent and reducing mismatch. [Exact contents and price are defined by the platform's bundle list — pending BASKET.]",
+      "tags": "T3, T4",
+      "source": "Sphere 2018; Logistics Cluster; Holguín 2022; contents pending BASKET"
+    },
+    {
+      "id": "Q3.11",
+      "cluster": "C3",
+      "subtopic": "Off-menu: first aid",
+      "question": "Why isn't there a first aid kit option?",
+      "answer": "First aid and medical supplies are generally coordinated through health authorities and established agencies rather than individual donor menus. Medical items must match clinical needs, regulations, and quality standards; unsolicited medical donations can arrive unsuitable, expired, or mislabelled, then need screening and disposal that burdens responders. Professional channels can also procure medical supplies in bulk and direct them where they are clinically needed. So the absence of a first-aid option reflects how medical supply is managed in a coordinated response, not that such items are unimportant — they are handled through institutional procurement.",
+      "tags": "T9, T7",
+      "source": "WHO 'Guidelines for Medicine Donations'; IFRC 'Unsolicited donations'"
+    },
+    {
+      "id": "Q3.12",
+      "cluster": "C3",
+      "subtopic": "Off-menu: tents",
+      "question": "Why aren't tents or temporary shelter on the list?",
+      "answer": "Large-scale shelter, such as tents, is usually procured through institutional channels rather than individual donations. Emergency shelter has technical specifications — size, weather suitability, durability — and is needed in coordinated quantities, which agencies handle through bulk procurement to recognised standards. Individually donated shelter is harder to match to these requirements and can create sorting and transport burden if it doesn't fit. The menu therefore focuses on contributions individuals can make effectively, while bulk shelter is managed by responders who can procure and deploy it at scale and to specification.",
+      "tags": "T7, T9",
+      "source": "Sphere Handbook 2018 (shelter); Logistics Cluster guidance"
+    },
+    {
+      "id": "Q3.13",
+      "cluster": "C3",
+      "subtopic": "Off-menu: generators",
+      "question": "What about generators and fuel?",
+      "answer": "Generators and fuel are heavy, costly to ship, and require safe installation and handling, making them poorly suited to individual in-kind donation. Bulky, high-handling items compete heavily for scarce transport and storage and need trained personnel to deploy safely. Power equipment is therefore typically sourced and managed by responders and agencies that can match it to need, install it safely, and supply fuel reliably. This is why such items sit outside the donor menu — not because power is unimportant, but because it is handled more effectively through coordinated procurement.",
+      "tags": "T7, T9",
+      "source": "Logistics Cluster 'In-Kind Donation Guidance'; jhv 'Material Convergence'"
+    },
+    {
+      "id": "Q3.14",
+      "cluster": "C3",
+      "subtopic": "Off-menu: tools",
+      "question": "Why aren't tools or hardware on the list?",
+      "answer": "Hand tools and construction hardware are generally not collected as individual donations: they raise safety, quality, and matching issues, and are more efficiently bought in bulk to specification. Mixed, unsorted hardware adds to the sorting and handling burden that low-priority or unmatched goods place on responders. Reconstruction needs also come later than the acute survival phase this scenario focuses on. So tools are usually procured through institutional channels when rebuilding begins, rather than donated individually in the first days — again a question of how the need is best met, not whether it exists.",
+      "tags": "T7, T9",
+      "source": "Logistics Cluster guidance; jhv 'Material Convergence'"
+    },
+    {
+      "id": "Q3.15",
+      "cluster": "C3",
+      "subtopic": "Off-menu: generic fallback",
+      "question": "Why isn't [unspecified item] on the list?",
+      "answer": "Items that aren't on this list are not necessarily unwanted — most are simply handled through institutional procurement rather than individual donation. Aid agencies and coordinating bodies disseminate priority-item lists and procure many goods in bulk, to specification, so incoming support matches assessed needs and doesn't create sorting or storage burden. The donor menu focuses on contributions individuals can make effectively in the acute phase. If you're unsure about a specific item, the most reliable approach is to support assessed priorities — flexible options or items confirmed as currently needed — rather than goods sent ahead of demand.",
+      "tags": "T5, T7",
+      "source": "Logistics Cluster guidance; IFRC 'Unsolicited donations'"
+    },
+    {
+      "id": "Q3.16",
+      "cluster": "C3",
+      "subtopic": "Will my item be useful / rejected?",
+      "question": "What if the item I choose isn't actually useful?",
+      "answer": "There is no penalty for choosing an item, and nothing you select here is turned away — the platform's options are all things responders can use at some point. What differs is how urgently each is needed now, and what it costs to hold meanwhile: higher-priority items and curated bundles tend to be used quickly, while lower-priority goods may sit in storage until needed, taking up space and handling capacity. If you'd rather not weigh that yourself, flexible options adapt automatically to current needs. Whatever you choose contributes; the options simply vary in how closely they match the most urgent needs now.",
+      "tags": "T10",
+      "source": "Daniels 2021; Holguín 2022"
+    },
+    {
+      "id": "Q3.17",
+      "cluster": "C3",
+      "subtopic": "Why lower-priority items are listed",
+      "question": "Why are items that may not be urgent even on the list?",
+      "answer": "The platform offers a range of options, and not all are equally urgent in the first days — some are higher-priority (shelter, warmth, water, food, hygiene) and some lower-priority right now. Listing an item doesn't mean it is currently a top need; it means it is available to choose. That is partly so donors can give in the way they prefer, and the assistant can help you tell which options most closely match current needs. Whether you choose higher- or lower-priority options is up to you — they differ in how urgently they are needed, not in whether they are allowed.",
+      "tags": "T4, T10",
+      "source": "Sphere; Holguín; scenario design"
+    },
+    {
+      "id": "Q3.18",
+      "cluster": "C3",
+      "subtopic": "Why items show brands",
+      "question": "Why are there brands on emergency items?",
+      "answer": "The items show brand and product details so you can see exactly what each option is, much like any shopping page. The brand itself does not change how useful an item is in the response — what matters is whether the item type matches current, assessed needs and its priority level. So read it as description, not a signal of relief quality. The specific products shown are set by the platform's item list.",
+      "tags": "T4",
+      "source": "Scenario design (platform item presentation)"
+    },
+    {
+      "id": "Q4.1",
+      "cluster": "C4",
+      "subtopic": "Overhead percentages",
+      "question": "How much of my donation actually reaches survivors vs overhead?",
+      "answer": "The share that reaches people depends on the donation type. Cash generally carries lower transport and logistics costs than physical goods, because it avoids shipping, sorting, and storage; donated items that must be transported and processed carry higher handling overhead. The scale can be striking — agencies producing clean water in-country can cost a fraction of shipping bottled water in. Some operating cost is unavoidable and funds the staff and systems that deliver aid. Rather than focusing on a single percentage, it helps to compare how efficiently each donation type converts into delivered help.",
+      "tags": "T8, T9, T1",
+      "source": "Harvey 2007; USAID 'Cash is Best' (2022)"
+    },
+    {
+      "id": "Q4.2",
+      "cluster": "C4",
+      "subtopic": "Partner organizations",
+      "question": "Which organisations actually handle the response?",
+      "answer": "For unrestricted donations you can choose among three organisations active in this response: a local one (Community Aid Foundation), an international one (Global Aid Alliance), and a government-related agency (National Emergency Authority). All three are established and active, and in performance, transparency, and past record there is no documented difference between them. Each works within the coordinated response, and the practical point is to give through recognised, active organisations rather than unverified appeals, since disasters attract fraud. Which of the three you choose is up to you.",
+      "tags": "T9, T10",
+      "source": "Scenario design (orgs equivalent by construction); Grand Bargain 2016; FBI IC3 PSA (2025)"
+    },
+    {
+      "id": "Q4.3",
+      "cluster": "C4",
+      "subtopic": "Audit verification",
+      "question": "How can I verify my donation was used as intended?",
+      "answer": "Reputable organisations make their work verifiable through reporting, independent audits, and updates on how funds are used. Research on emergency giving finds that operational transparency — concrete updates on the work being done — and formal certification both increase donor confidence and giving. Practical steps include giving to recognised organisations that publish results, and being cautious of solicitations that can't be verified, since disaster fraud is common. Verification is rarely a single receipt; it comes from organisations that report regularly and can be independently checked — what distinguishes established responders from opportunistic appeals.",
+      "tags": "T9",
+      "source": "Mejia 2019; FBI IC3 PSA (2025)"
+    },
+    {
+      "id": "Q4.4",
+      "cluster": "C4",
+      "subtopic": "Platform funding model",
+      "question": "How is the platform itself funded? Where does the overhead go?",
+      "answer": "Donation platforms and relief organisations generally use a portion of funds to cover operating costs — payment processing, logistics, staff, and reporting — while directing the remainder to the response. Some operating cost is necessary; it pays for the systems that actually deliver aid and produce the reporting donors rely on. International commitments encourage reducing management costs and duplication so more reaches affected people. The useful comparison is not whether overhead exists, but whether an organisation is transparent about it and efficient — cash, for instance, avoids much of the handling cost physical goods incur.",
+      "tags": "T9, T8",
+      "source": "Grand Bargain 2016; Harvey 2007"
+    },
+    {
+      "id": "Q4.5",
+      "cluster": "C4",
+      "subtopic": "Organisations operate independently",
+      "question": "Are the partner agencies coordinating with each other, or duplicating work?",
+      "answer": "The organisations here each accept and handle their own donations, so they are not presented as running a single, jointly coordinated operation. What they share is a common standard: each is established and active in the response and works to the same expectations on transparency, effectiveness, and reporting. For a donor, the choice between them is not about one being better coordinated than another — they can be treated as equivalent on that front, and which you choose is a matter of preference.",
+      "tags": "T9",
+      "source": "Grand Bargain 2016; CBPF Global Guidelines"
+    },
+    {
+      "id": "Q4.6",
+      "cluster": "C4",
+      "subtopic": "Unrestricted cash spending",
+      "question": "How is unrestricted cash actually spent? What's the decision process?",
+      "answer": "Unrestricted cash is allocated by the responding organisations to whatever needs they assess as most urgent, rather than being fixed to one category in advance. This flexibility is its main strength: responders can adapt as needs change and direct funds wherever gaps appear, procuring supplies from wherever they are available. It does not mean spending without accountability — established organisations report on allocation and are subject to audit and coordination. The decision process is essentially continuous needs assessment: funds follow the current priorities on the ground rather than a pre-set plan.",
+      "tags": "T2, T6, T9",
+      "source": "Harvey 2007; Grand Bargain 2016"
+    },
+    {
+      "id": "Q4.7",
+      "cluster": "C4",
+      "subtopic": "NGO track record",
+      "question": "What's the historical track record of these NGOs in past disasters?",
+      "answer": "The organisations available here are all established and active in this response, and they adhere to the same standards of transparency, operational effectiveness, and track record. There is no documented difference between them on those measures. Track record matters as a signal of reliability, and the relevant point is that the listed organisations meet a common standard — so the decision among them comes down to your own preference rather than a difference in past performance.",
+      "tags": "T9",
+      "source": "FBI IC3 PSA (2025); Mejia 2019"
+    },
+    {
+      "id": "Q4.8",
+      "cluster": "C4",
+      "subtopic": "Transparency depth",
+      "question": "How transparent is the organization beyond the audit reports?",
+      "answer": "The organisations here operate to the same standard of transparency — regular reporting on how donations are used, available to donors. There is no documented difference between them in how transparent they are. Rather than one offering deeper transparency than another, they can be treated as equivalent on this measure. The practical takeaway is that transparency is not a reason to prefer one option over another; the choice among them is yours.",
+      "tags": "T9",
+      "source": "Mejia 2019"
+    },
+    {
+      "id": "Q4.9",
+      "cluster": "C4",
+      "subtopic": "Post-donation experience",
+      "question": "What happens after I donate? Do I get updates?",
+      "answer": "With the organisations here, donating is followed by acknowledgement and, depending on the organisation, updates on how contributions are used. They operate to the same standard on this, so what you can expect afterward does not differ meaningfully between them. If follow-up matters to you, it is not a strong basis for choosing one over another — the options are equivalent on that front, and the choice remains yours.",
+      "tags": "T9",
+      "source": "Mejia 2019; FBI IC3 PSA (2025)"
+    },
+    {
+      "id": "Q4.10",
+      "cluster": "C4",
+      "subtopic": "Does the NGO choice matter?",
+      "question": "Does it matter which NGO I choose?",
+      "answer": "In terms of how effectively your donation is used, there is no documented difference between the three organisations — all are established, active, and work within the coordinated response. What matters more for usefulness is the type of contribution than the organisation behind it: flexible cash, a curated bundle, or items matched to current needs. So choosing among the three is mainly a matter of preference. If your aim is impact, the more consequential decision is usually the form your donation takes, not which listed organisation receives it.",
+      "tags": "T9, T1",
+      "source": "Scenario design (orgs equivalent); Harvey 2007; Holguín 2022"
+    },
+    {
+      "id": "Q4.11",
+      "cluster": "C4",
+      "subtopic": "Directed-donation handler (probe only)",
+      "question": "What type of NGO handles my directed donation?",
+      "answer": "Directed donations on this platform are managed by an established relief organisation (ReliefBridge) that is active in this response and works to the same standards of transparency, record, and effectiveness as the other organisations listed. It functions as a local partner coordinating the sectoral funds — food, water and hygiene, and medical. As with the other options, there is no documented difference in how effectively it operates. The main distinction with directed cash is the restriction to a category, not anything about the organisation.",
+      "tags": "T9",
+      "source": "Scenario design (org equivalent; disclose only when type is explicitly asked)"
+    },
+    {
+      "id": "Q4.12",
+      "cluster": "C4",
+      "subtopic": "Local vs international capability",
+      "question": "Is the local organisation as capable as the international one?",
+      "answer": "There is no documented difference in capability, transparency, or past record between the local, international, and government-related organisations listed — all are established and active. Local organisations often have close knowledge of conditions on the ground, while international ones bring wider networks, but neither is presented as more effective than the other. For your decision, the three can be treated as equivalent in how well they would use your donation; the choice comes down to preference rather than a documented performance gap.",
+      "tags": "T9",
+      "source": "Scenario design (orgs equivalent)"
+    },
+    {
+      "id": "Q4.13",
+      "cluster": "C4",
+      "subtopic": "Government-related agency concern",
+      "question": "Is the government-related agency political, or could funds be misused?",
+      "answer": "The government-related agency (National Emergency Authority) is presented as an established body active in this response, with no documented difference in transparency, record, or effectiveness compared with the local and international organisations. As with any donation, giving through recognised, active organisations and checking public reporting is the general safeguard against misuse. There is no basis to treat the government-related option as more or less reliable than the others; the three can be considered equivalent, and the choice is yours.",
+      "tags": "T9",
+      "source": "Scenario design (orgs equivalent); Mejia 2019; FBI IC3 PSA (2025)"
+    },
+    {
+      "id": "Q4.14",
+      "cluster": "C4",
+      "subtopic": "International NGO overhead concern",
+      "question": "Is the international NGO just higher overhead?",
+      "answer": "There is no documented difference in overhead, transparency, or effectiveness between the international organisation (Global Aid Alliance) and the local or government-related options — all are treated as equivalent here. More generally, the larger driver of how much of a donation reaches people is the donation type, not the organisation: cash avoids much of the handling cost physical goods carry. So the international option should not be assumed to carry higher overhead; the choice among the three is a matter of preference.",
+      "tags": "T9, T8",
+      "source": "Scenario design (orgs equivalent); Harvey 2007; USAID 'Cash is Best'"
+    },
+    {
+      "id": "Q4.15",
+      "cluster": "C4",
+      "subtopic": "Guarantees of impact / no misuse",
+      "question": "Can you guarantee my donation will save lives, or that funds will not be misused?",
+      "answer": "No one can guarantee a specific outcome for any single donation — relief depends on many factors on the ground, and I can't promise lives saved or that funds are never misused. What is reasonable to say is that giving through recognised, active organisations and matching support to current needs is the most reliable way to help, and that established organisations report on how funds are used and are open to audit. Certainty isn't available, but those are the conditions that make impact more likely.",
+      "tags": "T9",
+      "source": "Mejia 2019; FBI IC3 PSA (2025); study design"
+    },
+    {
+      "id": "Q5.1",
+      "cluster": "C5",
+      "subtopic": "Cash vs items general",
+      "question": "Is cash really better than donating items?",
+      "answer": "In the first days after a disaster, cash is generally considered the most useful form of donation, though it remains context-dependent. Aid agencies note that cash lets responders direct support to whatever is actually needed and adapt as needs shift, rather than committing to a guess. It also avoids much of the transport and logistics cost goods carry — agencies producing water in-country can cost far less than shipping it in. Items help most when they match an assessed, current need; goods that don't fit can create sorting and storage burdens, a 'second disaster'.",
+      "tags": "T1, T6, T7",
+      "source": "USAID 'Cash is Best' (2022); Harvey 2007; Holguín 2022; Natural Hazards Center 'Second Disaster'"
+    },
+    {
+      "id": "Q5.2",
+      "cluster": "C5",
+      "subtopic": "Bundles vs individual items",
+      "question": "What's the difference between bundles and individual items?",
+      "answer": "Curated bundles are pre-assembled sets of items grouped around a single need — a cold-weather or clean-water kit, say — while individual items are chosen one at a time. The practical difference is how closely each matches what responders have assessed as needed. Bundles are organised around priority needs, so they are less likely to introduce mismatched goods to sort out later; arbitrary individual selections carry more of that risk. Compared with cash, both are less flexible, since cash can be redirected as needs change. Bundles trade some donor choice for a closer fit to assessed needs.",
+      "tags": "T3, T5",
+      "source": "Holguín 2022; Natural Hazards Center; Harvey 2007"
+    },
+    {
+      "id": "Q5.3",
+      "cluster": "C5",
+      "subtopic": "When items make sense",
+      "question": "When should I pick individual items over cash or bundles?",
+      "answer": "Individual items make the most sense when a specific, current shortage is known and local markets cannot quickly supply it. In-kind goods add real value when they provide immediately available essentials — water, food, medical supplies — especially where supply chains are strained. The key condition is fit: items help when they match an assessed need, the climate, and the timing. In this cold-weather earthquake's first days, goods suited to shelter and warmth are more likely useful than general items. Where needs are still being assessed or markets function, cash or curated bundles tend to be more flexible, adapting as the situation changes.",
+      "tags": "T4, T5, T10",
+      "source": "Bao 2025; Harvey 2007; scenario context"
+    },
+    {
+      "id": "Q5.4",
+      "cluster": "C5",
+      "subtopic": "Platform self-interest",
+      "question": "Are cash and bundles really better, or is the platform just trying to reduce sorting?",
+      "answer": "Sorting and storage burden is real — unsolicited or mismatched goods can overwhelm responders and create a 'second disaster' of materials that must be handled rather than used. But the case for cash and curated options is broader than convenience for any single platform. Independent aid agencies and researchers reach the same conclusion: cash converts faster, matches current needs more closely, and avoids high shipping and sorting costs. Material convergence is a system-wide collective-action problem, not one organisation's preference. The flexibility and speed arguments hold independently of who makes them.",
+      "tags": "T1, T7, T8",
+      "source": "Natural Hazards Center; IFRC 'Unsolicited donations'; USAID 'Cash is Best'; Harvey 2007; Holguín 2022"
+    },
+    {
+      "id": "Q5.5",
+      "cluster": "C5",
+      "subtopic": "Non-priority items useful",
+      "question": "If I donate a non-priority item like toys, does it still help at all?",
+      "answer": "Non-priority items are not useless; they are simply less urgent in the first days, when shelter, water, food, and medical needs dominate. Some goods — toys or comfort items — can support morale and a sense of normalcy for children once immediate survival needs are met, part of why donors are drawn to tangible giving. The trade-off is timing and burden: items that aren't currently needed still have to be transported, sorted, and stored, which can divert capacity from urgent priorities. So a non-priority item can contribute, particularly later in the response.",
+      "tags": "T4, T10",
+      "source": "Zagefka 2015; Natural Hazards Center; IFRC 'Unsolicited donations'"
+    },
+    {
+      "id": "Q5.6",
+      "cluster": "C5",
+      "subtopic": "Making a fixed budget count",
+      "question": "How do I make my 100 credits count?",
+      "answer": "To make a fixed budget count, flexibility tends to help, because it lets the contribution be used as efficiently as possible. Cash can be directed to whatever is most needed at the moment, and agencies can often meet needs at lower cost than shipping equivalent goods. Cash also avoids the fixed handling and transport costs in-kind donations still carry. A curated bundle is a middle option, keeping the contribution targeted while organised efficiently, and high-priority items help when matched to a current need. There is no single best split — flexible options simply stretch a fixed budget further.",
+      "tags": "T1, T6",
+      "source": "USAID 'Cash is Best' (2022); Harvey 2007"
+    },
+    {
+      "id": "Q5.7",
+      "cluster": "C5",
+      "subtopic": "Myth: responders will use anything",
+      "question": "Won't the responders just find a use for whatever I send?",
+      "answer": "It's a common assumption that responders can put any donation to use, but in practice that's often not so. Studies of past disasters estimate that a large share of goods arriving at major events are non-priority items that weren't needed, while only a small fraction are urgently required on arrival. Goods that don't match current needs still have to be received, sorted, stored, and sometimes disposed of, competing for the staff, transport, and space that urgent supplies need. So unmatched items don't simply 'get used' — they can slow the response. Support matched to assessed needs avoids that.",
+      "tags": "T7, T5",
+      "source": "Holguín 2022; jhv 'Material Convergence'; Natural Hazards Center 'Second Disaster'"
+    },
+    {
+      "id": "Q5.8",
+      "cluster": "C5",
+      "subtopic": "Wanting to give something tangible",
+      "question": "I'd rather give an actual item than money — is that wrong?",
+      "answer": "Not at all — wanting to give something concrete is common and understandable, and giving can feel more meaningful when it's tangible. If that matters to you, the question is simply which in-kind option is most likely to help. Items that match current, assessed needs — or a curated bundle organised around a priority need — tend to be the most useful form of in-kind giving, while goods sent ahead of need add to sorting and storage burden. So there's no need to override the preference: a high-priority item or a bundle is a way to give something tangible that still lands well. The choice is entirely yours.",
+      "tags": "T10, T3, T4",
+      "source": "Zagefka 2015; Holguín 2022"
+    },
+    {
+      "id": "Q5.9",
+      "cluster": "C5",
+      "subtopic": "Not having to guess what's needed",
+      "question": "I don't know exactly what's needed — should I just pick items?",
+      "answer": "You don't have to know the exact item for your donation to help. One advantage of cash and curated bundles is that they don't require you to predict what will be needed: responders direct the support to whatever current assessments show is most urgent, even as that changes. Picking a specific item commits your contribution to that product — fine if you know a current shortage, riskier if needs shift. If you're unsure, more flexible options absorb that uncertainty for you. Either way, the platform's options are all things responders can use — so there's no wrong choice, only more or less flexible ones.",
+      "tags": "T6, T5",
+      "source": "Harvey 2007; Holguín 2022"
+    },
+    {
+      "id": "Q5.10",
+      "cluster": "C5",
+      "subtopic": "Mixing cash and items",
+      "question": "Can I give both cash and items?",
+      "answer": "Yes — and many donors do; splitting a contribution across cash and items is common. You're free to choose any mix that fits how you want to give. One way to think about it: cash and curated bundles keep part of your contribution flexible and matched to changing needs, while a specific item lets you give something concrete toward a shortage you care about. There's no single correct split — the options differ mainly in how flexible they are for responders, and the balance is yours to set.",
+      "tags": "T10",
+      "source": "Imbriale 2024; Harvey 2007"
+    },
+    {
+      "id": "Q5.11",
+      "cluster": "C5",
+      "subtopic": "Asking the assistant to choose",
+      "question": "What would you choose? Just tell me the best option.",
+      "answer": "I can't make the choice for you — and it's better that you decide based on what matters to you. What I can do is lay out how the options differ: cash and curated bundles stay flexible and adapt as needs change, while specific items let you give something concrete toward a known shortage. None is the single 'right' answer; they mainly trade flexibility and operational efficiency against tangibility and control. Tell me what you care about and I'll explain how the options compare on that — but the decision itself is entirely yours.",
+      "tags": "T10",
+      "source": "Study design (neutrality / donor autonomy)"
+    },
+    {
+      "id": "Q5.12",
+      "cluster": "C5",
+      "subtopic": "How to allocate the budget",
+      "question": "How should I split my credits? Can you suggest a basket?",
+      "answer": "There is no prescribed way to split your credits, and I won't recommend a specific basket — that's your call. The options differ mainly along a few lines: flexibility (cash and curated bundles adapt as needs change), control (directed cash fixes a category), and tangibility (individual items are concrete but less flexible). A useful way to decide is to weigh how much each matters to you, and whether you want to cover current high-priority needs, keep things adaptable, or give something specific. However you balance them — and however much of the budget you use — is a valid choice.",
+      "tags": "T6, T10",
+      "source": "Study design (neutrality / donor autonomy); Harvey 2007"
+    },
+    {
+      "id": "Q6.1",
+      "cluster": "C6",
+      "subtopic": "Directed cash meaning",
+      "question": "What's the difference between directed cash and regular (unrestricted) cash?",
+      "answer": "Directed cash is a monetary donation assigned to a specific purpose — food, water and hygiene, or medical support — so it can only be spent within that category. 'Cash for any need', by contrast, is unrestricted: the responding organisation decides which urgent need it should support as the situation develops. Both remain cash, so both keep the speed and local-purchasing advantages goods lack. The difference is control versus flexibility: directing cash gives you a say over the category, while leaving it unrestricted lets responders adapt to changing priorities. Which suits you depends on how much you want to steer the outcome.",
+      "tags": "T2",
+      "source": "Harvey 2007; Grand Bargain 2016"
+    },
+    {
+      "id": "Q6.2",
+      "cluster": "C6",
+      "subtopic": "Unrestricted cash meaning",
+      "question": "What does unrestricted cash (cash for any need) mean?",
+      "answer": "Unrestricted cash — sometimes shown as 'cash for any need' — is a donation the responding organisation can allocate to whatever it assesses as most urgent, rather than to a category you pre-select. Its strength is adaptability: in a fast-changing response, responders can move funds to current gaps and respond as needs shift, drawing supplies from wherever they are available. Unrestricted does not mean unaccountable — established organisations still report on how funds are used and are subject to audit. It contrasts with directed cash, which fixes your contribution to one purpose. Unrestricted maximises flexibility for those delivering the response.",
+      "tags": "T2, T6",
+      "source": "Harvey 2007; Grand Bargain 2016"
+    },
+    {
+      "id": "Q6.3",
+      "cluster": "C6",
+      "subtopic": "Directed cash better?",
+      "question": "Is directed cash better than unrestricted cash because I know exactly what I am funding?",
+      "answer": "Neither is simply 'better' — it depends on what you value. Directing cash gives you transparency and control over the category your donation supports, which some donors prefer and which can make giving feel more concrete. Unrestricted cash gives responders more room to direct funds to whatever is most urgent as needs change, which tends to be more operationally efficient early on. There is a trade-off: more donor control can mean less flexibility for those delivering aid. If knowing exactly what you fund matters most, directed cash meets that; if adaptability matters most, unrestricted does.",
+      "tags": "T2, T9",
+      "source": "Harvey 2007; Grand Bargain 2016; Toyasaki 2011"
+    },
+    {
+      "id": "Q6.4",
+      "cluster": "C6",
+      "subtopic": "Concerns of cash waste",
+      "question": "If I choose cash for any need, how do I know it will not be wasted?",
+      "answer": "'Cash for any need' does not mean no accountability. It means the responding organisation can decide which urgent need the funds should support, instead of being locked to a category chosen before needs are clear. Established organisations allocate unrestricted funds through ongoing needs assessment and remain subject to reporting, audit, and coordination. Flexibility is generally an operational advantage, letting responders adapt and direct funds as priorities emerge rather than hold them against a fixed plan. The more relevant safeguard against waste is choosing a recognised, transparent organisation, rather than restricting the donation itself.",
+      "tags": "T2, T9",
+      "source": "Grand Bargain 2016; Harvey 2007"
+    },
+    {
+      "id": "Q6.5",
+      "cluster": "C6",
+      "subtopic": "Unrestricted cash better?",
+      "question": "Does unrestricted cash help responders more than directed cash?",
+      "answer": "Often, yes — especially in the first days. Unrestricted cash lets responders adapt to changing needs, price shifts, and transport conditions, directing funds to whatever is most urgent at the moment. International humanitarian commitments specifically encourage increasing flexible, unearmarked funding for this reason. Directed cash still helps and keeps the advantages of cash over goods, but tying funds to a category can reduce responders' ability to move resources as the situation evolves. So from the responder's operational view, unrestricted cash is usually the more useful form, while directed cash trades some flexibility for donor control.",
+      "tags": "T2, T6",
+      "source": "Harvey 2007; Grand Bargain 2016"
+    },
+    {
+      "id": "Q6.6",
+      "cluster": "C6",
+      "subtopic": "The tradeoff",
+      "question": "Which cash option should I choose if I want both transparency and flexibility?",
+      "answer": "The two pull in slightly different directions, so it's a balance rather than a single right answer. Unrestricted cash maximises flexibility for aid personnel, letting them direct funds to the most urgent needs as they change; directed cash maximises your transparency and control over the category supported. If you want both, one approach is to weight toward unrestricted for adaptability while choosing a recognised, transparent organisation that reports on how funds are used — gaining accountability through the organisation rather than by restricting the funds. Some donors also split their contribution.",
+      "tags": "T2, T9",
+      "source": "Harvey 2007; Toyasaki 2011"
+    },
+    {
+      "id": "Q6.7",
+      "cluster": "C6",
+      "subtopic": "Why offer the inferior option",
+      "question": "If unrestricted is better, why offer directed at all?",
+      "answer": "Directed cash is offered because donor preferences differ, and giving people the option to support a specific category — food, hygiene, or medical aid — can increase willingness to give. Research on earmarking finds that letting donors direct funds can attract more donations and engagement, particularly for high-profile emergencies. So directed cash isn't 'inferior' so much as a different balance: it trades some operational flexibility for donor control and can expand the overall pool of giving. Offering both lets donors who want to steer their contribution participate, while keeping the more flexible unrestricted option available.",
+      "tags": "T10, T2",
+      "source": "Toyasaki 2011; Grand Bargain 2016"
+    },
+    {
+      "id": "Q6.8",
+      "cluster": "C6",
+      "subtopic": "Need prioritization in cash",
+      "question": "If I think a need is urgent, should I direct my credits into that instead of general cash?",
+      "answer": "Not necessarily. If you choose general (unrestricted) cash, the organisation's professional staff would still direct it toward the most urgent demand — which may well include the need you have in mind — while keeping the flexibility to adjust as the situation changes. Directing cash to a category guarantees it goes there, but it also removes responders' ability to redeploy it if priorities shift or that need is already covered. So if your goal is impact on urgent needs, unrestricted cash usually serves that well; directing makes sense mainly when category-level control matters most to you.",
+      "tags": "T2, T6",
+      "source": "Harvey 2007; Grand Bargain 2016"
+    },
+    {
+      "id": "Q6.9",
+      "cluster": "C6",
+      "subtopic": "Combination of options",
+      "question": "Can I donate both unrestricted and directed cash?",
+      "answer": "Yes. If you're unsure between the two — wanting some control while still supporting overall flexibility — a balanced split can be reasonable. You might direct part of your contribution to a category you care about and leave the rest unrestricted so responders can adapt it to changing needs. There's no operational reason the two can't be combined, and doing so lets you weigh donor control against responder flexibility by your own preference. The main point is that both remain cash, keeping the speed and local-purchasing advantages over donated goods.",
+      "tags": "T2, T10",
+      "source": "Harvey 2007; Grand Bargain 2016"
+    },
+    {
+      "id": "Q6.10",
+      "cluster": "C6",
+      "subtopic": "Directed cash vs items",
+      "question": "Is directed cash basically the same as donating specific items?",
+      "answer": "Not exactly. Directed cash is still cash, so it keeps the flexibility and efficiency advantages money has over goods — it can be converted to what's actually needed within the chosen category, drawn from wherever supply is available, and avoids the shipping, sorting, and storage costs physical items carry. Donating a specific item commits both the category and the exact product, even if needs or availability differ. So directing cash narrows the purpose while keeping cash's adaptability, whereas donating items fixes the form as well — generally less flexible for responders.",
+      "tags": "T1, T2",
+      "source": "USAID 'Cash is Best'; Harvey 2007"
+    },
+    {
+      "id": "Q6.11",
+      "cluster": "C6",
+      "subtopic": "Fund concentration / over-subscription",
+      "question": "What happens if everyone directs cash to the same fund?",
+      "answer": "If many donors pick the same directed fund, that category can receive more than it can immediately use while others lag — a real limitation of earmarking, since responders cannot freely move restricted funds between categories. Established organisations manage this through coordination and by holding or rephasing funds, but the mismatch is exactly why unrestricted cash tends to be more efficient: it can be directed wherever the current gap is. Directing to a category is still fine and keeps cash's advantages over goods; it just gives responders less room to balance across needs if everyone concentrates on one fund.",
+      "tags": "T2, T6",
+      "source": "Toyasaki 2011; Grand Bargain 2016; scenario design"
+    },
+    {
+      "id": "Q8.1",
+      "cluster": "C8",
+      "subtopic": "AI identity",
+      "question": "Are you ChatGPT? Who built you?",
+      "answer": "I'm an assistant for this donation page. My language ability uses OpenAI's GPT model, but I don't answer freely: I draw only on pre-vetted sources for this campaign — information from on-the-ground responders and field reports — and I'm limited to helping with the donation options on this page. So the underlying technology is OpenAI's, but what I tell you comes only from those vetted sources, within this campaign's scope.",
+      "tags": "",
+      "source": "OpenAI brand guidelines; study design"
+    },
+    {
+      "id": "Q8.2",
+      "cluster": "C8",
+      "subtopic": "AI accuracy",
+      "question": "How accurate is the information you give me?",
+      "answer": "My answers are generated only from pre-vetted sources for this campaign — on-the-ground responders, relief organisations and health authorities, and field information about this response — and are restricted to the donation options on this page. I don't improvise: I match your question to that vetted material. If something falls outside it, I'll say so rather than guess. For decisions beyond this campaign, official sources remain the best reference.",
+      "tags": "",
+      "source": "Study design; vetted source library (QAsources)"
+    },
+    {
+      "id": "Q8.3",
+      "cluster": "C8",
+      "subtopic": "AI errors",
+      "question": "What if you give wrong information?",
+      "answer": "Disaster needs are complex and information is never perfect, so I aim to be accurate but can't promise certainty. My answers draw on established humanitarian guidance, information about this response, and lessons from how past disasters have unfolded. If something seems off or doesn't fit your situation, treat it as one input rather than the last word, and weigh it against your own judgement. The aim is to help you think the options through with the best available information, not to replace your decision.",
+      "tags": "",
+      "source": "Study design"
+    },
+    {
+      "id": "Q8.4",
+      "cluster": "C8",
+      "subtopic": "How to use the assistant",
+      "question": "What can you help me with?",
+      "answer": "I can help you think through your donation on this page — cash versus items, directed versus unrestricted cash, what's most urgently needed, whether specific items are useful right now, how donations reach people, and how funds are used and verified. You can ask in your own words or use the suggested prompts. My aim is to give you objective, prepared information about the options so you can decide what fits your priorities — the final choice is entirely yours.",
+      "tags": "",
+      "source": "Study design; protocol opening message"
+    },
+    {
+      "id": "Q8.5",
+      "cluster": "C8",
+      "subtopic": "ShopBridge vs ReliefBridge / buying vs donating",
+      "question": "What's the difference between ShopBridge and ReliefBridge? Am I buying or donating?",
+      "answer": "ShopBridge is the marketplace interface — the page you're using to make choices. ReliefBridge is the relief organisation that receives the proceeds and, with the partner organisations, directs them to the response. So you're not buying anything for yourself: each option is a donation, whether cash, a directed fund, a curated bundle, or an item. Choosing an item means funding that item for the response, not purchasing it for delivery to you. The platform hosts the campaign; the relief organisations carry out the aid.",
+      "tags": "T9",
+      "source": "Scenario design; index UI"
+    },
+    {
+      "id": "Q8.6",
+      "cluster": "C8",
+      "subtopic": "Where the information comes from / neutrality",
+      "question": "Where does your information come from? Are you biased toward cash?",
+      "answer": "My answers are generated only from pre-vetted sources for this campaign — on-the-ground responders and field information, alongside established humanitarian guidance — and are limited to this donation page. I'm not here to push any particular choice: I can explain why aid organisations often note advantages for cash or curated options, but those are general findings, not a recommendation aimed at you. Where the evidence points one way I'll say so; where it depends on your priorities I'll lay out the trade-offs. The decision stays yours.",
+      "tags": "T9",
+      "source": "Study design; vetted source library (QAsources)"
+    },
+    {
+      "id": "Q8.7",
+      "cluster": "C8",
+      "subtopic": "Credits & what they mean",
+      "question": "What does a credit mean? Am I spending real money?",
+      "answer": "Credits are the donation budget assigned to you for this campaign — a way to allocate your contribution across the options, not money taken from your own account. Each option has a credit cost, and choosing it directs that part of your budget to the corresponding donation. You're allocating a donation, not making a personal purchase. How you use the credits is up to you.",
+      "tags": "",
+      "source": "Study design (platform mechanics)"
+    },
+    {
+      "id": "Q8.8",
+      "cluster": "C8",
+      "subtopic": "Spending all / unused credits",
+      "question": "Do I have to spend all 100 credits? What happens to ones I don't use?",
+      "answer": "You're free to allocate as much or as little of your 100 credits as you like — there's no requirement to use them all. The credits are a donation budget for this campaign rather than money that stays with you, so anything you don't allocate is simply not donated; it is not kept by you and not reassigned on your behalf. How much you give, and how you split it, is entirely your decision.",
+      "tags": "T10",
+      "source": "Study design (platform mechanics; donor autonomy)"
+    },
+    {
+      "id": "Q8.9",
+      "cluster": "C8",
+      "subtopic": "Changing choices / voucher vs item",
+      "question": "Can I change my choices before finishing? What's the difference between a voucher and an item?",
+      "answer": "You can adjust your choices as much as you like before you finalise — nothing is committed until you complete the order. As for the options: a cash or directed-cash 'voucher' donates money (used flexibly, or within a chosen category), while an item or bundle funds specific goods for the response. Both are donations to the campaign; they differ in whether you're giving flexible funds or specific things.",
+      "tags": "",
+      "source": "Study design (platform mechanics)"
+    },
+    {
+      "id": "Q8.10",
+      "cluster": "C8",
+      "subtopic": "Is there a right answer / being measured",
+      "question": "Is there a correct answer here? Are you measuring what I choose?",
+      "answer": "There's no right or wrong answer — the aim is for you to choose the donation options that fit your own priorities. I'm just here to help you think through how the options differ, if that's useful. Whatever you decide is a valid choice.",
+      "tags": "",
+      "source": "Study design (neutrality; demand-characteristic deflection)"
+    },
+    {
+      "id": "Q8.11",
+      "cluster": "C8",
+      "subtopic": "Is this a real donation? (deception, option 2)",
+      "question": "Is this a real donation, or is it simulated?",
+      "answer": "This is a donation scenario set up for a research study, and I can help you think through the options within it. Some details are explained more fully at the end of the study. For now, the most useful thing is to make the choices that fit your own priorities, as you would in a real donation situation.",
+      "tags": "",
+      "source": "Study design (incomplete disclosure + debrief; option 2)"
+    },
+    {
+      "id": "Q8.12",
+      "cluster": "C8",
+      "subtopic": "Are the organisations fictional? (deception, option 2)",
+      "question": "Are the organisations fictional?",
+      "answer": "This is a research scenario, so I can't go into specific details of the organisations beyond what is shown on the page — more is explained when the study finishes. What I can help with is how the donation options differ, so you can choose what fits your priorities.",
+      "tags": "",
+      "source": "Study design (incomplete disclosure + debrief; option 2)"
+    },
+    {
+      "id": "Q8.13",
+      "cluster": "C8",
+      "subtopic": "Is the earthquake scenario real? (deception, option 2)",
+      "question": "Is the earthquake scenario real?",
+      "answer": "The scenario here is part of a research study rather than a live event, and fuller details are given at the end. Within the scenario, I can help you weigh the donation options as you would if deciding in a real situation. Whatever you choose is up to you.",
+      "tags": "",
+      "source": "Study design (incomplete disclosure + debrief; option 2)"
+    },
+    {
+      "id": "Q8.14",
+      "cluster": "C8",
+      "subtopic": "Is the conversation recorded?",
+      "question": "Are my questions being recorded?",
+      "answer": "Yes — your interaction with this assistant is recorded as part of the session, like the rest of the task, and used for research analysis under the study's data terms. There is no right or wrong thing to ask. You can use me to think through the donation options; the conversation is simply part of the study record.",
+      "tags": "",
+      "source": "Study design (data handling / consent)"
+    },
+    {
+      "id": "Q8.15",
+      "cluster": "C8",
+      "subtopic": "Seeing and adjusting your basket",
+      "question": "How do I see what's in my basket, and what do the plus and minus buttons do?",
+      "answer": "The cart summary on the page shows what you've selected so far and how many of your 100 credits remain. The plus and minus buttons next to each option increase or decrease how many credits you put toward it. You can adjust freely, and nothing is final until you complete the order.",
+      "tags": "",
+      "source": "Study design (platform mechanics)"
+    },
+    {
+      "id": "Q8.16",
+      "cluster": "C8",
+      "subtopic": "Why options cost different amounts / how prices are set",
+      "question": "Why are the prices different, and how are they determined?",
+      "answer": "Each option's credit cost reflects the relative scale of what it includes: a single item costs less than a curated bundle, which contains several items, while cash is allocated per credit. The figures are set by the platform to reflect those relative differences, not to steer you toward any one choice. So a price difference mostly tracks how much an option contains — it isn't a signal of how useful that option is, which depends on current needs. [Exact prices are defined by the platform's item list — pending BASKET.]",
+      "tags": "T10",
+      "source": "Scenario design (platform pricing); prices pending BASKET"
+    }
+  ],
+  "chips": [
+    {
+      "id": "CH1",
+      "cluster": "C1",
+      "label": "Logistics & delivery",
+      "answer": "Your choice affects how quickly aid reaches people. Cash and curated bundles skip much of the shipping, sorting, and storage that individual goods need, so they tend to reach people faster; items help most when matched to current needs. Ask me about delivery times, how items are distributed, or what happens to surplus.",
+      "tags": "T1, T7, T8"
+    },
+    {
+      "id": "CH2",
+      "cluster": "C2",
+      "label": "What's needed here",
+      "answer": "Needs in the first days are still being assessed and can shift quickly — in this scenario, shelter, warmth, water, food, medical care, and hygiene are typically the early priorities. Because the picture changes, flexible support adapts as needs become clearer. Ask me what's most needed, about conditions, or how priorities are decided.",
+      "tags": "T5, T6"
+    },
+    {
+      "id": "CH3",
+      "cluster": "C3",
+      "label": "Items & bundles",
+      "answer": "The platform's items range from higher-priority (shelter, warmth, water, food, hygiene) to lower-priority goods, and curated bundles group items around a single need. Higher-priority items and bundles are the most likely to be used quickly. Ask me about a specific item, the bundles, or why something isn't on the list.",
+      "tags": "T4, T3, T5"
+    },
+    {
+      "id": "CH4",
+      "cluster": "C4",
+      "label": "Trust & transparency",
+      "answer": "Donations are handled by established organisations active in this response, and you can give unrestricted cash to a local, international, or government-related organisation. In transparency, record, and effectiveness there is no documented difference between them. Ask me how donations are verified, who the organisations are, or how funds are used.",
+      "tags": "T9, T10"
+    },
+    {
+      "id": "CH5",
+      "cluster": "C5",
+      "label": "Cash vs items",
+      "answer": "Cash and curated bundles are generally the most flexible options in the first days, adapting as needs change; individual items help most when matched to a current shortage. None is the only right choice — they differ mainly in flexibility. Ask me about cash vs items, bundles, or when items make sense.",
+      "tags": "T1, T6, T10"
+    },
+    {
+      "id": "CH6",
+      "cluster": "C6",
+      "label": "Directing your cash",
+      "answer": "You can give unrestricted cash (used wherever it is most needed) or direct it to a category like food, water and hygiene, or medical. Unrestricted is more flexible for responders; directed gives you more control over the category. Both are cash. Ask me how directed cash works, or which fits your priorities.",
+      "tags": "T2, T6, T10"
+    },
+    {
+      "id": "CH7",
+      "cluster": "C8",
+      "label": "About this assistant",
+      "answer": "I'm an assistant for this donation platform. My language is powered by OpenAI's GPT model, but my answers come from a vetted library prepared for this campaign, not free-form generation. I can help you think through cash vs items, directed cash, urgent needs, item usefulness, logistics, or transparency. The final choice is yours.",
+      "tags": "T10"
+    }
+  ],
+  "wrappers": {
+    "1": [
+      "[CANONICAL]"
+    ],
+    "2": [
+      "Here's what's relevant to that: [CANONICAL]",
+      "On that — here's what I can tell you: [CANONICAL]"
+    ],
+    "3": [
+      "That's close to something I can help with. [CANONICAL]",
+      "That's near a topic I have information on — here's what's relevant: [CANONICAL]"
+    ],
+    "4": [
+      "That's a little different from what I have specifically, but on a related point within this campaign: [CANONICAL]",
+      "I don't have that exact question, but here's the closest relevant information I can offer: [CANONICAL]"
+    ]
+  },
+  "refusals": {
+    "tier1": "That's a reasonable thing to want, but it's a little outside what I can help with here. I'm focused on this disaster donation campaign and the options on this page — things like cash versus items, earmarking, urgent needs, item usefulness, logistics, and transparency. For questions like personal tax or financial matters, or other relief efforts, an official source for that topic would serve you better. Is there anything about the donation options here I can help you think through?",
+    "tier2": "I can only help with questions related to this disaster donation campaign and the donation options available here, so that one is outside what I can answer. If you have any questions about how to make your donation most useful, though, I'm happy to help.",
+    "tier3": "I'm not able to help with that. I'm here only to answer questions about this disaster donation campaign and the options on this page. If it's useful, I can explain things like cash versus items, what's most urgently needed, or how donations are used."
+  },
+  "probeRule": "Only answer Q4.11 (directed-donation handler type) when the user explicitly asks what TYPE of organisation handles directed/earmarked donations. Never volunteer it.",
+  "tagLegend": {
+    "T1": {
+      "family": "Directional",
+      "advocates": "Cash over in-kind goods",
+      "dv": "↑ operational quality"
+    },
+    "T2": {
+      "family": "Directional",
+      "advocates": "Unrestricted over earmarked cash",
+      "dv": "↑ operational quality"
+    },
+    "T3": {
+      "family": "Directional",
+      "advocates": "Curated bundle over individual items",
+      "dv": "↑ operational quality"
+    },
+    "T4": {
+      "family": "Directional",
+      "advocates": "High-priority over low-priority items",
+      "dv": "↑ operational quality"
+    },
+    "T5": {
+      "family": "Directional",
+      "advocates": "Match to current assessed need (not ahead of need)",
+      "dv": "↑ operational quality"
+    },
+    "T6": {
+      "family": "Rationale",
+      "advocates": "Flexibility under uncertainty (adaptability premium)",
+      "dv": "↑ (supports T1-T5)"
+    },
+    "T7": {
+      "family": "Rationale",
+      "advocates": "Avoid material convergence / sorting-storage burden",
+      "dv": "↑ (supports T1-T5)"
+    },
+    "T8": {
+      "family": "Rationale",
+      "advocates": "Speed & lower logistics cost of cash",
+      "dv": "↑ (supports T1-T5)"
+    },
+    "T9": {
+      "family": "Rationale",
+      "advocates": "Trust, transparency, accountability & anti-fraud",
+      "dv": "↑ (de-risks cash/org choice)"
+    },
+    "T10": {
+      "family": "Neutrality",
+      "advocates": "Donor autonomy + legitimacy of tangible giving (no shame)",
+      "dv": "neutral (protects in-kind activation)"
+    }
+  },
+  "bandRubric": {
+    "1": "near-exact paraphrase",
+    "2": "close: same topic, different angle",
+    "3": "adjacent: partial overlap",
+    "4": "tangential but in-scope",
+    "5": "off-scope: refuse"
+  }
+}
