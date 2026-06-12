@@ -300,15 +300,15 @@ function understandGate(){if(state.understood)return;state.understood=true;state
 function updateChatHeader(){
   if(state.arm==='generic'){
     $('chatQualifier').textContent='— for general donation assistance';
-    $('chatStatus').textContent='Online · general-purpose model';
-    if($('srcTitle'))$('srcTitle').textContent='General-purpose AI';
-    if($('srcBody'))$('srcBody').textContent='A general assistant trained on public sources — not specific to this disaster. It can help you think through the donation options on this page.';
+    $('chatStatus').textContent='ChatGPT · general information';
+    if($('srcTitle'))$('srcTitle').textContent='General information';
+    if($('srcBody'))$('srcBody').textContent='Runs on ChatGPT as it normally works, drawing on general, publicly available information. Use it to think through the donation options on this page.';
     if($('srcIcon'))$('srcIcon').textContent='i';
   }else if(state.arm==='tca'){
     $('chatQualifier').textContent='— Field Response edition';
-    $('chatStatus').textContent='Current · disaster-response sources';
+    $('chatStatus').textContent='ChatGPT · disaster-response sources';
     if($('srcTitle'))$('srcTitle').textContent='Disaster-response sources';
-    if($('srcBody'))$('srcBody').textContent='Draws on current disaster-response guidance from humanitarian organizations, local emergency responders, health authorities, and fire & rescue services — focused on this response.';
+    if($('srcBody'))$('srcBody').textContent='Runs on a version of ChatGPT focused on disaster response, drawing on current guidance from humanitarian organizations, local emergency responders, and health and rescue services. Use it to think through the donation options on this page.';
     if($('srcIcon'))$('srcIcon').textContent='i';
   }
   $('skipBtn').disabled=state.arm!=='noai'&&!state.understood;
