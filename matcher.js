@@ -67,6 +67,7 @@ Routing tie-breakers (common confusions — route to the catalog entry about the
 - whether items are 'intentionally bad', a 'test', or there is a 'correct answer' -> the suspicion/measurement entry (cluster C8).
 - what happens if everyone picks one fund, or a fund is over- vs under-subscribed -> the earmarking fund-concentration entry (cluster C6).
 - why prices/credit costs differ between options, or how prices are determined/set -> the pricing entry (cluster C8).
+- a question that compares or ranks the options as a GROUP rather than asking about one (e.g. "how fast does each option reach people", "which is quickest", "what's the difference between all the options", "compare/rank the options") -> the comparative entry: the speed-across-options entry for speed/timing comparisons, or the all-options overview entry for general "difference between everything" questions — NOT a single-option entry like cash-only speed.
 
 When the best match is only a partial or ambiguous fit (you would rate it band 3-4) AND a DIFFERENT catalog entry is a genuinely plausible second reading of the same message, set "alt_index" to that second entry's NUMBER so the user can be offered a choice between the two topics. The two entries must be genuinely distinct topics (not two phrasings of the same thing). If the match is clear (band 1-2), off-scope (band 5), or there is no real second interpretation, set "alt_index" to null. You are only SELECTING entries here — you never write the question shown to the user.
 

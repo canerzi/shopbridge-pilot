@@ -737,6 +737,24 @@
       "answer": "Each option's credit cost reflects the relative scale of what it includes: a single item costs less than a curated bundle, which contains several items, while cash is allocated per credit. The figures are set by the platform to reflect those relative differences, not to steer you toward any one choice. So a price difference mostly tracks how much an option contains — it isn't a signal of how useful that option is, which depends on current needs. [Exact prices are defined by the platform's item list — pending BASKET.]",
       "tags": "T10",
       "source": "Scenario design (platform pricing); prices pending BASKET"
+    },
+    {
+      "id": "Q1.10",
+      "cluster": "C1",
+      "subtopic": "Speed across all options",
+      "question": "How quickly does each option reach people on the ground?",
+      "answer": "Speed broadly tracks how little has to happen before help is delivered. Cash is generally fastest: there is nothing to ship, sort, or store, so responders can act on it quickly and procure from wherever supply is closest. Directed cash is nearly as fast within its category. Curated bundles are quicker than scattered individual items because they are pre-assembled around a known need, but still must be transported and handled. Individual items are usually slowest, entering a pipeline of transport, sorting, and storage — and goods that don't match current needs can slow things further. Exact timing depends on conditions, so read this as a general ordering, not a guarantee.",
+      "tags": "T1, T6, T8",
+      "source": "Synthesis of Q1.1–Q1.3; USAID 'Cash is Best' (2022); Harvey 2007 (HPG/ODI)"
+    },
+    {
+      "id": "Q5.13",
+      "cluster": "C5",
+      "subtopic": "Overview of all options",
+      "question": "What's the difference between all the donation options?",
+      "answer": "The options differ mainly in how flexible they are for responders versus how much they let you steer. Unrestricted cash is the most flexible: responders direct it to whatever is most urgent and adapt as needs change. Directed cash keeps that speed and local-purchasing advantage but fixes your contribution to one category — food, water and hygiene, or medical. Curated bundles are pre-assembled around a priority need, more targeted than picking single items but less adaptable than cash. Individual items are the most concrete and let you give something specific, but help most when they match a current, assessed need. There is no single right choice — they trade flexibility and efficiency against control and tangibility, and the balance is yours.",
+      "tags": "T1, T6, T8",
+      "source": "Synthesis of C5/C6 modality entries"
     }
   ],
   "chips": [
