@@ -135,7 +135,23 @@ const state = {
   completedAt: null
 };
 sessionStorage.setItem('basket_pid', state.participantId);
+// ===== Resume-across-refresh persistence (production only; demo always starts fresh) =====
+const PERSIST = !DEMO;
+const STATE_KEY = 'basket_state_' + state.participantId;
+const PERSIST_FIELDS = ['cart','basketEvents','userTurns','totalSends','understood','understandAt','firstCatalogInteractionAt','topicClicks','openQuestions','ratings','ratingHintShown','finalReminderShown','finalReminderAction','chatCollapsed','completedAt','layoutSeed'];
+function saveState(){ if(!PERSIST) return; try{ const o={}; PERSIST_FIELDS.forEach(k=>{o[k]=state[k];}); localStorage.setItem(STATE_KEY, JSON.stringify(o)); }catch(e){} }
+function loadSavedState(){ if(!PERSIST) return null; try{ const r=localStorage.getItem(STATE_KEY); return r?JSON.parse(r):null; }catch(e){ return null; } }
+const SAVED_SNAPSHOT = loadSavedState();   // captured at load, before anything writes
 const $ = id => document.getElementById(id);
+// Enable/disable the chat composer. Gated until "I understand"; also off at cap / after completion.
+function setChatEnabled(on){
+  const cap = state.userTurns>=TURN_CAP || state.totalSends>=HARD_CAP;
+  const enable = !!on && !cap && !state.completedAt;
+  if($('chatInput')){ $('chatInput').disabled=!enable; $('chatInput').placeholder = enable ? 'Type a question, or pick a topic above...' : (state.completedAt ? 'Session submitted' : (cap ? 'Question limit reached' : 'Select “I understand” above to begin')); }
+  if($('send')) $('send').disabled=!enable;
+  document.querySelectorAll('#chipActions .chip').forEach(c=>{c.disabled=!enable;});
+  if($('aboutBtn')) $('aboutBtn').disabled=!enable;
+}
 const fmt = n => `${n} ${n===1?'credit':'credits'}`;
 const nowISO = () => new Date().toISOString();
 const timeStr = () => new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
@@ -200,7 +216,7 @@ function remaining(){return BUDGET-total();}
 function applyBodyClasses(){document.body.className=[state.arm,DEMO?'demo':'',state.production?'production':'',state.chatCollapsed?'chat-collapsed':'',(state.arm!=='noai'&&!state.understood)?'catalog-locked':''].filter(Boolean).join(' ');}
 function updatePriorChips(){const raw=params.get('prior')||params.get('pt_items')||'Thermal blanket,Hygiene pack,RTE food,Toys,Pet food';const vals=raw.split(',').map(s=>s.trim()).filter(Boolean).slice(0,8);$('priorChips').innerHTML=vals.map(v=>`<span class="chip">${esc(v)}</span>`).join('');}
 function trackFirstCatalogInteraction(){if(!state.firstCatalogInteractionAt){state.firstCatalogInteractionAt=Date.now();syncAnalytics();}}
-function logBasket(action,id){state.basketEvents.push({t:nowISO(),action,id:id||null,value:id?(state.cart[id]||0):null,total_cr:total()});}
+function logBasket(action,id){state.basketEvents.push({t:nowISO(),action,id:id||null,value:id?(state.cart[id]||0):null,total_cr:total()});saveState();}
 function add(id){
   if(state.arm!=='noai'&&!state.understood)return;
   trackFirstCatalogInteraction();
@@ -297,7 +313,7 @@ const msgWrap=$('messages');function scroll(){msgWrap.scrollTop=msgWrap.scrollHe
 function assistantMsg(html, includeGate=false){msgWrap.insertAdjacentHTML('beforeend',`<div class="chatrow assistant"><div class="avatar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073z"/></svg></div><div class="bubble">${html}${includeGate?'<div class="understandbox"><button class="understandbtn" id="understandBtn">I understand</button></div>':''}<span class="time">${timeStr()}</span></div></div>`);scroll();const btn=$('understandBtn');if(btn)btn.onclick=understandGate;}
 function userMsg(text){msgWrap.insertAdjacentHTML('beforeend',`<div class="chatrow user"><div class="bubble">${esc(text)}<span class="time">${timeStr()}</span></div><div class="avatar user">●</div></div>`);scroll();}
 function showWelcome(){msgWrap.innerHTML='';if(state.arm==='noai')return;assistantMsg(esc(baseWelcome+(state.arm==='tca'?fieldAttribution:'')),!state.understood);}
-function understandGate(){if(state.understood)return;state.understood=true;state.understandAt=Date.now();const b=$('understandBtn');if(b){b.textContent='Understood';b.disabled=true;}state.chatCollapsed=false;render();updateChatHeader();syncAnalytics();}
+function understandGate(){if(state.understood)return;state.understood=true;state.understandAt=Date.now();const b=$('understandBtn');if(b){b.textContent='Understood';b.disabled=true;}state.chatCollapsed=false;render();updateChatHeader();setChatEnabled(true);syncAnalytics();}
 function updateChatHeader(){
   if(state.arm==='generic'){
     $('chatQualifier').textContent='— for general donation assistance';
@@ -341,13 +357,14 @@ function rate(meta,value){
   syncAnalytics();
   try{fetch('/api/v4/feedback',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({participant_id:state.participantId,arm:state.arm,...rec})});}catch(e){}
 }
-async function sendText(text, topic=null){text=(text||'').trim();if(!text||state.thinking||state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP)return;state.thinking=true;userMsg(text);state.userTurns++;state.totalSends++;if(topic)state.topicClicks.push({topic,question:text,timestamp:nowISO()});else state.openQuestions.push({question:text,timestamp:nowISO(),beforeUnderstand:!state.understood});$('chatInput').value='';updateTurnCounter();syncAnalytics();typing();
+async function sendText(text, topic=null){text=(text||'').trim();if(!text||state.thinking||(state.arm!=='noai'&&!state.understood)||state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP)return;state.thinking=true;userMsg(text);state.userTurns++;state.totalSends++;if(topic)state.topicClicks.push({topic,question:text,timestamp:nowISO()});else state.openQuestions.push({question:text,timestamp:nowISO(),beforeUnderstand:!state.understood});$('chatInput').value='';updateTurnCounter();syncAnalytics();typing();
   const t0=Date.now();
   let answer, meta={turn:state.userTurns};
   try{
     const ctrl=new AbortController();const to=setTimeout(()=>ctrl.abort(),30000);
     const res=await fetch('/api/v4/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:text,arm:state.arm,turnNumber:state.userTurns,participant_id:state.participantId}),signal:ctrl.signal});
     clearTimeout(to);
+    if(res.status===429||res.status===403){const tr=$('typingRow');if(tr)tr.remove();state.thinking=false;assistantMsg(res.status===403?'This session has already been submitted. Please return to the survey tab to finish.':'You’ve reached the question limit for this session.');setChatEnabled(false);syncAnalytics();return;}
     if(!res.ok)throw new Error('status '+res.status);
     const data=await res.json();
     console.log('V4 QA routing:',data);
@@ -364,7 +381,7 @@ async function sendText(text, topic=null){text=(text||'').trim();if(!text||state
   if(meta.action==='clarify'||meta.action==='disambiguate'||topic==='about_assistant'){state.userTurns=Math.max(0,state.userTurns-1);updateTurnCounter();}  // clarify/disambiguation/About don't consume a question
   if(meta.action==='disambiguate'&&meta.options&&meta.options.length){renderDisambig(meta.options);}
   state.thinking=false;
-  if(state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP){document.querySelectorAll('#chipActions .chip').forEach(c=>c.disabled=true);$('chatInput').disabled=true;$('chatInput').placeholder='Question limit reached';$('send').disabled=true;}
+  if(state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP){setChatEnabled(false);}
   syncAnalytics();
 }
 function renderDisambig(options){
@@ -382,7 +399,7 @@ function renderDisambig(options){
   row.appendChild(wrap);msgWrap.appendChild(row);scroll();
 }
 async function sendForced(id,label){
-  if(state.thinking||state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP)return;
+  if(state.thinking||(state.arm!=='noai'&&!state.understood)||state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP)return;
   state.thinking=true;userMsg(label);state.userTurns++;state.totalSends++;
   state.topicClicks.push({topic:'disambiguation',question:label,matched_id:id,timestamp:nowISO()});
   updateTurnCounter();syncAnalytics();typing();
@@ -390,14 +407,16 @@ async function sendForced(id,label){
   try{
     const ctrl=new AbortController();const to=setTimeout(()=>ctrl.abort(),30000);
     const res=await fetch('/api/v4/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({forced_id:id,question:label,arm:state.arm,turnNumber:state.userTurns,participant_id:state.participantId}),signal:ctrl.signal});
-    clearTimeout(to);if(!res.ok)throw new Error('status '+res.status);
+    clearTimeout(to);
+    if(res.status===429||res.status===403){const tr=$('typingRow');if(tr)tr.remove();state.thinking=false;assistantMsg(res.status===403?'This session has already been submitted. Please return to the survey tab to finish.':'You’ve reached the question limit for this session.');setChatEnabled(false);syncAnalytics();return;}
+    if(!res.ok)throw new Error('status '+res.status);
     const data=await res.json();answer=data.answer||ANSWERS.fallback;meta.matched_id=data.matched_id;meta.band=data.band;meta.action=data.action;
   }catch(e){console.warn('forced fetch failed',e);answer=ANSWERS.fallback;meta.fallback=true;}
   const minThink=1500+Math.random()*600;const elapsed=Date.now()-t0;if(elapsed<minThink)await sleep(minThink-elapsed);
   const row=$('typingRow');if(row)row.remove();
   await typeAnswer(answer,meta);
   state.thinking=false;
-  if(state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP){document.querySelectorAll('#chipActions .chip').forEach(c=>c.disabled=true);$('chatInput').disabled=true;$('chatInput').placeholder='Question limit reached';$('send').disabled=true;}
+  if(state.userTurns>=TURN_CAP||state.totalSends>=HARD_CAP){setChatEnabled(false);}
   syncAnalytics();
 }
 function updateTurnCounter(){const el=$('turnCounter');if(DEMO){el.textContent=`Demo mode · ${state.userTurns} question${state.userTurns===1?'':'s'} asked (no limit)`;el.className='turncounter';return;}el.textContent=`Engage with assistant - your choice · ${state.userTurns} of ${TURN_CAP} questions used`;el.className='turncounter'+(state.userTurns>=TURN_CAP?' exhausted':state.userTurns>=TURN_CAP-1?' warning':'');}
@@ -410,7 +429,7 @@ function currentAnalytics(){
   });
   return {participant_id:state.participantId,arm_assignment:state.arm==='noai'?1:state.arm==='generic'?2:3,arm_label:state.arm,layout_seed:state.layoutSeed,session_start_iso:new Date(START_TIME).toISOString(),time_to_understand_ms:state.understandAt?state.understandAt-START_TIME:null,understand_click_timestamp:state.understandAt?new Date(state.understandAt).toISOString():null,engaged_chat_before_understand:state.openQuestions.some(q=>q.beforeUnderstand)||state.topicClicks.some(q=>!state.understandAt||new Date(q.timestamp).getTime()<state.understandAt),time_to_first_catalog_interaction_ms:state.firstCatalogInteractionAt?state.firstCatalogInteractionAt-(state.understandAt||START_TIME):null,chat_turns_used:state.userTurns,topic_chip_clicks:state.topicClicks,open_text_questions:state.openQuestions,answer_ratings:state.ratings,basket_events:state.basketEvents,final_basket:basket,total_allocated_cr:total(),total_kept_cr:remaining(),final_reminder_triggered:state.finalReminderShown,final_reminder_action:state.finalReminderAction,order_completion_timestamp:state.completedAt?new Date(state.completedAt).toISOString():null};
 }
-function syncAnalytics(){$('analyticsJson').value=JSON.stringify(currentAnalytics());window.SUBPROJECT_BASKET_ANALYTICS=currentAnalytics;}
+function syncAnalytics(){$('analyticsJson').value=JSON.stringify(currentAnalytics());window.SUBPROJECT_BASKET_ANALYTICS=currentAnalytics;saveState();}
 function maybeFinalReminder(){return state.arm!=='noai'&&state.userTurns===0&&state.topicClicks.length===0&&!state.finalReminderShown;}
 function completeOrder(force=false){
   if(total()<=0)return;
@@ -463,7 +482,7 @@ async function returnToSurvey(){
     else{$('returnOverlay').classList.remove('show');$('toast').textContent='Order recorded · Donate '+fmt(total())+' · Keep '+fmt(remaining());$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2800);console.log('No return URL configured.');}
   },wait);
 }
-function setArm(arm){state.arm=arm;state.cart={};state.basketEvents=[];state.userTurns=0;state.totalSends=0;state.thinking=false;state.understood=(arm==='noai');state.understandAt=null;state.firstCatalogInteractionAt=null;state.topicClicks=[];state.openQuestions=[];state.ratings=[];state.ratingHintShown=false;state.finalReminderShown=false;state.finalReminderAction=null;state.chatCollapsed=false;state.completedAt=null;document.querySelectorAll('.armtoggle button[data-arm]').forEach(b=>b.classList.toggle('active',b.dataset.arm===arm));$('chatPane').classList.remove('mobile-open');showWelcome();updateTurnCounter();updateChatHeader();render();document.querySelectorAll('#chipActions .chip').forEach(c=>c.disabled=false);$('chatInput').disabled=false;$('chatInput').placeholder='Type a question, or pick a topic above...';$('send').disabled=false;}
+function setArm(arm){state.arm=arm;state.cart={};state.basketEvents=[];state.userTurns=0;state.totalSends=0;state.thinking=false;state.understood=(arm==='noai');state.understandAt=null;state.firstCatalogInteractionAt=null;state.topicClicks=[];state.openQuestions=[];state.ratings=[];state.ratingHintShown=false;state.finalReminderShown=false;state.finalReminderAction=null;state.chatCollapsed=false;state.completedAt=null;document.querySelectorAll('.armtoggle button[data-arm]').forEach(b=>b.classList.toggle('active',b.dataset.arm===arm));$('chatPane').classList.remove('mobile-open');showWelcome();updateTurnCounter();updateChatHeader();render();setChatEnabled(state.understood);}
 $('cartToggle').addEventListener('click',()=>{$('cartCard').classList.toggle('expanded');$('cartToggle').textContent=$('cartCard').classList.contains('expanded')?'▴':'▾';});
 $('clearBtn').addEventListener('click',()=>{if(Object.keys(state.cart).length===0)return;if(confirm('Clear entire cart and start over?'))clearCart();});
 $('send').onclick=()=>sendText($('chatInput').value);
@@ -483,7 +502,14 @@ $('orderSummary').addEventListener('click',e=>{if(e.target.id==='orderSummary')$
 document.querySelectorAll('.armtoggle button[data-arm]').forEach(btn=>btn.addEventListener('click',()=>setArm(btn.dataset.arm)));
 function resetQuestions(){state.userTurns=0;state.totalSends=0;state.thinking=false;state.ratings=[];state.openQuestions=[];state.topicClicks=[];showWelcome();updateTurnCounter();document.querySelectorAll('#chipActions .chip').forEach(c=>c.disabled=false);if($('aboutBtn'))$('aboutBtn').disabled=false;$('chatInput').disabled=false;$('chatInput').placeholder='Type a question, or pick a topic above...';$('send').disabled=false;syncAnalytics();}
 if(DEMO&&$('resetQBtn')){$('resetQBtn').addEventListener('click',resetQuestions);}
-buildLayoutRows(false);setArm(state.arm);applyBodyClasses();syncAnalytics();
+buildLayoutRows(false);setArm(state.arm);
+// Resume across refresh (production): rehydrate basket + AI-quota + understood-gate so a reload can't restart.
+if(SAVED_SNAPSHOT){
+  PERSIST_FIELDS.forEach(k=>{ if(SAVED_SNAPSHOT[k]!==undefined) state[k]=SAVED_SNAPSHOT[k]; });
+  if(state.arm!=='noai'){ showWelcome(); if(state.understood) assistantMsg('Welcome back — your basket and progress have been restored. You can continue where you left off.'); }
+  render(); updateTurnCounter(); updateChatHeader(); setChatEnabled(state.understood);
+}
+applyBodyClasses();syncAnalytics();
 </script>
 </body>
 </html>

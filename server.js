@@ -14,6 +14,30 @@ const LOG_DIR = process.env.LOG_DIR || __dirname;   // point at a mounted Render
 try { fs.mkdirSync(LOG_DIR, { recursive: true }); } catch (_) {}
 const LOG_FILE = path.join(LOG_DIR, 'logs.jsonl');
 
+// --- Per-participant quota + completion guard (anti refresh/restart reset) ---
+// Enforced ONLY for real Qualtrics response IDs (pid starts with "R_"); test/random
+// pids ("p_...", "E2E_TEST...") bypass so demo/QA isn't blocked. Rebuilt from the
+// durable log on startup so a Render restart can't reopen the quota.
+const HARD_CAP = 9;                 // max /ask sends per participant (mirrors client HARD_CAP)
+const pidStats = new Map();         // pid -> { sends, completed }
+const isRealPid = pid => typeof pid === 'string' && /^R_/.test(pid);
+function statFor(pid) { let s = pidStats.get(pid); if (!s) { s = { sends: 0, completed: false }; pidStats.set(pid, s); } return s; }
+function rebuildStats() {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return;
+    const lines = fs.readFileSync(LOG_FILE, 'utf8').split('\n');
+    for (const line of lines) {
+      if (!line.trim()) continue;
+      let o; try { o = JSON.parse(line); } catch (_) { continue; }
+      if (o.type === 'completion') { if (o.pid && !o.duplicate) statFor(o.pid).completed = true; }
+      else if (o.type === 'feedback') { /* ratings don't consume quota */ }
+      else if (o.participant_id) { statFor(o.participant_id).sends++; }
+    }
+    console.log('[stats] rebuilt quota state for', pidStats.size, 'participants');
+  } catch (e) { console.warn('rebuildStats failed:', e.message); }
+}
+rebuildStats();
+
 // Write a log record to the durable file AND, if a webhook is configured, mirror it there.
 // On a paid Render plan, point LOG_DIR at a mounted Disk so logs survive restarts/redeploys.
 // (On free tier the disk is ephemeral; the optional webhook is the fallback.) Fire-and-forget.
@@ -29,6 +53,11 @@ app.get('/health', (req, res) => res.json({ ok: true, model: MODEL }));
 app.post('/api/v4/ask', async (req, res) => {
   const { question, arm, turnNumber, participant_id, forced_id } = req.body || {};
   if (!question && !forced_id) return res.status(400).json({ error: 'no_question' });
+  if (isRealPid(participant_id)) {
+    const s = statFor(participant_id);
+    if (s.completed) return res.status(403).json({ error: 'already_completed' });
+    if (s.sends >= HARD_CAP) return res.status(429).json({ error: 'cap_reached' });
+  }
   try {
     // forced_id = participant clicked a disambiguation button -> deterministic by-ID fetch, no model call.
     const out = forced_id ? resolveForced(forced_id) : await resolve(question);
@@ -48,6 +77,7 @@ app.post('/api/v4/ask', async (req, res) => {
       options: out.options || null
     };
     persist(log);
+    if (isRealPid(participant_id)) statFor(participant_id).sends++;
     console.log('[ask]', out.action, 'band', out.band, (out.matched_id || 'REFUSE'), '|', String(forced_id || question).slice(0, 70));
     res.json({ answer: out.answer, matched_id: out.matched_id, band: out.band, confidence: out.band, action: out.action, options: out.options || null, disambig_q: out.disambig_q || null });
   } catch (e) {
@@ -71,6 +101,9 @@ const HMAC_SECRET = process.env.QUALTRICS_HMAC_SECRET || '';
 // mint a tamper-evident HMAC token, and build the Qualtrics return URL.
 app.post('/api/v4/complete', (req, res) => {
   const { pid, arm, nonce, allocation_summary, engagement_summary, analytics } = req.body || {};
+  // First completion per real pid is authoritative; later ones are flagged duplicate
+  // (still routed back to Qualtrics, but excluded from analysis).
+  const duplicate = isRealPid(pid) && statFor(pid).completed;
   // Derive the "used the assistant at least once" flag server-side from the analytics payload.
   // '1'/'0' for the AI arms; '' for No-AI (so Qualtrics branches on arm and skips the AI blocks).
   const ana = analytics || {};
@@ -84,9 +117,11 @@ app.post('/api/v4/complete', (req, res) => {
     type: 'completion', ts: new Date().toISOString(),
     pid: pid || null, arm: arm || null, used_ai: used_ai, nonce: nonce || null,
     allocation_summary: allocation_summary || null, engagement_summary: engagement_summary || null,
-    completion_token: token || null, analytics: analytics || null
+    completion_token: token || null, analytics: analytics || null,
+    duplicate: duplicate || undefined
   };
   persist(rec);
+  if (isRealPid(pid)) statFor(pid).completed = true;
   let return_url = null;
   if (RETURN_BASE) {
     const sep = RETURN_BASE.includes('?') ? '&' : '?';
@@ -101,8 +136,8 @@ app.post('/api/v4/complete', (req, res) => {
     if (token) q.push('completion_token=' + encodeURIComponent(token));
     return_url = RETURN_BASE + sep + q.join('&');
   }
-  console.log('[complete]', pid, arm, 'used_ai=' + (used_ai === '' ? 'NA' : used_ai), token ? '(token minted)' : '(NO HMAC secret set)');
-  res.json({ ok: true, completion_token: token || null, return_url });
+  console.log('[complete]', pid, arm, 'used_ai=' + (used_ai === '' ? 'NA' : used_ai), token ? '(token minted)' : '(NO HMAC secret set)', duplicate ? '(DUPLICATE)' : '');
+  res.json({ ok: true, completion_token: token || null, return_url, duplicate: duplicate || false });
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
