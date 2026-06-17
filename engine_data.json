@@ -87,7 +87,7 @@
       "subtopic": "Long-term needs",
       "question": "What about long-term needs after the immediate response phase?",
       "answer": "This campaign is focused on the immediate aftermath — the first days after the disaster — so longer-term recovery needs sit outside its scope. Those later needs, such as rebuilding, livelihoods, and sustained health support, are real, but they are handled through other, longer-term efforts rather than this donation task. For the choices here, the relevant question is what helps most in the first days, where flexible support — cash that responders can direct as needs shift — and items matched to current needs are most useful.",
-      "tags": "T6, T2",
+      "tags": "T5, T6",
       "source": "Grand Bargain 2016; Harvey 2007 (HPG/ODI)"
     },
     {
@@ -114,7 +114,7 @@
       "subtopic": "Item: dry pet food pack",
       "question": "What's Dry pet food pack, 5 kg?",
       "answer": "A dry pet food pack supports companion animals — a real motive, since some households will not leave pets behind — but it is lower priority than survival needs (shelter, water, food, medical care) in the first days, and low-priority goods can add to sorting and storage load if they arrive ahead of need. [Spec, brand, and price come from the platform's item list — pending BASKET.] To give in kind more effectively, a curated bundle matches assessed needs more closely, and cash stays the most flexible as needs shift. Up to you.",
-      "tags": "T4, T5",
+      "tags": "T4, T5, T10",
       "source": "Sphere Handbook 2018; FEMA; jhv 'Material Convergence'; spec pending BASKET"
     },
     {
@@ -265,8 +265,8 @@
       "id": "Q4.2",
       "cluster": "C4",
       "subtopic": "Partner organizations",
-      "question": "Which organisations actually handle the response?",
-      "answer": "For unrestricted donations you can choose among three organisations active in this response: a local one (Community Aid Foundation), an international one (Global Aid Alliance), and a government-related agency (National Emergency Authority). All three are established and active, and in performance, transparency, and past record there is no documented difference between them. Each works within the coordinated response, and the practical point is to give through recognised, active organisations rather than unverified appeals, since disasters attract fraud. Which of the three you choose is up to you.",
+      "question": "Which of the three organisations should I choose — are they different in transparency, track record, or effectiveness?",
+      "answer": "You can give unrestricted cash through three organisations active in this response: a local one (Community Aid Foundation), an international one (Global Aid Alliance), and a government-related agency (National Emergency Authority). All three are established and active, and there is no documented difference between them in transparency, track record, effectiveness, overhead, or the follow-up you receive after donating. Each handles its own donations rather than running a single joint operation; local organisations often know ground conditions well and international ones bring wider networks, but neither is presented as more effective. The practical point is to give through recognised, active organisations rather than unverified appeals, since disasters attract fraud. Which of the three you choose is a matter of preference.",
       "tags": "T9, T10",
       "source": "Scenario design (orgs equivalent by construction); Grand Bargain 2016; FBI IC3 PSA (2025)"
     },
@@ -289,15 +289,6 @@
       "source": "Grand Bargain 2016; Harvey 2007"
     },
     {
-      "id": "Q4.5",
-      "cluster": "C4",
-      "subtopic": "Organisations operate independently",
-      "question": "Are the partner agencies coordinating with each other, or duplicating work?",
-      "answer": "The organisations here each accept and handle their own donations, so they are not presented as running a single, jointly coordinated operation. What they share is a common standard: each is established and active in the response and works to the same expectations on transparency, effectiveness, and reporting. For a donor, the choice between them is not about one being better coordinated than another — they can be treated as equivalent on that front, and which you choose is a matter of preference.",
-      "tags": "T9",
-      "source": "Grand Bargain 2016; CBPF Global Guidelines"
-    },
-    {
       "id": "Q4.6",
       "cluster": "C4",
       "subtopic": "Unrestricted cash spending",
@@ -305,33 +296,6 @@
       "answer": "Unrestricted cash is allocated by the responding organisations to whatever needs they assess as most urgent, rather than being fixed to one category in advance. This flexibility is its main strength: responders can adapt as needs change and direct funds wherever gaps appear, procuring supplies from wherever they are available. It does not mean spending without accountability — established organisations report on allocation and are subject to audit and coordination. The decision process is essentially continuous needs assessment: funds follow the current priorities on the ground rather than a pre-set plan.",
       "tags": "T2, T6, T9",
       "source": "Harvey 2007; Grand Bargain 2016"
-    },
-    {
-      "id": "Q4.7",
-      "cluster": "C4",
-      "subtopic": "NGO track record",
-      "question": "What's the historical track record of these NGOs in past disasters?",
-      "answer": "The organisations available here are all established and active in this response, and they adhere to the same standards of transparency, operational effectiveness, and track record. There is no documented difference between them on those measures. Track record matters as a signal of reliability, and the relevant point is that the listed organisations meet a common standard — so the decision among them comes down to your own preference rather than a difference in past performance.",
-      "tags": "T9",
-      "source": "FBI IC3 PSA (2025); Mejia 2019"
-    },
-    {
-      "id": "Q4.8",
-      "cluster": "C4",
-      "subtopic": "Transparency depth",
-      "question": "How transparent is the organization beyond the audit reports?",
-      "answer": "The organisations here operate to the same standard of transparency — regular reporting on how donations are used, available to donors. There is no documented difference between them in how transparent they are. Rather than one offering deeper transparency than another, they can be treated as equivalent on this measure. The practical takeaway is that transparency is not a reason to prefer one option over another; the choice among them is yours.",
-      "tags": "T9",
-      "source": "Mejia 2019"
-    },
-    {
-      "id": "Q4.9",
-      "cluster": "C4",
-      "subtopic": "Post-donation experience",
-      "question": "What happens after I donate? Do I get updates?",
-      "answer": "With the organisations here, donating is followed by acknowledgement and, depending on the organisation, updates on how contributions are used. They operate to the same standard on this, so what you can expect afterward does not differ meaningfully between them. If follow-up matters to you, it is not a strong basis for choosing one over another — the options are equivalent on that front, and the choice remains yours.",
-      "tags": "T9",
-      "source": "Mejia 2019; FBI IC3 PSA (2025)"
     },
     {
       "id": "Q4.10",
@@ -352,15 +316,6 @@
       "source": "Scenario design (org equivalent; disclose only when type is explicitly asked)"
     },
     {
-      "id": "Q4.12",
-      "cluster": "C4",
-      "subtopic": "Local vs international capability",
-      "question": "Is the local organisation as capable as the international one?",
-      "answer": "There is no documented difference in capability, transparency, or past record between the local, international, and government-related organisations listed — all are established and active. Local organisations often have close knowledge of conditions on the ground, while international ones bring wider networks, but neither is presented as more effective than the other. For your decision, the three can be treated as equivalent in how well they would use your donation; the choice comes down to preference rather than a documented performance gap.",
-      "tags": "T9",
-      "source": "Scenario design (orgs equivalent)"
-    },
-    {
       "id": "Q4.13",
       "cluster": "C4",
       "subtopic": "Government-related agency concern",
@@ -368,15 +323,6 @@
       "answer": "The government-related agency (National Emergency Authority) is presented as an established body active in this response, with no documented difference in transparency, record, or effectiveness compared with the local and international organisations. As with any donation, giving through recognised, active organisations and checking public reporting is the general safeguard against misuse. There is no basis to treat the government-related option as more or less reliable than the others; the three can be considered equivalent, and the choice is yours.",
       "tags": "T9",
       "source": "Scenario design (orgs equivalent); Mejia 2019; FBI IC3 PSA (2025)"
-    },
-    {
-      "id": "Q4.14",
-      "cluster": "C4",
-      "subtopic": "International NGO overhead concern",
-      "question": "Is the international NGO just higher overhead?",
-      "answer": "There is no documented difference in overhead, transparency, or effectiveness between the international organisation (Global Aid Alliance) and the local or government-related options — all are treated as equivalent here. More generally, the larger driver of how much of a donation reaches people is the donation type, not the organisation: cash avoids much of the handling cost physical goods carry. So the international option should not be assumed to carry higher overhead; the choice among the three is a matter of preference.",
-      "tags": "T9, T8",
-      "source": "Scenario design (orgs equivalent); Harvey 2007; USAID 'Cash is Best'"
     },
     {
       "id": "Q4.15",
@@ -688,26 +634,8 @@
       "id": "Q8.11",
       "cluster": "C8",
       "subtopic": "Is this a real donation? (deception, option 2)",
-      "question": "Is this a real donation, or is it simulated?",
-      "answer": "This is a donation scenario set up for a research study, and I can help you think through the options within it. Some details are explained more fully at the end of the study. For now, the most useful thing is to make the choices that fit your own priorities, as you would in a real donation situation.",
-      "tags": "",
-      "source": "Study design (incomplete disclosure + debrief; option 2)"
-    },
-    {
-      "id": "Q8.12",
-      "cluster": "C8",
-      "subtopic": "Are the organisations fictional? (deception, option 2)",
-      "question": "Are the organisations fictional?",
-      "answer": "This is a research scenario, so I can't go into specific details of the organisations beyond what is shown on the page — more is explained when the study finishes. What I can help with is how the donation options differ, so you can choose what fits your priorities.",
-      "tags": "",
-      "source": "Study design (incomplete disclosure + debrief; option 2)"
-    },
-    {
-      "id": "Q8.13",
-      "cluster": "C8",
-      "subtopic": "Is the earthquake scenario real? (deception, option 2)",
-      "question": "Is the earthquake scenario real?",
-      "answer": "The scenario here is part of a research study rather than a live event, and fuller details are given at the end. Within the scenario, I can help you weigh the donation options as you would if deciding in a real situation. Whatever you choose is up to you.",
+      "question": "Is this real — the donation, the organisations, and the earthquake?",
+      "answer": "This is a donation scenario set up for a research study, not a live event — the organisations and the earthquake shown are part of that scenario, and fuller details are explained at the end of the study. I can't go beyond what's on the page about the specific organisations or situation. For now, the most useful thing is to make the choices that fit your own priorities, as you would in a real donation. Whatever you choose is up to you.",
       "tags": "",
       "source": "Study design (incomplete disclosure + debrief; option 2)"
     },
@@ -744,7 +672,7 @@
       "subtopic": "Speed across all options",
       "question": "How quickly does each option reach people on the ground?",
       "answer": "Speed broadly tracks how little has to happen before help is delivered. Cash is generally fastest: there is nothing to ship, sort, or store, so responders can act on it quickly and procure from wherever supply is closest. Directed cash is nearly as fast within its category. Curated bundles are quicker than scattered individual items because they are pre-assembled around a known need, but still must be transported and handled. Individual items are usually slowest, entering a pipeline of transport, sorting, and storage — and goods that don't match current needs can slow things further. Exact timing depends on conditions, so read this as a general ordering, not a guarantee.",
-      "tags": "T1, T6, T8",
+      "tags": "T1, T3, T6, T8",
       "source": "Synthesis of Q1.1–Q1.3; USAID 'Cash is Best' (2022); Harvey 2007 (HPG/ODI)"
     },
     {
@@ -753,7 +681,7 @@
       "subtopic": "Overview of all options",
       "question": "What's the difference between all the donation options?",
       "answer": "The options differ mainly in how flexible they are for responders versus how much they let you steer. Unrestricted cash is the most flexible: responders direct it to whatever is most urgent and adapt as needs change. Directed cash keeps that speed and local-purchasing advantage but fixes your contribution to one category — food, water and hygiene, or medical. Curated bundles are pre-assembled around a priority need, more targeted than picking single items but less adaptable than cash. Individual items are the most concrete and let you give something specific, but help most when they match a current, assessed need. There is no single right choice — they trade flexibility and efficiency against control and tangibility, and the balance is yours.",
-      "tags": "T1, T6, T8",
+      "tags": "T1, T2, T3, T6, T10",
       "source": "Synthesis of C5/C6 modality entries"
     }
   ],
