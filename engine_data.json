@@ -41,7 +41,7 @@
       "cluster": "C1",
       "subtopic": "Physical distribution mechanism",
       "question": "How are items physically distributed to people who need them?",
-      "answer": "Distribution generally moves through a coordinated chain: goods arrive at central receiving points, are sorted and prioritised, then pass to local hubs and finally to shelters and households. Local responders and partner agencies usually handle the last-mile step, since they know the area and the people. The efficiency of this flow depends heavily on goods being sorted and matched to need; large volumes of low-priority items slow the movement of high-priority ones. This is one reason assessed-need matching and flexible support are emphasised — they keep the pipeline clear for what is urgent.",
+      "answer": "Distribution generally moves through a coordinated chain: goods arrive at central receiving points, are sorted and prioritised, then pass to local hubs and finally to shelters and households. Local responders and partner agencies usually handle the last-mile step, since they know the area and the people. The efficiency of this flow depends heavily on goods being sorted and matched to need; large volumes of low-priority items slow the movement of high-priority ones. This is one reason assessed-need matching and flexible support are emphasised — they keep the pipeline clear for what is urgent. Cash adds the most flexibility here, since it needs no sorting or storage and can be directed to current priorities, while well-matched items move through the chain best.",
       "tags": "T7, T5",
       "source": "Sanchez-Partida 'Humanitarian Logistics'; Logistics Cluster guidance; jhv 'Material Convergence'"
     },
@@ -59,7 +59,7 @@
       "cluster": "C2",
       "subtopic": "Most needed now",
       "question": "What's most needed in this region right now?",
-      "answer": "In this scenario — a winter earthquake in its first days — the most pressing needs typically centre on shelter and warmth, clean water, food, medical care, and hygiene. This reflects information about the response — from on-the-ground sources such as responders, relief organisations, and health authorities — together with established humanitarian guidance. Exact priorities come from on-the-ground assessments rather than fixed lists, because conditions and numbers are still being confirmed. Needs also shift as the response develops, so today's priority may change within days. Flexible support adapts to those changes, while specific goods help most when they match what assessments currently show is needed.",
+      "answer": "In this scenario — a winter earthquake in its first days — the most pressing needs typically centre on shelter and warmth, clean water, food, medical care, and hygiene. This reflects information about the response — from on-the-ground sources such as responders, relief organisations, and health authorities — together with established humanitarian guidance. Exact priorities come from on-the-ground assessments rather than fixed lists, because conditions and numbers are still being confirmed. Needs also shift as the response develops, so today's priority may change within days. Because of that uncertainty, cash gives responders more flexibility to direct help where it is currently needed, while specific goods help most when they match what assessments show is needed right now.",
       "tags": "T5, T6",
       "source": "Sphere Handbook 2018; FEMA 'When Disaster Strikes'; scenario context"
     },
@@ -68,7 +68,7 @@
       "cluster": "C2",
       "subtopic": "Weather",
       "question": "How are the weather conditions in the region?",
-      "answer": "Conditions in the affected region are cold and wet, with winter temperatures and rain expected to continue for roughly the next ten to twelve days. This matters for donation choices: cold, exposed conditions raise the importance of shelter, warmth, dry bedding, and protection from the elements for people in temporary or damaged housing. Cold weather can also affect health needs and the suitability of certain items. Because the climate is a fixed feature of this scenario, support that addresses warmth and shelter is especially relevant early on.",
+      "answer": "Conditions in the affected region are cold and wet, with winter temperatures and rain expected to continue for roughly the next ten to twelve days. This matters for donation choices: cold, exposed conditions raise the importance of shelter, warmth, dry bedding, and protection from the elements for people in temporary or damaged housing. Cold weather can also affect health needs and the suitability of certain items. Because the climate is a fixed feature of this scenario, support that addresses warmth and shelter is especially relevant early on. As conditions and needs can still change, cash gives responders more flexibility to adapt, while items addressing warmth and shelter help most when they match current needs.",
       "tags": "T4, T5",
       "source": "Scenario specification; Sphere Handbook 2018 (shelter/NFI)"
     },
@@ -77,7 +77,7 @@
       "cluster": "C2",
       "subtopic": "How priorities are determined",
       "question": "How do you know what's actually needed in this region right now?",
-      "answer": "Needs are established through structured assessments rather than assumptions. Those working in the response on the ground — responders, relief organisations, and health authorities — gather and share information about what people require, and priorities are set on the basis of assessed need. Established humanitarian guidance also points to circulating priority-item lists so incoming support matches real gaps rather than guesses. Because assessments update as more areas are reached, the picture evolves over the first days and weeks. This is why flexible support is valued: it follows the assessment as it changes, instead of being locked to an early estimate.",
+      "answer": "Needs are established through structured assessments rather than assumptions. Those working in the response on the ground — responders, relief organisations, and health authorities — gather and share information about what people require, and priorities are set on the basis of assessed need. Established humanitarian guidance also points to circulating priority-item lists so incoming support matches real gaps rather than guesses. Because assessments update as more areas are reached, the picture evolves over the first days and weeks. This is why flexible support is valued: cash follows the assessment as it changes instead of being locked to an early estimate, while items matched to confirmed needs also help.",
       "tags": "T5",
       "source": "Sphere Handbook 2018; Logistics Cluster 'In-Kind Donation Guidance'"
     },
@@ -86,7 +86,7 @@
       "cluster": "C2",
       "subtopic": "Long-term needs",
       "question": "What about long-term needs after the immediate response phase?",
-      "answer": "This campaign is focused on the immediate aftermath — the first days after the disaster — so longer-term recovery needs sit outside its scope. Those later needs, such as rebuilding, livelihoods, and sustained health support, are real, but they are handled through other, longer-term efforts rather than this donation task. For the choices here, the relevant question is what helps most in the first days, where flexible support and items matched to current needs are most useful.",
+      "answer": "This campaign is focused on the immediate aftermath — the first days after the disaster — so longer-term recovery needs sit outside its scope. Those later needs, such as rebuilding, livelihoods, and sustained health support, are real, but they are handled through other, longer-term efforts rather than this donation task. For the choices here, the relevant question is what helps most in the first days, where flexible support — cash that responders can direct as needs shift — and items matched to current needs are most useful.",
       "tags": "T6, T2",
       "source": "Grand Bargain 2016; Harvey 2007 (HPG/ODI)"
     },
@@ -104,7 +104,7 @@
       "cluster": "C3",
       "subtopic": "Item: thermal blanket",
       "question": "What is the thermal blanket?",
-      "answer": "A thermal blanket provides insulation and warmth for people who have lost shelter or are exposed to cold, making it a high-priority item in this winter-earthquake setting. Warmth and protection from the elements are core early needs when housing is damaged and people are in temporary or open shelter. Blankets are compact, durable, and broadly useful, so they match assessed cold-weather needs well in the first days. [Specific product spec, brand, and price are defined by the platform's item list — pending BASKET.] As with any item, it helps most when it matches what responders currently report needing.",
+      "answer": "A thermal blanket provides warmth and insulation for people who have lost shelter — a high-priority need in this winter earthquake, and among the in-kind options that fit current needs well. [Specific product spec, brand, and price are defined by the platform's item list — pending BASKET.] If you are giving in kind, a curated bundle groups related warmth needs more coherently, and cash stays the most flexible as needs shift. Your choice either way.",
       "tags": "T4, T5",
       "source": "Sphere Handbook 2018 (shelter/NFI); scenario context; spec pending BASKET"
     },
@@ -113,7 +113,7 @@
       "cluster": "C3",
       "subtopic": "Item: dry pet food pack",
       "question": "What's Dry pet food pack, 5 kg?",
-      "answer": "A dry pet food pack supports companion animals affected by the disaster. It is not useless — animal welfare matters and some households will not leave pets behind — but it is generally lower priority than items meeting people's immediate survival needs for shelter, water, food, and medical care. Pet supplies tend to become more relevant once urgent human needs are covered. [Specific product spec, brand, and price come from the platform's item list — pending BASKET.] Because early capacity is limited, lower-priority goods can also add to sorting and storage load if they arrive ahead of need.",
+      "answer": "A dry pet food pack supports companion animals — a real motive, since some households will not leave pets behind — but it is lower priority than survival needs (shelter, water, food, medical care) in the first days, and low-priority goods can add to sorting and storage load if they arrive ahead of need. [Spec, brand, and price come from the platform's item list — pending BASKET.] To give in kind more effectively, a curated bundle matches assessed needs more closely, and cash stays the most flexible as needs shift. Up to you.",
       "tags": "T4, T5",
       "source": "Sphere Handbook 2018; FEMA; jhv 'Material Convergence'; spec pending BASKET"
     },
@@ -122,7 +122,7 @@
       "cluster": "C3",
       "subtopic": "Item: ready-to-eat food pack",
       "question": "What's in the ready-to-eat food pack?",
-      "answer": "A ready-to-eat food pack provides immediate nutrition without needing cooking facilities, water, or power — high priority in the first days, when people are displaced and kitchens are unavailable. Food that needs no preparation avoids the problems of items that require cooking or clean water to use safely. It suits the acute phase of this scenario well. [Exact contents, brand, and price are set by the platform's item list — pending BASKET.] As with all goods, it is most useful when it matches current assessed needs and dietary suitability for the population.",
+      "answer": "A ready-to-eat food pack provides immediate nutrition with no cooking, water, or power needed — high priority in the first days, when people are displaced and kitchens are unavailable. [Exact contents, brand, and price are set by the platform's item list — pending BASKET.] As with any item, it helps most when it matches current assessed needs; a curated bundle groups related needs more coherently, and cash stays the most flexible as needs shift. Your choice.",
       "tags": "T4, T5",
       "source": "Sphere Handbook 2018 (food security); USAID 'Cash is Best'; spec pending BASKET"
     },
@@ -131,7 +131,7 @@
       "cluster": "C3",
       "subtopic": "Item: hygiene pack",
       "question": "What's in the hygiene pack?",
-      "answer": "A hygiene pack supports sanitation and disease prevention — a high-priority need in crowded shelters where water and sanitation are disrupted. Hygiene promotion and basic supplies are a core component of humanitarian response, because poor sanitation quickly creates health risks for displaced populations. This makes hygiene items broadly relevant early on. [Specific contents, brand, and price are defined by the platform's item list — pending BASKET.] Hygiene packs work best when their contents match the population's needs and the local context, which is why responders assess composition rather than assuming one standard kit fits everyone.",
+      "answer": "A hygiene pack supports sanitation and disease prevention — a high-priority need in crowded shelters where water and sanitation are disrupted. [Specific contents, brand, and price are defined by the platform's item list — pending BASKET.] It works best when its contents fit the population and context; a curated bundle matches assessed needs more coherently, and cash stays the most flexible as needs shift. Your choice.",
       "tags": "T4, T5",
       "source": "Sphere Handbook 2018 (WASH); spec pending BASKET"
     },
@@ -140,7 +140,7 @@
       "cluster": "C3",
       "subtopic": "Item: toys / stuffed animals",
       "question": "What about the toys / stuffed animals?",
-      "answer": "Toys and comfort items are not useless, but they are lower priority than survival needs in the first days. Once immediate needs for shelter, water, food, and medical care are met, comfort items can support children's morale and a sense of normalcy in shelters — part of why donors are drawn to them. Earlier in the response, though, they deliver less benefit per unit of logistics effort, and goods sent ahead of need add to sorting and storage burden. [Product spec, brand, and price are from the platform's item list — pending BASKET.]",
+      "answer": "Toys and comfort items are not useless, but they are lower priority than survival needs in the first days; once shelter, water, food, and medical care are met, they can support children's morale — part of why donors are drawn to them. Sent ahead of need, though, they add to sorting and storage burden. [Product spec, brand, and price are from the platform's item list — pending BASKET.] To give in kind more effectively, a curated bundle matches current needs more closely, and cash stays the most flexible as needs shift. Up to you.",
       "tags": "T4, T10",
       "source": "Zagefka 2015; Natural Hazards Center 'Second Disaster'; spec pending BASKET"
     },
@@ -149,7 +149,7 @@
       "cluster": "C3",
       "subtopic": "Item: cold/flu medication bundle",
       "question": "What is Painkiller + cough syrup + cold/flu bundle?",
-      "answer": "This is an over-the-counter medication bundle for common symptoms. It is not without value, but individually donated medicines are generally lower priority and are usually handled through professional medical channels rather than donor menus. International guidance discourages unsolicited medicine donations, which can arrive mislabelled, expired, or unsuited to local needs and then require careful screening and disposal. Medical supply is typically coordinated by health authorities and agencies that can match drugs to need and regulation. [Exact contents, brand, and price are defined by the platform's item list — pending BASKET.]",
+      "answer": "This is an over-the-counter medication bundle for common symptoms. It is not without value, but individually donated medicines are generally lower priority and handled through professional medical channels: international guidance discourages unsolicited medicine donations, which can arrive mislabelled, expired, or unsuited to local needs and then need screening and disposal. [Exact contents, brand, and price are defined by the platform's item list — pending BASKET.] If giving in kind, a curated bundle matched to assessed needs fits better, and cash lets health agencies obtain the right supplies most flexibly. Your choice.",
       "tags": "T4, T9",
       "source": "WHO 'Guidelines for Medicine Donations'; FEMA/HowStuffWorks 'worst things to donate'; spec pending BASKET"
     },
@@ -176,7 +176,7 @@
       "cluster": "C3",
       "subtopic": "Bundle: Power & Light Pack",
       "question": "What's the Power & Light Pack?",
-      "answer": "A power-and-light pack is a curated bundle providing basic lighting and small-scale power, which can matter where electricity is disrupted — for safety, communication, and managing cold nights. Its relevance depends on the assessed situation; lighting and power needs are real but usually rank behind shelter, water, food, and medical care in the first hours. As a curated kit, it groups related items around one purpose, keeping the donation coherent and reducing mismatch. [Exact contents and price are defined by the platform's bundle list — pending BASKET.]",
+      "answer": "A power-and-light pack is a curated bundle providing basic lighting and small-scale power, which can matter where electricity is disrupted — for safety, communication, and managing cold nights. Its relevance depends on the assessed situation; lighting and power needs are real but usually rank behind shelter, water, food, and medical care in the first hours. As a curated kit, it groups related items around one purpose, keeping the donation coherent and reducing mismatch. Compared with cash it is less flexible — cash lets responders adapt as needs change — but it is more organised than picking single items. [Exact contents and price are defined by the platform's bundle list — pending BASKET.]",
       "tags": "T3, T4",
       "source": "Sphere 2018; Logistics Cluster; Holguín 2022; contents pending BASKET"
     },
@@ -185,7 +185,7 @@
       "cluster": "C3",
       "subtopic": "Off-menu: first aid",
       "question": "Why isn't there a first aid kit option?",
-      "answer": "First aid and medical supplies are generally coordinated through health authorities and established agencies rather than individual donor menus. Medical items must match clinical needs, regulations, and quality standards; unsolicited medical donations can arrive unsuitable, expired, or mislabelled, then need screening and disposal that burdens responders. Professional channels can also procure medical supplies in bulk and direct them where they are clinically needed. So the absence of a first-aid option reflects how medical supply is managed in a coordinated response, not that such items are unimportant — they are handled through institutional procurement.",
+      "answer": "First aid and medical supplies are generally coordinated through health authorities and established agencies rather than individual donor menus. Medical items must match clinical needs, regulations, and quality standards; unsolicited medical donations can arrive unsuitable, expired, or mislabelled, then need screening and disposal that burdens responders. Professional channels can also procure medical supplies in bulk and direct them where they are clinically needed. So the absence of a first-aid option reflects how medical supply is managed in a coordinated response, not that such items are unimportant — they are handled through institutional procurement. Cash supports that route, letting agencies procure and direct medical supplies flexibly as clinical needs are confirmed.",
       "tags": "T9, T7",
       "source": "WHO 'Guidelines for Medicine Donations'; IFRC 'Unsolicited donations'"
     },
@@ -194,7 +194,7 @@
       "cluster": "C3",
       "subtopic": "Off-menu: tents",
       "question": "Why aren't tents or temporary shelter on the list?",
-      "answer": "Large-scale shelter, such as tents, is usually procured through institutional channels rather than individual donations. Emergency shelter has technical specifications — size, weather suitability, durability — and is needed in coordinated quantities, which agencies handle through bulk procurement to recognised standards. Individually donated shelter is harder to match to these requirements and can create sorting and transport burden if it doesn't fit. The menu therefore focuses on contributions individuals can make effectively, while bulk shelter is managed by responders who can procure and deploy it at scale and to specification.",
+      "answer": "Large-scale shelter, such as tents, is usually procured through institutional channels rather than individual donations. Emergency shelter has technical specifications — size, weather suitability, durability — and is needed in coordinated quantities, which agencies handle through bulk procurement to recognised standards. Individually donated shelter is harder to match to these requirements and can create sorting and transport burden if it doesn't fit. The menu therefore focuses on contributions individuals can make effectively, while bulk shelter is managed by responders who can procure and deploy it at scale and to specification. Cash supports this, giving responders the flexibility to source the right shelter as needs are confirmed, rather than committing to fixed in-kind items.",
       "tags": "T7, T9",
       "source": "Sphere Handbook 2018 (shelter); Logistics Cluster guidance"
     },
@@ -203,7 +203,7 @@
       "cluster": "C3",
       "subtopic": "Off-menu: generators",
       "question": "What about generators and fuel?",
-      "answer": "Generators and fuel are heavy, costly to ship, and require safe installation and handling, making them poorly suited to individual in-kind donation. Bulky, high-handling items compete heavily for scarce transport and storage and need trained personnel to deploy safely. Power equipment is therefore typically sourced and managed by responders and agencies that can match it to need, install it safely, and supply fuel reliably. This is why such items sit outside the donor menu — not because power is unimportant, but because it is handled more effectively through coordinated procurement.",
+      "answer": "Generators and fuel are heavy, costly to ship, and require safe installation and handling, making them poorly suited to individual in-kind donation. Bulky, high-handling items compete heavily for scarce transport and storage and need trained personnel to deploy safely. Power equipment is therefore typically sourced and managed by responders and agencies that can match it to need, install it safely, and supply fuel reliably. This is why such items sit outside the donor menu — not because power is unimportant, but because it is handled more effectively through coordinated procurement, which cash gives responders the flexibility to fund and manage as needs are confirmed.",
       "tags": "T7, T9",
       "source": "Logistics Cluster 'In-Kind Donation Guidance'; jhv 'Material Convergence'"
     },
@@ -212,7 +212,7 @@
       "cluster": "C3",
       "subtopic": "Off-menu: tools",
       "question": "Why aren't tools or hardware on the list?",
-      "answer": "Hand tools and construction hardware are generally not collected as individual donations: they raise safety, quality, and matching issues, and are more efficiently bought in bulk to specification. Mixed, unsorted hardware adds to the sorting and handling burden that low-priority or unmatched goods place on responders. Reconstruction needs also come later than the acute survival phase this scenario focuses on. So tools are usually procured through institutional channels when rebuilding begins, rather than donated individually in the first days — again a question of how the need is best met, not whether it exists.",
+      "answer": "Hand tools and construction hardware are generally not collected as individual donations: they raise safety, quality, and matching issues, and are more efficiently bought in bulk to specification. Mixed, unsorted hardware adds to the sorting and handling burden that low-priority or unmatched goods place on responders. Reconstruction needs also come later than the acute survival phase this scenario focuses on. So tools are usually procured through institutional channels when rebuilding begins, rather than donated individually in the first days — again a question of how the need is best met, not whether it exists. Where those needs arise, cash gives responders more flexibility to procure the right tools to specification than fixed in-kind donations.",
       "tags": "T7, T9",
       "source": "Logistics Cluster guidance; jhv 'Material Convergence'"
     },
